@@ -1,0 +1,59 @@
+/* .nav-img{
+    width: 100px;
+    margin-left: 20px;
+}
+.title{
+    margin-left: 10px;
+}
+.carousel-item{
+    object-fit: cover;
+    height: 100vh;
+} */
+
+body{
+    margin: auto;
+    background-color: white;
+}
+li{
+    list-style: none;
+}
+nav{
+    background-color: aqua;
+}
+.menu{
+    font-size: 20px;
+}
+.menu:hover{
+    color: aliceblue;
+    cursor: pointer;
+}
+/* background: linear-gradient(cyan, rgb(92, 214, 214)), url('images/your-image.jpg'); */
+.banner{
+    background: linear-gradient(cyan,rgb(92, 214, 214),url('images/background\ img.jfif'));
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center ;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+    height: 450px;
+}
+.banner-container{
+    width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+.bn-img{
+    width: 320px;
+    margin-top: -50px;
+
+}
+.back{
+    background-color: #387efa;;
+}
+.foot{
+    background-color: #387efa;;
+}
+.doc-img{
+    
+}
