@@ -16,60 +16,43 @@
 
 <body>
     <header>
-        <header>
-            <nav class="d-flex justify-content-around align-items-center p-4">
-                <div class="logo-container d-flex align-items-center gap-2">
-                    <h3 class="text-danger">IMMUNOHUB</h3>
 
+    <!-- Navbar  -->
+    <div id="navbar"></div>
+        
+    <!-- banner container  -->
+    <div class="swiffy-slider slider-nav-visible slider-nav-animation slider-nav-animation-slow slider-item-first-visible"
+        id="animatedText">
 
+        <ul class="slider-container" id="container1">
+            <li id="slide1" class="slide-visible">
+                <div>
+                    <img src="static/images/back7.jpg" alt="..." loading="lazy" class="w-100">
+                    <p class="display-1 text-white position-absolute top-50 start-50 translate-middle">Give the
+                        Gift of Life<br><a href="registration.html" class="btn btn-danger" type="submit">Register
+                            Now</a></p>
                 </div>
-                <div class="menu-container d-flex gap-3">
-                    <li class="menu text-decoration-none"><a class="text-decoration-none text-dark"
-                            href="index.html">Home</a></li>
-                    <li class="menu">Services</li>
-                    <li class="menu">Contact us</li>
 
-                    <div class="d-flex gap-2">
-                        <a href="login.html" class="btn btn-success" type="submit">Login</a>
-                        <a href="registration.html" class="btn btn-danger" type="submit">Register</a>
-                    </div>
-
+            </li>
+            <li id="slide2" class="">
+                <div>
+                    <img src="static/images/back8.jpg" alt="..." loading="lazy" class="w-100">
+                    <h5 class="display-1 text-white position-absolute top-50 start-50 translate-middle">Join the
+                        Lifesaving Journey<br><a href="registration.html" class="btn btn-danger"
+                            type="submit">Register Now</a></h5>
                 </div>
-            </nav>
+            </li>
+        </ul>
 
-            <!-- banner container  -->
-            <div class="swiffy-slider slider-nav-visible slider-nav-animation slider-nav-animation-slow slider-item-first-visible"
-                id="animatedText">
+        <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+        <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
 
-                <ul class="slider-container" id="container1">
-                    <li id="slide1" class="slide-visible">
-                        <div>
-                            <img src="static/images/back2.jfif" alt="..." loading="lazy" class="w-100">
-                            <p class="display-1 text-white position-absolute top-50 start-50 translate-middle">Give the
-                                Gift of Life<br><a href="/user/register/" class="btn btn-danger" type="submit">Register
-                                    Now</a></p>
-                        </div>
-
-                    </li>
-                    <li id="slide2" class="">
-                        <div>
-                            <img src="static/images/background img.jfif" alt="..." loading="lazy" class="w-100">
-                            <h5 class="display-1 text-white position-absolute top-50 start-50 translate-middle">Join the
-                                Lifesaving Journey<br><a href="/user/register/" class="btn btn-danger"
-                                    type="submit">Register Now</a></h5>
-                        </div>
-                    </li>
-                </ul>
-
-                <button type="button" class="slider-nav" aria-label="Go to previous"></button>
-                <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
-
-                <div class="slider-indicators">
-                    <button aria-label="Go to slide" class="active"></button>
-                    <button aria-label="Go to slide" class=""></button>
-                </div>
-            </div>
-        </header>
+        <div class="slider-indicators">
+            <button aria-label="Go to slide" class="active"></button>
+            <button aria-label="Go to slide" class=""></button>
+        </div>
+    </div>
+        
 
     </header>
 
@@ -271,8 +254,8 @@
         <div class="container m-auto p-5 row gap-0">
             <div class="col-md-4 mt-3">
                 <h3 class="text-white">IMMUNOHUB</h3>
-                <p class="text-white">Save One's Life is an automated blood service that connects blood searchers with
-                    voluntary blood donors in a moment through SMS and website.</p>
+                <!-- <p class="text-white">Save One's Life is an automated blood service that connects blood searchers with
+                    voluntary blood donors in a moment through SMS and website.</p> -->
                 <div class="d-flex justify-content-start gap-3 mt-5">
                     <i class="fa-brands fa-facebook fa-2xl" style="color: #ffffff;"></i>
                     <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
@@ -299,7 +282,7 @@
                     <small class="text-white m-auto">+91 9751791203, +91 9159669599</small>
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
+            <!-- <div class="col-md-4 mt-3">
                 <h3 class="text-white">Quick Links</h3>
                 <a class="text-white text-decoration-none" aria-current="page" href="/">Home</a>
                 <br>
@@ -308,7 +291,7 @@
                 <a class="text-white text-decoration-none" aria-current="page" href="/#faq">FAQ</a>
                 <br>
                 <a class="text-white text-decoration-none" aria-current="page" href="/#gallery">Gallery</a>
-            </div>
+            </div> -->
 
             <hr class="text-white mt-2">
             <p class="text-center text-white">Copyright © Salim</p>
@@ -321,6 +304,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="auth.js"></script>
+    <script src="navber.js"></script>
 </body>
 
 </html>
