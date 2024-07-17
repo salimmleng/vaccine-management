@@ -60,3 +60,11 @@ nav{
    object-fit: cover;
     
 } */
+.bg-img{
+    background: white;
+    width: 320px;
+}
+.service{
+    border-radius: 5px;
+    background-color: rgb(247, 238, 238);
+}

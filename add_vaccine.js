@@ -55,7 +55,7 @@ const getAllvaccines = () => {
                          <h6>Manufacturer: ${vaccine.manufacturer}</h6>
                          <h6>Batch Number: ${vaccine.batch_number}</h6>
                          <h6>Expiry date: ${vaccine.expiry_date}</h6>
-                         <a href="edit_vaccine.html" class="btn btn-primary" type="submit">Edit vaccine schedule</a>
+                         <a onclick="handleBookDose(${vaccine.id})" class="btn btn-primary" type="submit">Book dose</a>
   
                         </div>
                 
@@ -73,3 +73,7 @@ const getAllvaccines = () => {
 }
 getAllvaccines()
 
+
+const handleBookDose = (VaccineID)=>{
+
+}
