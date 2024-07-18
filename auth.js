@@ -9,10 +9,10 @@ const handleRegistration = (event) => {
   const first_name = getValue("first_name");
   const last_name = getValue("last_name");
   const email = getValue("email");
-  const role_select = getValue("role_select");
   const password = getValue("password1");
   const confirm_password = getValue("password2");
   const nid = getValue("nid");
+  const address = getValue("address");
 
   if (password !== confirm_password) {
     console.error("Passwords do not match");
@@ -26,9 +26,9 @@ const handleRegistration = (event) => {
     last_name,
     email,
     nid,
-    role: role_select,
     password,
     confirm_password,
+    address,
   };
   
   console.log(info)

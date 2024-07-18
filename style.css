@@ -1,14 +1,3 @@
-/* .nav-img{
-    width: 100px;
-    margin-left: 20px;
-}
-.title{
-    margin-left: 10px;
-}
-.carousel-item{
-    object-fit: cover;
-    height: 100vh;
-} */
 
 body{
     margin: auto;
@@ -67,4 +56,10 @@ nav{
 .service{
     border-radius: 5px;
     background-color: rgb(247, 238, 238);
+}
+.pro-img{
+    width: 25px;
+}
+.docc-img{
+    width: 150px;
 }

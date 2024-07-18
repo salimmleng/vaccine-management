@@ -20,7 +20,7 @@
     <header>
 
         <!-- Navbar  -->
-        <div id="navbar"></div>
+        <div id="navbar1"></div>
 
     </header>
 
@@ -43,15 +43,14 @@
 
                                <div class="d-flex gap-3 mb-2">
                                 <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                                <div><a class="mt-1 text-decoration-none"> Add vaccine</a></div>
+                                <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
                                </div>
 
                                <div class="d-flex gap-3">
                                 <div> <img class="pro-img" src="static/images/resume.png" alt=""></div> 
-                                <div><a href="patient_profile.html" class="mt-1 text-decoration-none">Patient details</a></div>
+                                <div><a href="doc_patient_info.html" class="mt-1 text-decoration-none">Patient details</a></div>
                                </div>
 
-                            
                             </div>
                         </div>
                     </div>
@@ -59,69 +58,30 @@
             </div>
 
         </div>
-        <div class="col-md-8">
-          <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h1 class="card-title text-center">Add vaccine</h1>
-                        </div>
+        <div class="col-md-8 mt-5">
+            <div class="card m-2" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img class="docc-img mx-4 my-3" src="static/images/doc-img.png" class="img-fluid rounded-start card-img" alt="...">
+                    </div>
+                    <div class="col-md-6">
                         <div class="card-body">
-                          <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
-                            <div class="mb-3">
-                              <label for="name" class="form-label">Name</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="name"
-                                required
-                                name="name"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label for="manufacturer" class="form-label">Manufacturer</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="manufacturer"
-                                required
-                                name="manufacturer"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label for="batch_number" class="form-label">Batch Number</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="batch_number"
-                                required
-                                name="batch_number"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label for="expiry_date" class="form-label">Expiry date</label>
-                              <input
-                                type="date"
-                                class="form-control"
-                                id="expiry_date"
-                                required
-                                name="expiry_date"
-                              />
-                            </div>
-                            <div class="d-grid gap-2">
-                              <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                          </form>
+                            <h6>Vaccine: BCG</h6>
+                            <h6>Start age: 5</h6>
+                            <h6>End age: 5</h6>
+                            <h6>
+                                Last Donate Date: Dec. 11, 2023
+    
+                            </h6>
+                            <h6>
+    
+                                Donation Status: 
+    
+                            </h6>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      
 
 
         </div>
@@ -186,7 +146,7 @@
     <script src="auth.js"></script>
     <script src="navber.js"></script>
     <script src="profile.js"></script>
-    <script src="add_vaccine.js"></script>
+    
 </body>
 
 </html>

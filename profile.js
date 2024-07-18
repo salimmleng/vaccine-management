@@ -23,27 +23,29 @@ async function fetchUserProfile() {
       }
 
       const data = await response.json();
-      updateUserProfileDOM(data);
+      console.log(data);
   } catch (error) {
       console.error('Error fetching user profile:', error);
   }
 }
-function updateUserProfileDOM(profile) {
-  const profileElement = document.getElementById('profile');
-  if (!profileElement) {
-      console.error('Profile element not found');
-      return;
-  }
 
-  // Assuming profile object has properties: username, email, etc.
-  profileElement.innerHTML = `
-      <th scope="row">${profile.username}</th>
-      <td>${profile.email}</td>
-      <td>${profile.role}</td>
-      <td>${profile.nid}</td>
-      <td>❌</td>
-  `;
-}
+
+// function updateUserProfileDOM(profile) {
+//   const profileElement = document.getElementById('profile');
+//   if (!profileElement) {
+//       console.error('Profile element not found');
+//       return;
+//   }
+
+//   // Assuming profile object has properties: username, email, etc.
+//   profileElement.innerHTML = `
+//       <th scope="row">${profile.username}</th>
+//       <td>${profile.email}</td>
+//       <td>${profile.role}</td>
+//       <td>${profile.nid}</td>
+//       <td>❌</td>
+//   `;
+// }
 
 // Call fetchUserProfile when the page loads
 document.addEventListener('DOMContentLoaded', () => {
