@@ -23,61 +23,66 @@
         <div id="navbar"></div>
 
     </header>
-
-    <!-- doctor profile info section -->
     
-    <div class="row">
-        <div class="col-md-6 container p-5">
-            <div class="card profile" style="width: 18rem;">
-                <img class="dash-img m-auto" src="static/images/dashboard.png" 
-                class="card-img-top" alt="...">
-                <h3 class="text-center text-danger">Doctor dashboard</h3>
-                <hr>
-                <div class="card-body">
-                    <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/profile_4466498.png" alt=""></div> 
-                        <div><a href="doc_profile.html" class="mt-1 text-decoration-none"> Profile</a></div>
-                       </div>
+    <!-- update form -->
 
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/resume.png" alt=""></div> 
-                        <div><a href="doc_patient_info.html" class="mt-1 text-decoration-none">Patient details</a></div>
-
-                       </div>
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-                    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="card-title text-center">Add vaccine</h1>
+                    </div>
+                    <div class="card-body">
+                      <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            required
+                            name="name"
+                          />
+                        </div>
+              
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            required
+                            name="email"
+                          />
+                        </div>
+              
+                        <div class="mb-3">
+                          <label for="nid" class="form-label">NID Number</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nid"
+                            required
+                            name="nid"
+                          />
+                        </div>
+              
+                       
+                        <div class="d-grid gap-2">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                      </form>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div class="col-md-6 mt-5">
-            <h3>Personal information</h3>
-            <img class="docc-img mx-4 my-3" src="static/images/doc-img.png" class="img-fluid rounded-start card-img" alt="...">
-            <h6>Name: Salim Hossain</h6>
-            <h6>Email: salim@gmail.com</h6>
-            <h6>NID: 12345</h6>
-
-
-
-        </div>
-
     </div>
 
+
     
-    
+
+     
     <!-- Footer -->
     <footer class="mt-5 foot">
         <div class="container m-auto p-5 row gap-0">

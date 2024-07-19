@@ -1,5 +1,4 @@
 
-
 const handleRegistration = (event) => {
   event.preventDefault();
 
@@ -9,10 +8,12 @@ const handleRegistration = (event) => {
   const first_name = getValue("first_name");
   const last_name = getValue("last_name");
   const email = getValue("email");
+  const address = getValue("address");
+  const nid = getValue("nid");
+  const user_role = getValue("user_role");
   const password = getValue("password1");
   const confirm_password = getValue("password2");
-  const nid = getValue("nid");
-  const address = getValue("address");
+ 
 
   if (password !== confirm_password) {
     console.error("Passwords do not match");
@@ -25,12 +26,14 @@ const handleRegistration = (event) => {
     first_name,
     last_name,
     email,
+    address,
     nid,
+    user_role,
     password,
     confirm_password,
-    address,
+    
   };
-  
+ 
   console.log(info)
 
   fetch("http://127.0.0.1:8000/accounts/register/", {
@@ -40,12 +43,12 @@ const handleRegistration = (event) => {
   })
     .then((res) => {
       alert("Registration successful. Check your mail for confirmation.")
-    
+
+      localStorage.setItem('userRole',user_role);
       window.location.href = "login.html";
   })
 
 };
-
 
 const handleLogin =(event) =>{
   event.preventDefault()
