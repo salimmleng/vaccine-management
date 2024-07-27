@@ -31,7 +31,7 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h1 class="card-title text-center">Add vaccine</h1>
+                        <h1 class="card-title text-center">Update profile</h1>
                     </div>
                     <div class="card-body">
                       <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
@@ -39,7 +39,7 @@
                           <label for="name" class="form-label">Name</label>
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control profile-body"
                             id="name"
                             required
                             name="name"
@@ -50,18 +50,29 @@
                           <label for="email" class="form-label">Email</label>
                           <input
                             type="email"
-                            class="form-control"
+                            class="form-control profile-body"
                             id="email"
                             required
                             name="email"
                           />
                         </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input
+                              type="address"
+                              class="form-control profile-body"
+                              id="address"
+                              required
+                              name="address"
+                            />
+                          </div>
               
                         <div class="mb-3">
                           <label for="nid" class="form-label">NID Number</label>
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control profile-body"
                             id="nid"
                             required
                             name="nid"

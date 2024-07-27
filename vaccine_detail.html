@@ -23,50 +23,87 @@
         <div id="navbar"></div>
 
     </header>
-    
-    <!-- change password form -->
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h1 class="card-title text-center">Change password</h1>
-                    </div>
-                    <div class="card-body">
-                      <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
-                        <div class="mb-3">
-                          <label for="password" class="form-label">Old Password</label>
-                          <input
-                            type="password"
-                            class="form-control profile-body"
-                            id="password"
-                            required
-                            name="password"
-                          />
-                        </div>
-              
-                        <div class="mb-3">
-                          <label for="password" class="form-label">New Password</label>
-                          <input
-                            type="password"
-                            class="form-control profile-body"
-                            id="password"
-                            required
-                            name="password"
-                          />
-                        </div>
-              
-                        <div class="d-grid gap-2">
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-                      </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <!-- vaccine detail -->
+
+    <div class="d-flex flex-wrap justify-content-center" id="vaccine-container">
     </div>
 
-     
+
+     <!-- Edit Modal  -->
+
+     <div
+     class="modal fade"
+     id="editModal"
+     tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body">
+           <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                    type="text"
+                    class="form-control profile-body"
+                    id="name"
+                    required
+                    name="name"
+                    />
+                </div>
+        
+                <div class="mb-3">
+                    <label  for="manufacturer" class="form-label">Manufacturer</label>
+                    <input
+                    type="text"
+                    class="form-control profile-body"
+                    id="manufacturer"
+                    required
+                    name="manufacturer"
+                    />
+                </div>
+        
+                <div class="mb-3">
+                    <label for="batch_number" class="form-label">Batch Number</label>
+                    <input
+                    type="text"
+                    class="form-control profile-body"
+                    id="batch_number"
+                    required
+                    name="batch_number"
+                    />
+                </div>
+        
+                <div class="mb-3">
+                    <label for="expiry_date" class="form-label">Expiry date</label>
+                    <input
+                    type="date"
+                    class="form-control profile-body"
+                    id="expiry_date"
+                    required
+                    name="expiry_date"
+                    />
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Edit vaccine</button>
+                </div>
+            </form>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
     <!-- Footer -->
     <footer class="mt-5 foot">
         <div class="container m-auto p-5 row gap-0">
@@ -120,10 +157,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
         defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="navber.js"></script>
-    <script src="profile.js"></script>
-    
+    <script src="vaccine_detail.js"></script>
 </body>
 
 </html>
+

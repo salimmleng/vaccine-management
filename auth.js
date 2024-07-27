@@ -10,7 +10,7 @@ const handleRegistration = (event) => {
   const email = getValue("email");
   const address = getValue("address");
   const nid = getValue("nid");
-  const user_role = getValue("user_role");
+  // const user_role = getValue("user_role");
   const password = getValue("password1");
   const confirm_password = getValue("password2");
  
@@ -28,7 +28,7 @@ const handleRegistration = (event) => {
     email,
     address,
     nid,
-    user_role,
+    // user_role,
     password,
     confirm_password,
     
@@ -44,9 +44,13 @@ const handleRegistration = (event) => {
     .then((res) => {
       alert("Registration successful. Check your mail for confirmation.")
 
-      localStorage.setItem('userRole',user_role);
+      // localStorage.setItem('userRole',user_role);
       window.location.href = "login.html";
   })
+   .catch((error) => {
+    console.error("Error:", error.message);
+    alert(`Error: ${error.message}`);
+  });
 
 };
 
