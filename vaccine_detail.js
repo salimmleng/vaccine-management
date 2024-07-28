@@ -33,11 +33,11 @@ const getQueryParams = (param) => {
                             class="btn btn-info"
                             data-bs-toggle="modal"
                             data-bs-target="#editModal"
-                         >
-                          Update vaccine
-                        </button>
-                        <a onclick="deleteVaccine(${vaccine.id})" class="btn btn-danger">Delete</a>
+                            >
+                            Book dose
+                         </button>
 
+                         
                         </div>
                 
                    </div>
@@ -54,6 +54,17 @@ const getQueryParams = (param) => {
         })
 
 }
+
+/* <button
+type="button"
+class="btn btn-info"
+data-bs-toggle="modal"
+data-bs-target="#editModal"
+>
+Update vaccine
+</button>
+<a onclick="deleteVaccine(${vaccine.id})" class="btn btn-danger">Delete</a> */
+
 
 
 const updateVaccine = (event) => {

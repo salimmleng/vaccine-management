@@ -35,75 +35,6 @@
 
 
 
-const addVaccine = (event) => {
-    event.preventDefault();
-  
-    const form = document.getElementById("add-vaccine");
-    const formData = new FormData(form);
-    const token = localStorage.getItem("token");
-  
-    fetch("http://127.0.0.1:8000/doctor/api/vaccines/", {
-      method: "POST",
-      headers: {
-        Authorization: `Token ${token}`,
-      },
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert("Vaccine Added Successfully");
-        console.log(data);
-        window.location.href = "vaccine.html";
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("Error adding vaccine");
-      });
-  };
-  
-  const getAllVaccines = () => {
-    fetch("http://127.0.0.1:8000/doctor/api/vaccines/")
-      .then((res) => res.json())
-      .then((vaccines) => {
-        console.log(vaccines);
-        const allVaccines = document.getElementById("vaccine-container");
-        allVaccines.innerHTML = ""; // Clear the container before appending new items
-  
-        vaccines.forEach((vaccine) => {
-          const div = document.createElement("div");
-          div.classList.add("card", "m-2");
-          div.style.maxWidth = "570px";
-          div.innerHTML = `
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="${vaccine.image}" class="img-fluid rounded-start card-img" alt="...">
-              </div>
-              <div class="col-md-6">
-                <div class="card-body">
-                  <h6>Vaccine: ${vaccine.name}</h6>
-                  <h6>Vaccine ID: ${vaccine.id}</h6>
-                  <h6>Manufacturer: ${vaccine.manufacturer}</h6>
-                  <h6>Batch Number: ${vaccine.batch_number}</h6>
-                  <h6>Expiry Date: ${vaccine.expiry_date}</h6>
-                  <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
-                </div>
-              </div>
-            </div>
-          `;
-          allVaccines.appendChild(div);
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching vaccines:", error);
-      });
-  };
-  
-  getAllVaccines();
-  
-
-
-
-
 // const getAllvaccines = () => {
 //     fetch("http://127.0.0.1:8000/doctor/api/vaccines/")
 //         .then((res) => res.json())
@@ -148,7 +79,72 @@ const addVaccine = (event) => {
 // getAllvaccines()
 
 
-const handleBookDose = (VaccineID)=>{
 
-}
-// onclick="handleBookDose(${vaccine.id})"
+const addVaccine = (event) => {
+    event.preventDefault();
+  
+    const form = document.getElementById("add-vaccine");
+    const formData = new FormData(form);
+    const token = localStorage.getItem("token");
+  
+    fetch("http://127.0.0.1:8000/doctor/api/vaccines/", {
+      method: "POST",
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Vaccine Added Successfully");
+        console.log(data);
+        window.location.href = "vaccine.html";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error adding vaccine");
+      });
+  };
+  
+  const getAllVaccines = () => {
+    fetch("http://127.0.0.1:8000/doctor/api/vaccines/")
+      .then((res) => res.json())
+      .then((vaccines) => {
+        console.log(vaccines);
+        const allVaccines = document.getElementById("vaccine-container");
+        allVaccines.innerHTML = ""; 
+  
+        vaccines.forEach((vaccine) => {
+          const div = document.createElement("div");
+          div.classList.add("card", "m-2");
+          div.style.maxWidth = "570px";
+          div.innerHTML = `
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="static/images/BCG.jpg" class="img-fluid rounded-start card-img" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h6>Vaccine: ${vaccine.name}</h6>
+                  <h6>Vaccine ID: ${vaccine.id}</h6>
+                  <h6>Manufacturer: ${vaccine.manufacturer}</h6>
+                  <h6>Batch Number: ${vaccine.batch_number}</h6>
+                  <h6>Expiry Date: ${vaccine.expiry_date}</h6>
+
+                  <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
+                  
+                </div>
+              </div>
+            </div>
+          `;
+          allVaccines.appendChild(div);
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching vaccines:", error);
+      });
+  };
+  
+  getAllVaccines();
+  
+
