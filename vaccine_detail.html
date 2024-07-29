@@ -108,7 +108,7 @@
 
    <div
    class="modal fade"
-   id="editModal"
+   id="addModal"
    tabindex="-1"
    aria-labelledby="exampleModalLabel"
    aria-hidden="true"
@@ -116,7 +116,7 @@
    <div class="modal-dialog">
      <div class="modal-content">
        <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+         <h5 class="modal-title" id="exampleModalLabel">Book first dose</h5>
          <button
            type="button"
            class="btn-close"
@@ -125,54 +125,24 @@
          ></button>
        </div>
        <div class="modal-body">
-         <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4">
-              <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input
-                  type="text"
-                  class="form-control profile-body"
-                  id="name"
-                  required
-                  name="name"
-                  />
-              </div>
-      
-              <div class="mb-3">
-                  <label  for="manufacturer" class="form-label">Manufacturer</label>
-                  <input
-                  type="text"
-                  class="form-control profile-body"
-                  id="manufacturer"
-                  required
-                  name="manufacturer"
-                  />
-              </div>
-      
-              <div class="mb-3">
-                  <label for="batch_number" class="form-label">Batch Number</label>
-                  <input
-                  type="text"
-                  class="form-control profile-body"
-                  id="batch_number"
-                  required
-                  name="batch_number"
-                  />
-              </div>
-      
-              <div class="mb-3">
-                  <label for="expiry_date" class="form-label">Expiry date</label>
-                  <input
-                  type="date"
-                  class="form-control profile-body"
-                  id="expiry_date"
-                  required
-                  name="expiry_date"
-                  />
-              </div>
-              <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">Edit vaccine</button>
-              </div>
+        <form id="bookingForm" class="pt-4">
+            <div class="mb-3">
+            <label class="mb-1" for="vaccine">Vaccine</label>
+            <select name="vaccine" class="select form-select"  id="vaccine" required>
+            </select>
+            </div>
+
+
+            <div class="mb-3">
+              <label class="mb-1" for="scheduled_date">Choose a date :</label>
+              <select id="scheduled_date" name="scheduled_date" class="select form-select" required>
+                
+            </select>
+            </div>
+
+            <button class="btn btn-success" type="submit">Submit</button>
           </form>
+          <div id="message"></div>
        </div>
      </div>
    </div>

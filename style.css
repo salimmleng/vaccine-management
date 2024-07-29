@@ -6,8 +6,8 @@ body{
 li{
     list-style: none;
 }
-nav{
-    background-color: rgb(249, 245, 245)
+.bg-light{
+    background-color: #f8f9fa;
 }
 .menu{
     font-size: 20px;
@@ -54,7 +54,19 @@ nav{
     
 }
 .banner{
-    background-color: rgb(255, 255, 255)
+    /* background-color: rgb(255, 255, 255) */
+    display: block;
+    background-image: url(/static/images/banner-bg.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 82vh;
+
+}
+.su-main-footer-area {
+    background: #f26d3e;
+    min-height: 80px;
+    padding: 1rem;
 }
 .bn-img{
     width: 400px;

@@ -32,7 +32,7 @@ const getQueryParams = (param) => {
                             type="button"
                             class="btn btn-info"
                             data-bs-toggle="modal"
-                            data-bs-target="#editModal"
+                            data-bs-target="#addModal"
                             >
                             Book dose
                          </button>
@@ -114,3 +114,105 @@ const deleteVaccine = (vaccineId) => {
   
  
   getVaccineDetail()
+
+
+  // add dose 
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const token = localStorage.getItem("token");
+    const apiUrl = 'http://127.0.0.1:8000/patient/';
+    const apiurl2 = 'http://127.0.0.1:8000/doctor/';
+    const vaccineId = getQueryParams("id");
+    
+    const vaccineSelect = document.getElementById('vaccine');
+    const dateSelect = document.getElementById('scheduled_date');
+    const form = document.getElementById('bookingForm');
+    const messageDiv = document.getElementById('message');
+
+    // Function to fetch and populate available dates
+    function fetchAvailableDates() {
+        fetch(`${apiUrl}available-dates/`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item;
+                option.textContent = item;
+                dateSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error fetching available dates:', error));
+    }
+
+    // Function to fetch and populate vaccines
+    function fetchVaccines() {
+        fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {  // Assuming you have an endpoint for vaccines
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // data.forEach(vaccine => {
+            //     const option = document.createElement('option');
+            //     option.value = vaccine.id;
+            //     option.textContent = vaccine.name;
+            //     vaccineSelect.appendChild(option);
+            // });
+            
+          // const vaccine = document.getElementById("vaccine")
+          // vaccine.value = data.name
+
+          const option = document.createElement('option');
+          // option.value = data.id;
+          option.textContent = data.name;
+          vaccineSelect.appendChild(option);
+  
+        })
+        .catch(error => console.error('Error fetching vaccines:', error));
+    }
+
+    // Function to handle form submission
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const vaccineId2 = vaccineSelect.value;
+        const scheduledDate = dateSelect.value;
+
+        fetch(`${apiUrl}book-dose/`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                vaccine: vaccineId2,
+                scheduled_date: scheduledDate,
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                messageDiv.textContent = 'First dose booked successfully!';
+                $("#addModal").modal("hide");
+                form.reset();
+            } else {
+                messageDiv.textContent = 'Error booking dose. Please try again.';
+                $("#addModal").modal("hide");
+            }
+        })
+        .catch(error => console.error('Error booking dose:', error));
+    });
+
+    // Initialize the form with available dates and vaccines
+    fetchAvailableDates();
+    fetchVaccines();
+});
+
+
+
+
