@@ -53,6 +53,7 @@ const getQueryParams = (param) => {
             document.getElementById("expiry_date").value = vaccine.expiry_date;
         })
 
+
 }
 
 /* <button
@@ -67,50 +68,50 @@ Update vaccine
 
 
 
-const updateVaccine = (event) => {
-    event.preventDefault();
-    const vaccineId = getQueryParams("id");
-    const form = document.getElementById("update-vaccine");
-    const formData = new FormData(form);
-    const token = localStorage.getItem("token");
+// const updateVaccine = (event) => {
+//     event.preventDefault();
+//     const vaccineId = getQueryParams("id");
+//     const form = document.getElementById("update-vaccine");
+//     const formData = new FormData(form);
+//     const token = localStorage.getItem("token");
     
 
-    const updateVaccineData = {
-        name: formData.get("name"),
-        manufacturer: formData.get("manufacturer"),
-        batch_number: formData.get("batch_number"),
-        expiry_date: formData.get("expiry_date"),
-    };
+//     const updateVaccineData = {
+//         name: formData.get("name"),
+//         manufacturer: formData.get("manufacturer"),
+//         batch_number: formData.get("batch_number"),
+//         expiry_date: formData.get("expiry_date"),
+//     };
 
-    fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `Token ${token}`,
-        },
-        body: JSON.stringify(updateVaccineData),
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data)
-            $("#editModal").modal("hide");
+//     fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {
+//         method: "PUT",
+//         headers: {
+//             "Content-Type": "application/json",
+//             Authorization: `Token ${token}`,
+//         },
+//         body: JSON.stringify(updateVaccineData),
+//     })
+//         .then((res) => res.json())
+//         .then((data) => {
+//             console.log(data)
+//             $("#editModal").modal("hide");
 
-        });
-};
+//         });
+// };
 
 
-const deleteVaccine = (vaccineId) => {
-    const token = localStorage.getItem("token");
-    fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Token ${token}`,
-      },
-    })
-      .then((res) => (window.location.href = "./vaccine.html"))
-      .catch((error) => console.log(error));
-  };
+// const deleteVaccine = (vaccineId) => {
+//     const token = localStorage.getItem("token");
+//     fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {
+//       method: "DELETE",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: `Token ${token}`,
+//       },
+//     })
+//       .then((res) => (window.location.href = "./vaccine.html"))
+//       .catch((error) => console.log(error));
+//   };
   
  
   getVaccineDetail()

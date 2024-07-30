@@ -175,8 +175,8 @@
     </div> -->
 
      <!-- vaccine list -->
-     <div class="d-flex flex-wrap justify-content-center" id="vaccine-container">
-    </div>
+     <!-- <div class="d-flex flex-wrap justify-content-center" id="vaccine-container">
+    </div> -->
 
 
 
@@ -184,38 +184,24 @@
 
     <div class='container my-5'>
         <body>
-          <h2 class="text-center pb-3">Available Vaccine</h2>
+          <h2 class="text-center pb-3">Manage Vaccine</h2>
         </body>
       
-        <table class="table table-striped table-hover ">
-          <thead class='table-dark'>
+        <table class="table">
+          <thead class="table-dark">
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
+              <th scope="col">ID</th>
+              <th scope="col">Vaccine name</th>
               <th scope="col">Manufacturer</th>
-              <th scope="col">Start date</th>
-              <th scope="col">End date</th>
+              <th scope="col">B.no</th>
+              <th scope="col">Ex.date</th>
+              <th scope="col">Action</th>
              
       
             </tr>
           </thead>
-          <tbody>
-            <tr>
-                <td>Corona</td>
-                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eaque dolores corporis soluta assumenda expedita!</td>
-                <td>Albion</td>
-                <td>02/07/2023</td>
-                <td>01/08/2025</td>
-              
-            </tr>
-            <tr>
-                <td>Hapetaitis B</td>
-                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eaque dolores corporis soluta assumenda expedita!</td>
-                <td>Aristo</td>
-                <td>02/07/2023</td>
-                <td>01/08/2025</td>
-              
-            </tr>
+          <tbody class="bor" id="vaccine-container">
+            
           </tbody>
          
         </table>

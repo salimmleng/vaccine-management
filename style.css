@@ -104,3 +104,24 @@ li{
     transition: 0.5s ease;
     cursor: pointer;
 }
+.bor{
+    border: 1px solid rgb(209, 207, 207);
+   
+}
+.bord{
+    border: 1px solid rgb(209, 207, 207);
+    background-color: rgb(214, 212, 212);
+    
+   
+}
+.td-design{
+    background-color: darkgoldenrod
+
+}
+.edit{
+    padding: 16px 32px;
+    background-color: #F3745B;
+    border-radius: 5px;
+}
+
+
