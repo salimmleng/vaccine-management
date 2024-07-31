@@ -24,9 +24,78 @@
 
     </header>
 
-    <!-- profile info section -->
+   
+
+    <!-- add vaccine -->
+    <div class="container mt-5">
+     
+          <div class="w-75 mx-auto">
+              <div class="card ">
+                  <div class="card-header bg-info text-white">
+                      <h1 class="card-title text-center">Add vaccine</h1>
+                  </div>
+                  <div class="card-body">
+                    <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          required
+                          name="name"
+                        />
+                      </div>
+            
+                      <div class="mb-3">
+                        <label  for="manufacturer" class="form-label">Manufacturer</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="manufacturer"
+                          required
+                          name="manufacturer"
+                        />
+                      </div>
+            
+                      <div class="mb-3">
+                        <label for="batch_number" class="form-label">Batch Number</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="batch_number"
+                          required
+                          name="batch_number"
+                        />
+                      </div>
+            
+                      <div class="mb-3">
+                        <label for="expiry_date" class="form-label">Expiry date</label>
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="expiry_date"
+                          required
+                          name="expiry_date"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                          <label for="image" class="form-label">Vaccine Image</label>
+                          <input type="file" class="form-control" id="image" name="image" accept="image/*" />
+                      </div>
+
+
+                      <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    </form>
+                  </div>
+              </div>
+          </div>
+  </div>
     
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-6 container p-5">
             <div class="card profile" style="width: 18rem;">
                 <img class="dash-img m-auto" src="static/images/dashboard.png" 
@@ -137,7 +206,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
        <!-- Edit Modal  -->
 
@@ -270,7 +339,7 @@
     <script src="auth.js"></script>
     <script src="navber.js"></script>
     <script src="profile.js"></script>
-    <script src="add_vaccine.js"></script>
+    <script src="campaign.js"></script>
 </body>
 
 </html>

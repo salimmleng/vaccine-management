@@ -21,65 +21,47 @@
 
         <!-- Navbar  -->
         <div id="navbar"></div>
+        <div id="navbar1"></div>
+
 
     </header>
 
     
-    <!-- Add vaccine Form -->
+    <!-- vaccine campaign for doctor -->
 
-    <div class="mx-auto w-75 mt-5 ">
-        <h3 class=" text-center my-2">Edit vaccine page</h3>
-        <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4 bord">
-            <div class="mb-3">
-                <label for="name" class="form-label mx-2">Name</label>
-                <input
-                type="text"
-                class="form-control profile-body "
-                id="name"
-                required
-                name="name"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label  for="manufacturer" class="form-label mx-2">Manufacturer</label>
-                <input
-                type="text"
-                class="form-control profile-body"
-                id="manufacturer"
-                required
-                name="manufacturer"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label for="batch_number" class="form-label mx-2">Batch Number</label>
-                <input
-                type="text"
-                class="form-control profile-body"
-                id="batch_number"
-                required
-                name="batch_number"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label for="expiry_date" class="form-label mx-2">Expiry date</label>
-                <input
-                type="date"
-                class="form-control profile-body"
-                id="expiry_date"
-                required
-                name="expiry_date"
-                />
-            </div>
+
+    <div class='container my-5'>
+        <body>
+        <div class="d-flex justify-content-around">
+          <div>
+            <h2 class="pb-3">Manage Vaccine</h2>
+          </div>
+          <div>
+            <button class="edit-btn btn"><a href="add_vaccine.html" class="mt-1 text-decoration-none text-dark"> Add vaccine</a></button>
+          </div>
+        </div>
+        </body>
+      
+        <table class="table">
+          <thead class="table-danger">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Vaccine name</th>
+              <th scope="col">Manufacturer</th>
+              <th scope="col">B.no</th>
+              <th scope="col">Ex.date</th>
+              <th scope="col">Action</th>
+             
+      
+            </tr>
+          </thead>
+          <tbody class="bor" id="campaign-container">
             
-            <button type="submit" class="btn btn-primary mx-2 my-2">Edit vaccine</button>
-            
-        </form>
+          </tbody>
+         
+        </table>
       </div>
 
-    
 
 
     <!-- Footer -->
@@ -133,11 +115,14 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
-        defer></script>
+    defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
     <script src="auth.js"></script>
     <script src="navber.js"></script>
     <script src="campaign.js"></script>
 </body>
 
 </html>
+
+

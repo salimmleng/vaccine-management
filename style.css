@@ -123,5 +123,20 @@ li{
     background-color: #F3745B;
     border-radius: 5px;
 }
+.edit-btn{
+    padding: 4px 8px;
+    background-color: white;
+    box-shadow: 0px 3px 6px ;
+    
+
+}
+.prof{
+    background-color: rgb(230, 223, 223);
+    width: 80%;
+    height: 43px;
+    border-radius: 5px;
+    padding: 8px;
+    padding-right: 10px;
+}
 
 
