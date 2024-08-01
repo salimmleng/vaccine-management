@@ -95,7 +95,7 @@ const UpdateProfile = (event) => {
       .then((data) => {
        
         alert("Profile updated successfully")
-        window.location.href = "./doc_profile.html";
+        window.location.href = "profile.html";
              
       });
       

@@ -1,5 +1,11 @@
 const getAllvaccines = () => {
-    fetch("http://127.0.0.1:8000/doctor/api/vaccines/")
+    const token = localStorage.getItem("token");
+    fetch("http://127.0.0.1:8000/api/vaccines/",{
+        headers: {
+            Authorization: `Token ${token}`,
+          },
+
+    })
         .then((res) => res.json())
         .then((vaccines) => {
             console.log(vaccines)
@@ -49,8 +55,15 @@ const getQueryParams = (param) => {
 
   const getVaccineDetail = () => {
     const vaccineId = getQueryParams("id");
+    const token = localStorage.getItem("token");
     console.log(vaccineId)
-    fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`)
+    fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`,{
+        method: "GET",
+        headers: {
+            Authorization: `Token ${token}`,
+          },
+
+    })
         .then((res) => res.json())
         .then((vaccine) => {
             console.log(vaccine)
@@ -136,7 +149,7 @@ const getQueryParams = (param) => {
 
     // Function to fetch and populate vaccines
     function fetchVaccines() {
-        fetch(`http://127.0.0.1:8000/doctor/api/vaccines/${vaccineId}/`, {  // Assuming you have an endpoint for vaccines
+        fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`, {  // Assuming you have an endpoint for vaccines
             headers: {
                 'Authorization': `Bearer ${token}`
             }

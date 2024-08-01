@@ -27,7 +27,59 @@
     <!-- dose container -->
 
     
+    <div class="mx-auto w-75 mt-5 ">
+        <h3 class=" text-center my-3">Vaccination form</h3>
+        <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4 bord">
+            <div class="mb-3">
+                <label for="name" class="form-label mx-2">Name</label>
+                <input
+                type="text"
+                class="form-control profile-body "
+                id="name"
+                required
+                name="name"
+                />
+            </div>
+    
+            <div class="mb-3">
+                <label  for="manufacturer" class="form-label mx-2">Manufacturer</label>
+                <input
+                type="text"
+                class="form-control profile-body"
+                id="manufacturer"
+                required
+                name="manufacturer"
+                />
+            </div>
+    
+            <div class="mb-3">
+                <label for="batch_number" class="form-label mx-2">Batch Number</label>
+                <input
+                type="text"
+                class="form-control profile-body"
+                id="batch_number"
+                required
+                name="batch_number"
+                />
+            </div>
+    
+            <div class="mb-3">
+                <label for="expiry_date" class="form-label mx-2">Expiry date</label>
+                <input
+                type="date"
+                class="form-control profile-body"
+                id="expiry_date"
+                required
+                name="expiry_date"
+                />
+            </div>
+            
+            <button type="submit" class="btn btn-primary mx-2 my-2">Edit vaccine</button>
+            
+        </form>
+      </div>
 
+    
 
     
     <!-- Footer -->
