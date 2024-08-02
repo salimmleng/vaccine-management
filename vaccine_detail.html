@@ -106,6 +106,7 @@
 
    <!-- add dose -->
 
+<!-- 
    <div
    class="modal fade"
    id="addModal"
@@ -126,28 +127,77 @@
        </div>
        <div class="modal-body">
         <form id="bookingForm" class="pt-4">
-            <div class="mb-3">
-            <label class="mb-1" for="vaccine">Vaccine</label>
-            <select name="vaccine" class="select form-select"  id="vaccine" required>
-            </select>
-            </div>
 
+          <div class="mb-3">
+            <label for="hospital_name" class="form-label">Hospital Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="hospital_name"
+              name="hospital_name"
+            />
+          </div>
 
-            <div class="mb-3">
-              <label class="mb-1" for="scheduled_date">Choose a date :</label>
-              <select id="scheduled_date" name="scheduled_date" class="select form-select" required>
-                
-            </select>
-            </div>
+          <div class="mb-3">
+            <label for="mobile_no" class="form-label">Mobile No</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mobile_no"
+              name="mobile_no"
+            />
+          </div>
+           
+           
 
-            <button class="btn btn-success" type="submit">Submit</button>
+            <button onclick="handleTakeVaccine()" class="btn btn-success" type="submit">Take vaccine</button>
           </form>
-          <div id="message"></div>
+        
        </div>
      </div>
    </div>
  </div>
- 
+  -->
+
+ <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Book first dose</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="bookingForm" class="pt-4">
+                  
+                  <div class="mb-3">
+                      <label for="dose_number" class="form-label">Dose Number</label>
+                      <input type="number" class="form-control" id="dose_number" name="dose_number" required />
+                  </div>
+                  <div class="mb-3">
+                      <label for="date-container" class="form-label">Scheduled Date</label>
+                      <select type="date" id="date-container" class="select form-select" name="date-container">
+
+                      </select>
+                  </div>
+                 
+                  <div class="mb-3">
+                      <label for="center-container" class="form-label">Vaccine center</label>
+                      <select type="text" id="center-container" class="select form-select" name="center-container">
+
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                      <label for="mobile_no" class="form-label">Mobile No</label>
+                      <input type="text" class="form-control" id="mobile_no" name="mobile_no" value="00" required />
+                  </div>
+                  <button type="submit" class="btn btn-success">Take vaccine</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
     <!-- Footer -->
     <footer class="mt-5 foot">
         <div class="container m-auto p-5 row gap-0">
