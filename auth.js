@@ -70,6 +70,7 @@ const handleLogin =(event) =>{
         console.log(data);
         localStorage.setItem('token', data.token)
         localStorage.setItem('user_id', data.user_id)
+        localStorage.setItem('userRole',data.user_role)
         window.location.href = 'index.html'   
       })
 
@@ -91,6 +92,7 @@ const handleLogout = () => {
       console.log(data);
       localStorage.removeItem("token");
       localStorage.removeItem("user_id");
+      localStorage.removeItem("userRole");
       window.location.href = "index.html";
     });
 };

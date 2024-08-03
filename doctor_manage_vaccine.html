@@ -19,68 +19,72 @@
 <body>
     <header>
 
-    <!-- Navbar  -->
-    <div id="navbar"></div>
+        <!-- Navbar  -->
+        <div id="navbar"></div>
 
     </header>
+
+    <!-- profile info section -->
     
-    <!-- dose container -->
+    <div class="row">
+        <div class="col-md-3 container p-5">
+            <div class="card profile" style="width: 18rem;">
+                <img class="dash-img m-auto" src="static/images/dashboard.png" 
+                class="card-img-top" alt="...">
+                <h3 class="text-center text-danger">Doctor dashboard</h3>
+                <hr>
+                <div class="card-body">
+                    <div class="d-flex gap-3 mb-4">
+                        <div> <img class="pro-img" src="static/images/profile_4466498.png" alt=""></div> 
+                        <div><a href="doc_profile.html" class="mt-1 text-decoration-none"> Profile</a></div>
+                       </div>
+
+                       <div class="d-flex gap-3 mb-4">
+                        <div> <img class="pro-img" src="static/images/resume.png" alt=""></div> 
+                        <div><a href="doc_patient_info.html" class="mt-1 text-decoration-none">Patient details</a></div>
+
+                       </div>
+                       
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            <div class='container my-5'>
+                <body>
+                  <h2 class="text-center pb-3">All patient's vaccine info</h2>
+                </body>
+              
+                <table class="table">
+                  <thead class='table-info'>
+                    <tr>
+                      
+                      <th scope="col">Mobile</th>
+                      
+                      <th scope="col">Vaccine name</th>
+                      <th scope="col">Vaccine center</th>
+                      <th scope="col">Vaccine status</th>
+                      
+
+                      <th scope="col">Action</th>
+
+                     
+              
+                    </tr>
+                  </thead>
+                  <tbody class="bor" id="table-body">
+                    
+                  </tbody>
+                 
+                </table>
+              </div>
+
+
+        </div>
+
+    </div>
 
     
-    <div class="mx-auto w-75 mt-5 ">
-        <h3 class=" text-center my-3">Vaccination form</h3>
-        <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4 bord">
-            <div class="mb-3">
-                <label for="name" class="form-label mx-2">Name</label>
-                <input
-                type="text"
-                class="form-control profile-body "
-                id="name"
-                required
-                name="name"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label  for="manufacturer" class="form-label mx-2">Manufacturer</label>
-                <input
-                type="text"
-                class="form-control profile-body"
-                id="manufacturer"
-                required
-                name="manufacturer"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label for="batch_number" class="form-label mx-2">Batch Number</label>
-                <input
-                type="text"
-                class="form-control profile-body"
-                id="batch_number"
-                required
-                name="batch_number"
-                />
-            </div>
-    
-            <div class="mb-3">
-                <label for="expiry_date" class="form-label mx-2">Expiry date</label>
-                <input
-                type="date"
-                class="form-control profile-body"
-                id="expiry_date"
-                required
-                name="expiry_date"
-                />
-            </div>
-            
-            <button type="submit" class="btn btn-primary mx-2 my-2">Edit vaccine</button>
-            
-        </form>
-      </div>
-
-    
-
     
     <!-- Footer -->
     <footer class="mt-5 foot">
@@ -137,7 +141,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="auth.js"></script>
     <script src="navber.js"></script>
-    <script src="add_vaccine.js"></script>
+    <script src="doctor_manage_dose.js"></script>
+    
 </body>
 
 </html>

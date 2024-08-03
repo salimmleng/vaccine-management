@@ -24,7 +24,7 @@ function fetchUserProfile() {
     })
     .then(data => {
       console.log(data.email)
-      const profileInfo =  document.getElementById("profile")
+      const profileInfo =  document.getElementById("doc_profile")
       profileInfo.innerHTML = `
             <h3>Personal information</h3>
             <img class="docc-img mx-4 my-3" src="static/images/doc-img.png" class="img-fluid rounded-start card-img" alt="...">

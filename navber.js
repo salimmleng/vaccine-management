@@ -18,7 +18,7 @@ function loadDoctorNavbar() {
 
              <li class="menu text-decoration-none"><a class="text-decoration-none text-dark"
                 href="./campaign.html" class="menu">Campaign</a></li>
-              <a href="profile.html" class="btn btn-success" type="submit">Profile</a>
+              <a href="doc_profile.html" class="btn btn-success" type="submit">Profile</a>
               <a onclick="handleLogout()" class="btn btn-danger" type="submit">Logout</a>
                </div>
               `;
@@ -48,7 +48,7 @@ function loadPatientNavbar() {
                  <div class="d-flex gap-2">
                  <li class="menu text-decoration-none"><a class="text-decoration-none text-dark"
                 href="./vaccine.html" class="menu">Vaccine list</a></li>
-                 <a href="profile.html" class="btn btn-success" type="submit">Profile</a>
+                 <a href="patient_profile.html" class="btn btn-success" type="submit">Profile</a>
                 <a onclick="handleLogout()" class="btn btn-danger" type="submit">Logout</a>
                </div>
               `;
