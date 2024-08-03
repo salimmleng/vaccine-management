@@ -159,15 +159,8 @@ const loadHospitalname = ()=>{
 
 }
 
+
 loadHospitalname()
-
-
-
-
-
-
-
-
 
 
 
@@ -176,9 +169,8 @@ const handleTakeVaccine=(event)=>{
     event.preventDefault();
     const vaccine = getQueryParams("id");
     const mobile = document.getElementById("mobile_no").value
-    const dose_number = document.getElementById("dose_number").value
-    const date = document.getElementById("date-container")
-    const selectedDate = date.options[date.selectedIndex]
+    const firstDose_date = document.getElementById("date-container")
+    const selectedDate = firstDose_date.options[firstDose_date.selectedIndex]
     const center = document.getElementById("center-container")
     const selectedCenter = center.options[center.selectedIndex]
     const patientID = localStorage.getItem("user_id")
@@ -187,30 +179,60 @@ const handleTakeVaccine=(event)=>{
     const info ={
       user: patientID,
       vaccine_status: "Pending",
-      date: selectedDate.value,
+      firstDose_date_id: parseInt(selectedDate.value),
       mobile_no: mobile,
-      dose_number: dose_number,
-      vaccine_center: selectedCenter.value,
+      vaccine_center_id: parseInt(selectedCenter.value),
       cancel: false,
-      vaccine: vaccine,
+      vaccine_id: parseInt(vaccine),
 
 
     }
-    console.log(info)
+    
+    console.log(JSON.stringify(info))
+    
+    const token = localStorage.getItem("token");
     fetch("http://127.0.0.1:8000/vaccine/api/doses/", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "application/json",
+             Authorization: `Token ${token}`,
+       },
       body: JSON.stringify(info),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        
+        showAlert("First dose scheduled successfully!", "success");
+        $("#addModal").modal("hide");
+         
       });
+      
      
-
-
 }
+// const showAlert = (message, type) => {
+//   const alertContainer = document.getElementById("alert-container");
+//   alertContainer.innerHTML = `
+//       <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+//           ${message}
+//           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+//       </div>
+//   `;
+//   setTimeout(() => {
+//       alertContainer.innerHTML = ''; // Clear the alert after a few seconds
+//   }, 5000);
+// };
+
+
+const showAlert = (message, type) => {
+  const alertContainer = document.getElementById("alert-container");
+  alertContainer.innerHTML = `
+      <div class="custom-alert ${type}">
+          ${message}
+          <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+      </div>
+  `;
+};
+
+
 document.getElementById("bookingForm").addEventListener("submit", handleTakeVaccine);
 
 
