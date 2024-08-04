@@ -43,6 +43,7 @@ const loadAllDoses = () => {
 
   const completeDose = (doseId, element) => {
     const token = localStorage.getItem("token");
+    console.log(doseId)
     fetch(`http://127.0.0.1:8000/vaccine/api/doses/${doseId}/`, {
       method: "PATCH",
       headers: {

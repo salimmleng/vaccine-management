@@ -68,10 +68,20 @@ const handleLogin =(event) =>{
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        localStorage.setItem('token', data.token)
-        localStorage.setItem('user_id', data.user_id)
-        localStorage.setItem('userRole',data.user_role)
-        window.location.href = 'index.html'   
+        
+        if (data.token && data.user_role) {
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user_id', data.user_id);
+          localStorage.setItem('userRole', data.user_role);
+          window.location.href = 'index.html';
+        } else {
+          console.error("Login failed: user_role not found");
+          alert("Login failed: user_role not found");
+        }
+        // localStorage.setItem('token', data.token)
+        // localStorage.setItem('user_id', data.user_id)
+        // localStorage.setItem('userRole',data.user_role)
+        // window.location.href = 'index.html'   
       })
 
 }
