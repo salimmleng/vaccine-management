@@ -1,51 +1,106 @@
-const getAllvaccines = () => {
-    const token = localStorage.getItem("token");
-    fetch("http://127.0.0.1:8000/api/vaccines/",{
-        headers: {
-            Authorization: `Token ${token}`,
-          },
+// const getAllvaccines = () => {
+//     const token = localStorage.getItem("token");
+//     fetch("http://127.0.0.1:8000/api/vaccines/",{
+//         // headers: {
+//         //     Authorization: `Token ${token}`,
+//         //   },
 
-    })
-        .then((res) => res.json())
-        .then((vaccines) => {
-            console.log(vaccines)
+//     })
+//         .then((res) => res.json())
+//         .then((vaccines) => {
+//             console.log(vaccines)
             
-            const allvaccines = document.getElementById("vaccine-container")
-            vaccines.forEach((vaccine) => {
-                console.log(vaccine)
-                const div = document.createElement("div")
-                div.classList.add("card", "m-2")
-                div.style.maxWidth = "570px"
-                div.innerHTML = `
-             <div class="row g-0">
-                     <div class="col-md-6">
-                        <img src="static/images/BCG.jpg" class="img-fluid rounded-start card-img" alt="...">
-                     </div>
-                   <div  class="col-md-6">
-                        <div class="card-body">
-                         <h6>Vaccine: ${vaccine.name}</h6>
-                         <h6>Vaccine: ${vaccine.id}</h6>
-                         <h6>Manufacturer: ${vaccine.manufacturer}</h6>
-                         <h6>Batch Number: ${vaccine.batch_number}</h6>
-                         <h6>Expiry date: ${vaccine.expiry_date}</h6>
+//             const allvaccines = document.getElementById("vaccine-container")
+//             vaccines.forEach((vaccine) => {
+//                 console.log(vaccine)
+//                 const div = document.createElement("div")
+//                 div.classList.add("card", "m-2")
+//                 div.style.maxWidth = "570px"
+//                 div.innerHTML = `
+//              <div class="row g-0">
+//                      <div class="col-md-6">
+//                         <img src="static/images/BCG.jpg" class="img-fluid rounded-start card-img" alt="...">
+//                      </div>
+//                    <div  class="col-md-6">
+//                         <div class="card-body">
+//                          <h6>Vaccine: ${vaccine.name}</h6>
+//                          <h6>Vaccine: ${vaccine.id}</h6>
+//                          <h6>Manufacturer: ${vaccine.manufacturer}</h6>
+//                          <h6>Batch Number: ${vaccine.batch_number}</h6>
+//                          <h6>Expiry date: ${vaccine.expiry_date}</h6>
 
-                         <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
+//                          <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
 
-                        </div>
+//                         </div>
                 
-                   </div>
-              </div>
+//                    </div>
+//               </div>
        
                                
-            `
-            allvaccines.appendChild(div)
+//             `
+//             allvaccines.appendChild(div)
 
-            })
+//             })
 
-        })
+//         })
+
+// }
+// getAllvaccines()
+
+
+const getAllvaccines = () => {
+  const token = localStorage.getItem("token");
+  fetch("http://127.0.0.1:8000/api/vaccines/",{
+      // headers: {
+      //     Authorization: `Token ${token}`,
+      //   },
+
+  })
+      .then((res) => res.json())
+      .then((vaccines) => {
+          console.log(vaccines)
+          
+          const allvaccines = document.getElementById("vaccine-container")
+          vaccines.forEach((vaccine) => {
+              console.log(vaccine)
+              const div = document.createElement("div")
+              div.classList.add("col-md-4","mb-4")
+              
+              div.innerHTML = `
+                  <div class="card ">
+                    <img src="static/images/meas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6>Vaccine: ${vaccine.name}</h6>
+                        <h6>Vaccine: ${vaccine.id}</h6>
+                        <h6>Manufacturer: ${vaccine.manufacturer}</h6>
+                        <h6>Batch Number: ${vaccine.batch_number}</h6>
+                        <h6>Expiry date: ${vaccine.expiry_date}</h6>
+                        <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
+                    </div>
+                </div>
+     
+                             
+          `
+          allvaccines.appendChild(div)
+
+          })
+
+      })
 
 }
 getAllvaccines()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,9 +118,9 @@ const getQueryParams = (param) => {
     console.log(vaccineId)
     fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`,{
         method: "GET",
-        headers: {
-            Authorization: `Token ${token}`,
-          },
+        // headers: {
+        //     Authorization: `Token ${token}`,
+        //   },
 
     })
         .then((res) => res.json())
@@ -73,22 +128,12 @@ const getQueryParams = (param) => {
             console.log(vaccine)
             
             const allvaccines = document.getElementById("vaccine_detail-container")
-                const div = document.createElement("div")
-                div.classList.add("card", "m-2")
-                div.style.maxWidth = "570px"
-                div.innerHTML = `
-            <div class="row g-0">
-                     <div class="col-md-6">
-                        <img src="static/images/BCG.jpg" class="img-fluid rounded-start card-img" alt="...">
-                     </div>
-                   <div  class="col-md-6">
-                        <div class="card-body">
-                         <h6>Vaccine: ${vaccine.name}</h6>
-                         <h6>Vaccine: ${vaccine.id}</h6>
-                         <h6>Manufacturer: ${vaccine.manufacturer}</h6>
-                         <h6>Batch Number: ${vaccine.batch_number}</h6>
-                         <h6>Expiry date: ${vaccine.expiry_date}</h6>
+            const div = document.createElement("div")
+              div.classList.add("col-md-4","mb-4")
 
+              let buttonHTML = ""
+               if (token){
+                  buttonHTML = `
                          <button
                             type="button"
                             class="btn btn-info"
@@ -96,17 +141,29 @@ const getQueryParams = (param) => {
                             data-bs-target="#addModal"
                             >
                             Book dose
-                         </button>
-
-                         
-                        </div>
-                
-                   </div>
-              </div>
-       
-                               
-            `
-            allvaccines.appendChild(div)
+                          </button>
+                  `
+               }
+               else{
+                  buttonHTML = '<p><a class="text-decoration-none text-danger" href="Registration.html">Register to book dose</a></p>'
+               }
+              
+              div.innerHTML = `
+                  <div class="card ">
+                    <img src="static/images/meas.jpg" class="card-img-top2" alt="...">
+                    <div class="card-body">
+                        <h6>Vaccine: ${vaccine.name}</h6>
+                        <h6>Vaccine: ${vaccine.id}</h6>
+                        <h6>Manufacturer: ${vaccine.manufacturer}</h6>
+                        <h6>Batch Number: ${vaccine.batch_number}</h6>
+                        <h6>Expiry date: ${vaccine.expiry_date}</h6>
+                        ${buttonHTML}
+                        
+                    </div>
+                </div>
+                       
+          `
+          allvaccines.appendChild(div)
         })
 
 

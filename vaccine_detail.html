@@ -25,139 +25,17 @@
     </header>
 
     <!-- vaccine detail -->
-
-    <div class="d-flex flex-wrap justify-content-center" id="vaccine_detail-container">
+  <div class="">
+   <div class="container my-5">
+    <div id="vaccine_detail-container" class="d-flex justify-content-center">
+       
     </div>
 
-   
-     <!-- Edit Modal  -->
-
-     <!-- <div
-     class="modal fade"
-     id="editModal"
-     tabindex="-1"
-     aria-labelledby="exampleModalLabel"
-     aria-hidden="true"
-   >
-     <div class="modal-dialog">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-           <button
-             type="button"
-             class="btn-close"
-             data-bs-dismiss="modal"
-             aria-label="Close"
-           ></button>
-         </div>
-         <div class="modal-body">
-           <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input
-                    type="text"
-                    class="form-control profile-body"
-                    id="name"
-                    required
-                    name="name"
-                    />
-                </div>
-        
-                <div class="mb-3">
-                    <label  for="manufacturer" class="form-label">Manufacturer</label>
-                    <input
-                    type="text"
-                    class="form-control profile-body"
-                    id="manufacturer"
-                    required
-                    name="manufacturer"
-                    />
-                </div>
-        
-                <div class="mb-3">
-                    <label for="batch_number" class="form-label">Batch Number</label>
-                    <input
-                    type="text"
-                    class="form-control profile-body"
-                    id="batch_number"
-                    required
-                    name="batch_number"
-                    />
-                </div>
-        
-                <div class="mb-3">
-                    <label for="expiry_date" class="form-label">Expiry date</label>
-                    <input
-                    type="date"
-                    class="form-control profile-body"
-                    id="expiry_date"
-                    required
-                    name="expiry_date"
-                    />
-                </div>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Edit vaccine</button>
-                </div>
-            </form>
-         </div>
-       </div>
-     </div>
-   </div> -->
-
-   <!-- add dose -->
-
-<!-- 
-   <div
-   class="modal fade"
-   id="addModal"
-   tabindex="-1"
-   aria-labelledby="exampleModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">Book first dose</h5>
-         <button
-           type="button"
-           class="btn-close"
-           data-bs-dismiss="modal"
-           aria-label="Close"
-         ></button>
-       </div>
-       <div class="modal-body">
-        <form id="bookingForm" class="pt-4">
-
-          <div class="mb-3">
-            <label for="hospital_name" class="form-label">Hospital Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="hospital_name"
-              name="hospital_name"
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="mobile_no" class="form-label">Mobile No</label>
-            <input
-              type="text"
-              class="form-control"
-              id="mobile_no"
-              name="mobile_no"
-            />
-          </div>
-           
-           
-
-            <button onclick="handleTakeVaccine()" class="btn btn-success" type="submit">Take vaccine</button>
-          </form>
-        
-       </div>
-     </div>
    </div>
- </div>
-  -->
+
+
+   
+    <!-- handle book dose -->
 
  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -197,6 +75,9 @@
     <div id="alert-container" class="custom-alert-container">
       <!-- Alert messages will be inserted here -->
   </div>
+
+</div>
+
     <!-- Footer -->
     <footer class="mt-5 foot">
         <div class="container m-auto p-5 row gap-0">

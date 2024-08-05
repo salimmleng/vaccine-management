@@ -17,21 +17,19 @@ const loadAllDoses = () => {
           const tr = document.createElement("tr");
           tr.id = `dose-row-${item.id}`;
           tr.innerHTML = `
-             
+              <td class="table-success">${item.user.first_name}</td>
               <td class="table-success">${item.mobile_no}</td>
+              <td class="table-success">${item.user.nid}</td>
               <td class="table-success">${item.vaccine.name}</td>
               <td class="table-success">${item.vaccine_center.name}</td>
               <td class="table-success">${item.vaccine_status}</td>
               
               ${
                 item.vaccine_status == "Pending"
-                ? `<td class="text-danger table-success "><a style="cursor: pointer;" onclick="completeDose(${item.id}, this)">complete</a></td>`
+                ? `<td class="text-danger table-success "><a style="cursor: pointer;" onclick="completeDose(${item.id}, this)">Accept</a></td>`
                  : `<td class="table-success" >✔</td>`
               }
-             
-
-             
-             
+      
               `;
           parent.appendChild(tr);
         });

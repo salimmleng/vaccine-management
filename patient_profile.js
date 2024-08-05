@@ -27,7 +27,7 @@ function fetchUserProfile() {
       const profileInfo =  document.getElementById("patient_profile")
       profileInfo.innerHTML = `
             <h3>Personal information</h3>
-            <img class="docc-img mx-4 my-3" src="static/images/doc-img.png" class="img-fluid rounded-start card-img" alt="...">
+            <img class="docc-img mx-4 my-3" src="static/images/pat-img.png" class="img-fluid rounded-start card-img" alt="...">
             <h5>User ID</h5>
             <h6 class="prof">${data.id}</h6>
             <h5>Full name</h5>

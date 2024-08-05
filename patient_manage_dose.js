@@ -29,7 +29,7 @@ const loadAllDoses = () => {
               
              ${
                 item.vaccine_status == "Pending"
-                ? `<td class="table-success "><a onclick="deleteVaccine(${item.id})">❌</a></td>`
+                ? `<td class="table-success "><a class="text-danger text-decoration-none " style="cursor: pointer;" onclick="deleteVaccine(${item.id})">Cancel</a></td>`
                  : `<td class="table-success" >✔</td>`
               }
              
