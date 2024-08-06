@@ -25,13 +25,94 @@
     </header>
 
     <!-- vaccine detail -->
-  <div class="">
+  
    <div class="container my-5">
     <div id="vaccine_detail-container" class="d-flex justify-content-center">
        
     </div>
 
    </div>
+
+   <!-- Review section -->
+    
+
+   <h2 class="text-center text-danger">Patient's review</h2>
+
+   <div class="container gap-2 my-5">
+    <div class="row" id="review-container">
+        <div class="col-md-4 mb-4">
+            <div class=" card mb-4">
+                <img src="static/images/vac-img6.jfif" class="card-img-top2" alt="...">
+                <div class="card-body">
+                    <h6>Reviewer: Salim hossain</h6>
+                    <h6>Review: This vacine is very helpful</h6>   
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class=" card mb-4">
+                <img src="static/images/vac-img4.jpg" class="card-img-top2" alt="...">
+                <div class="card-body">
+                    <h6>Reviewer: Almina akther</h6>
+                    <h6>Review: This vacine is very helpful</h6>   
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class=" card mb-4">
+                <img src="static/images/vac-img7.jpeg" class="card-img-top2" alt="...">
+                <div class="card-body">
+                    <h6>Reviewer: Moslema khatun</h6>
+                    <h6>Review: This vacine is very helpful</h6>   
+                    
+                </div>
+            </div>
+
+        </div>
+        
+
+       
+    </div>
+
+  </div>
+
+  <!-- leave review section -->
+
+  <div class="mx-auto w-75 mt-5 ">
+    <h3 class=" text-center mb-3">Leave review</h3>
+    <form id="review-vaccine" onsubmit="reviewVaccine(event)" class="pt-4 bord">
+        <div class="mb-3">
+            <label for="name" class="form-label mx-2">Name</label>
+            <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            name="name"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="review" class="form-label mx-2">Review</label>
+            <input
+            type="text-field"
+            class="form-control"
+            id="review"
+            required
+            name="review"
+            />
+        </div>
+        
+        <button type="submit" class="btn btn-primary mx-2 my-2">Submit</button>
+        
+    </form>
+  </div>
+
+
+
+
 
 
    
@@ -76,7 +157,7 @@
       <!-- Alert messages will be inserted here -->
   </div>
 
-</div>
+
 
     <!-- Footer -->
     <footer class="mt-5 foot">
