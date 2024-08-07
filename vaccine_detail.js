@@ -221,19 +221,6 @@ const handleTakeVaccine=(event)=>{
       
      
 }
-// const showAlert = (message, type) => {
-//   const alertContainer = document.getElementById("alert-container");
-//   alertContainer.innerHTML = `
-//       <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-//           ${message}
-//           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-//       </div>
-//   `;
-//   setTimeout(() => {
-//       alertContainer.innerHTML = ''; // Clear the alert after a few seconds
-//   }, 5000);
-// };
-
 
 const showAlert = (message, type) => {
   const alertContainer = document.getElementById("alert-container");
@@ -248,5 +235,38 @@ const showAlert = (message, type) => {
 
 document.getElementById("bookingForm").addEventListener("submit", handleTakeVaccine);
 
+// review section
 
 
+const submitReview = (event) => {
+  event.preventDefault();
+  const rating = document.getElementById("rating").value;
+  const comment = document.getElementById("comment").value;
+  const vaccineId = getQueryParams("id");
+  const token = localStorage.getItem("token");
+
+  fetch("http://127.0.0.1:8000/vaccine/reviews/", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+          Authorization: `Token ${token}`,
+      },
+      body: JSON.stringify({
+          vaccine: vaccineId,
+          rating: rating,
+          comment: comment,
+      }),
+  })
+  .then((res) => res.json())
+  .then((data) => {
+      console.log(data);
+      // alert("Review submitted successfully!");
+      document.getElementById("review-form").reset();
+  })
+  .catch((error) => {
+      console.error("Error:", error);
+      alert("Failed to submit review. Please try again.");
+  });
+};
+
+document.getElementById("review-form").addEventListener("submit", submitReview);

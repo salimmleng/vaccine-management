@@ -238,15 +238,16 @@ li{
 
 
 /*  navigation links */
-#nav-element a::after {
+/* Target only the navigation links within the nav-element */
+#nav-element .nav-link::after {
     content: '';
     display: block;
     width: 0;
     height: 4px;
-    background: gray; 
-    transition: width .3s;
+    background: red; 
+    transition: width 0.3s;
 }
 
-#nav-element a:hover::after, #nav-element a.active::after {
-    width: 100%; 
+#nav-element .nav-link:hover::after, #nav-element .nav-link.active::after {
+    width: 100%; /* Underline the entire width of the link */
 }
