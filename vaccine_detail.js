@@ -20,7 +20,7 @@ const getAllvaccines = () => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="static/images/meas.jpg" class="card-img-top" alt="...">
+                    <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                         <h6>Vaccine: ${vaccine.name}</h6>
                         <h6>Vaccine ID: ${vaccine.id}</h6>
@@ -102,7 +102,7 @@ const getQueryParams = (param) => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="static/images/meas.jpg" class="card-img-top2" alt="...">
+                    <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                         <h6>Vaccine: ${vaccine.name}</h6>
                         <h6>Vaccine: ${vaccine.id}</h6>
@@ -216,6 +216,8 @@ const handleTakeVaccine=(event)=>{
         console.log(data);
         showAlert("First dose scheduled successfully!", "success");
         $("#addModal").modal("hide");
+        localStorage.setItem(`bookedDose_${vaccine}`, "true");  // store dose id
+        displayReviewForm();
          
       });
       
@@ -232,18 +234,61 @@ const showAlert = (message, type) => {
   `;
 };
 
-
 document.getElementById("bookingForm").addEventListener("submit", handleTakeVaccine);
+
+
+// display review form
+
+const displayReviewForm = () => {
+  const vaccineId = getQueryParams("id");
+  const formContainer = document.getElementById("review-form-container");
+
+  const hasBookedDose = localStorage.getItem(`bookedDose_${vaccineId}`) === "true";
+
+  if (hasBookedDose) {
+    formContainer.innerHTML = `
+      <div class="mx-auto w-75 mt-5">
+        <h3 class="text-center my-2">Review this vaccine</h3>
+        <form id="review-form" class="pt-2 bord" onsubmit="submitReview(event)">
+          <div class="mb-3">
+            <label for="rating" class="form-label mx-2">Rating</label>
+            <select id="rating" class="form-select" required>
+              <option value="⭐">⭐</option>
+              <option value="⭐⭐">⭐⭐</option>
+              <option value="⭐⭐⭐">⭐⭐⭐</option>
+              <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+              <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="comment" class="form-label mx-2">Comment</label>
+            <textarea class="form-control" id="comment" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mx-2 my-2">Submit</button>
+        </form>
+      </div>
+    `;
+  } else {
+    formContainer.innerHTML = "<p class='text-center fw-bold'>You must book a dose before submitting a review.</p>";
+  }
+};
+
+// Call displayReviewForm to set initial state
+displayReviewForm();
+
 
 // review section
 
 
 const submitReview = (event) => {
   event.preventDefault();
+  const reviewerID = localStorage.getItem("user_id")
   const rating = document.getElementById("rating").value;
   const comment = document.getElementById("comment").value;
   const vaccineId = getQueryParams("id");
   const token = localStorage.getItem("token");
+
+  
 
   fetch("http://127.0.0.1:8000/vaccine/reviews/", {
       method: "POST",
@@ -252,7 +297,8 @@ const submitReview = (event) => {
           Authorization: `Token ${token}`,
       },
       body: JSON.stringify({
-          vaccine: vaccineId,
+          reviewer: reviewerID,
+          vaccine_id: parseInt(vaccineId),
           rating: rating,
           comment: comment,
       }),
@@ -261,7 +307,7 @@ const submitReview = (event) => {
   .then((data) => {
       console.log(data);
       // alert("Review submitted successfully!");
-      document.getElementById("review-form").reset();
+     
   })
   .catch((error) => {
       console.error("Error:", error);
@@ -269,4 +315,73 @@ const submitReview = (event) => {
   });
 };
 
-document.getElementById("review-form").addEventListener("submit", submitReview);
+// display review
+
+const displayReview = () => {
+  const vaccineId = getQueryParams("id");
+  const token = localStorage.getItem("token");
+  console.log(vaccineId)
+  fetch(`http://127.0.0.1:8000/vaccine/reviews/${vaccineId}/`,{
+      method: "GET",
+      headers: {
+          Authorization: `Token ${token}`,
+        },
+
+  })
+      .then((res) => res.json())
+      .then((reviews) => {
+          console.log(reviews)
+
+          const allReviews = document.getElementById("review-container");
+          allReviews.innerHTML = ""; 
+          
+          if (reviews.length === 0) {
+            allReviews.innerHTML = "<p class='text-center fw-bold'>No reviews found for this vaccine.</p>";
+          } else {
+            reviews.forEach((review) => {
+              const div = document.createElement("div");
+              div.classList.add("col-md-4", "mb-4");
+    
+              div.innerHTML = `
+                <div class="card mb-4">
+                  <img src="static/images/vac-icon.png" class="card-img-top2" alt="...">
+                  <div class="card-body">
+                    <h6>Rating: ${review.rating}</h6>
+                    <h6>Reviewer: ${review.reviewer.first_name}</h6>
+                    <h6>Review: ${review.comment}</h6>
+                    <h6>Created at: ${review.created_at}</h6>
+                  </div>
+                </div>
+              `;
+              allReviews.appendChild(div);
+      })
+    }
+
+})
+
+
+}
+displayReview()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
