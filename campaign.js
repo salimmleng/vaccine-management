@@ -50,6 +50,7 @@ const getAllVaccines = () => {
               <td class="table-success">${vaccine.id}</td>
               <td class="table-success">${vaccine.name}</td>
               <td class="table-success">${vaccine.manufacturer}</td>
+              <td class="table-success">${vaccine.age_limit}</td>
               <td class="table-success">${vaccine.batch_number}</td>
               <td class="table-success">${vaccine.expiry_date}</td>
               <td class="table-success"> <a href="./edit_vaccine.html?id=${vaccine.id}" class="btn btn-info ">Edit</a>
@@ -91,6 +92,7 @@ const getVaccineDetail = () => {
       document.getElementById("manufacturer").value = vaccine.manufacturer;
       document.getElementById("batch_number").value = vaccine.batch_number;
       document.getElementById("expiry_date").value = vaccine.expiry_date;
+      document.getElementById("age_limit").value = vaccine.age_limit;
      
     });
 };
@@ -109,6 +111,7 @@ const updateVaccine = (event) => {
       manufacturer: formData.get("manufacturer"),
       batch_number: formData.get("batch_number"),
       expiry_date: formData.get("expiry_date"),
+      age_limit: formData.get("age_limit"),
   };
 
   fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`, {

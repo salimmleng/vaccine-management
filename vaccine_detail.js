@@ -22,11 +22,11 @@ const getAllvaccines = () => {
                   <div class="card ">
                     <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
-                        <h6>Vaccine: ${vaccine.name}</h6>
-                        <h6>Vaccine ID: ${vaccine.id}</h6>
-                        <h6>Manufacturer: ${vaccine.manufacturer}</h6>
-                        <h6>Batch Number: ${vaccine.batch_number}</h6>
-                        <h6>Expiry date: ${vaccine.expiry_date}</h6>
+                        <h6 class="card-title mb-2">Vaccine: ${vaccine.name}</h6>
+                        <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
+                        <p class="card-text">Batch Number: ${vaccine.batch_number}</p>
+                        <p class="card-text">Age limit: ${vaccine.age_limit}</p>
+                        <p class="card-text">Expiry date: ${vaccine.expiry_date}</p>
                         <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
                     </div>
                 </div>
@@ -104,11 +104,11 @@ const getQueryParams = (param) => {
                   <div class="card ">
                     <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
-                        <h6>Vaccine: ${vaccine.name}</h6>
-                        <h6>Vaccine: ${vaccine.id}</h6>
-                        <h6>Manufacturer: ${vaccine.manufacturer}</h6>
-                        <h6>Batch Number: ${vaccine.batch_number}</h6>
-                        <h6>Expiry date: ${vaccine.expiry_date}</h6>
+                       <h6 class="card-title">Vaccine: ${vaccine.name}</h6>
+                        <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
+                        <p class="card-text">Batch Number: ${vaccine.batch_number}</p>
+                        <p class="card-text">Age limit: ${vaccine.age_limit}</p>
+                        <p class="card-text">Expiry date: ${vaccine.expiry_date}</p>
                         ${buttonHTML}
                         
                     </div>
@@ -195,7 +195,6 @@ const handleTakeVaccine=(event)=>{
       firstDose_date_id: parseInt(selectedDate.value),
       mobile_no: mobile,
       vaccine_center_id: parseInt(selectedCenter.value),
-      cancel: false,
       vaccine_id: parseInt(vaccine),
 
 
@@ -269,7 +268,7 @@ const displayReviewForm = () => {
       </div>
     `;
   } else {
-    formContainer.innerHTML = "<p class='text-center fw-bold'>You must book a dose before submitting a review.</p>";
+    formContainer.innerHTML = "<p class='text-center text-warning fw-bold'>You must book a dose before giving a review.</p>";
   }
 };
 

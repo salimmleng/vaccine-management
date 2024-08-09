@@ -27,7 +27,7 @@ const loadAllDoses = () => {
               ${
                 item.vaccine_status == "Pending"
                 ? `<td class="text-danger table-success "><a style="cursor: pointer;" onclick="completeDose(${item.id}, this)">Accept</a></td>`
-                 : `<td class="table-success" >✔</td>`
+                 : `<td class="table-success" >Accepted</td>`
               }
       
               `;
