@@ -34,7 +34,8 @@ function fetchUserProfile() {
             <h6 class="prof">${data.first_name} ${data.last_name}</h6>
             <h5>Email address</h5>
             <h6 class="prof">${data.email}</h6>
-            <a href="./update_profile.html?id=${data.id}" class="btn btn-warning mt-4 mb-3" type="submit">Edit profile</a>
+            <a href="./update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
+            <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-4" type="submit">Change password</a>
               
       `
     })
@@ -95,37 +96,13 @@ const UpdateProfile = (event) => {
       .then((data) => {
        
         alert("Profile updated successfully")
-        window.location.href = "profile.html";
+        window.location.href = "patient_profile.html";
              
       });
       
 };
 
 // update profile end
-
-
-
-
-  
-
-
-// function updateUserProfileDOM(profile) {
-//   const profileElement = document.getElementById('profile');
-//   if (!profileElement) {
-//       console.error('Profile element not found');
-//       return;
-//   }
-
-//   // Assuming profile object has properties: username, email, etc.
-//   profileElement.innerHTML = `
-//       <th scope="row">${profile.username}</th>
-//       <td>${profile.email}</td>
-//       <td>${profile.role}</td>
-//       <td>${profile.nid}</td>
-//       <td>❌</td>
-//   `;
-// }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   fetchUserProfile();

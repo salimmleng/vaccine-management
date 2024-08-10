@@ -34,7 +34,7 @@ function fetchUserProfile() {
             <h6 class="prof">${data.first_name} ${data.last_name}</h6>
             <h5>Email address</h5>
             <h6 class="prof">${data.email}</h6>
-            <a href="./update_profile.html?id=${data.id}" class="btn btn-warning mt-4 mb-3" type="submit">Edit profile</a>
+            <a href="./update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
               
       `
     })
@@ -53,7 +53,13 @@ const getQueryParams = (param) => {
 
 const getProfileDetail = () => {
   const profileId = getQueryParams("id");
-  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`)
+  const token = localStorage.getItem('token');
+  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`,{
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`
+    }
+  })
     .then((res) => res.json())
     .then((data) => {
       
@@ -95,37 +101,13 @@ const UpdateProfile = (event) => {
       .then((data) => {
        
         alert("Profile updated successfully")
-        window.location.href = "profile.html";
+        window.location.href = "doc_profile.html";
              
       });
       
 };
 
 // update profile end
-
-
-
-
-  
-
-
-// function updateUserProfileDOM(profile) {
-//   const profileElement = document.getElementById('profile');
-//   if (!profileElement) {
-//       console.error('Profile element not found');
-//       return;
-//   }
-
-//   // Assuming profile object has properties: username, email, etc.
-//   profileElement.innerHTML = `
-//       <th scope="row">${profile.username}</th>
-//       <td>${profile.email}</td>
-//       <td>${profile.role}</td>
-//       <td>${profile.nid}</td>
-//       <td>❌</td>
-//   `;
-// }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   fetchUserProfile();

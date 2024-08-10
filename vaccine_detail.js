@@ -22,12 +22,12 @@ const getAllvaccines = () => {
                   <div class="card ">
                     <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
-                        <h6 class="card-title mb-2">Vaccine: ${vaccine.name}</h6>
+                        <h6 class="card-title mb-2 v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
                         <p class="card-text">Batch Number: ${vaccine.batch_number}</p>
                         <p class="card-text">Age limit: ${vaccine.age_limit}</p>
                         <p class="card-text">Expiry date: ${vaccine.expiry_date}</p>
-                        <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-primary" type="submit">Show details</a>
+                        <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-custom" type="submit">Show details</a>
                     </div>
                 </div>
      
@@ -88,7 +88,7 @@ const getQueryParams = (param) => {
                   buttonHTML = `
                          <button
                             type="button"
-                            class="btn btn-info"
+                            class="btn btn-outline-custom"
                             data-bs-toggle="modal"
                             data-bs-target="#addModal"
                             >
@@ -104,7 +104,7 @@ const getQueryParams = (param) => {
                   <div class="card ">
                     <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
-                       <h6 class="card-title">Vaccine: ${vaccine.name}</h6>
+                       <h6 class="card-title v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
                         <p class="card-text">Batch Number: ${vaccine.batch_number}</p>
                         <p class="card-text">Age limit: ${vaccine.age_limit}</p>
@@ -247,7 +247,7 @@ const displayReviewForm = () => {
   if (hasBookedDose) {
     formContainer.innerHTML = `
       <div class="mx-auto w-75 mt-5">
-        <h3 class="text-center my-2">Review this vaccine</h3>
+        
         <form id="review-form" class="pt-2 bord" onsubmit="submitReview(event)">
           <div class="mb-3">
             <label for="rating" class="form-label mx-2">Rating</label>
@@ -263,12 +263,12 @@ const displayReviewForm = () => {
             <label for="comment" class="form-label mx-2">Comment</label>
             <textarea class="form-control" id="comment" rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary mx-2 my-2">Submit</button>
+          <button type="submit" class="btn btn-deep-orange mx-2 my-2">Submit</button>
         </form>
       </div>
     `;
   } else {
-    formContainer.innerHTML = "<p class='text-center text-warning fw-bold'>You must book a dose before giving a review.</p>";
+    formContainer.innerHTML = "<p class='text-center fw-bold'>You must book a dose before giving a review.</p>";
   }
 };
 
@@ -345,9 +345,9 @@ const displayReview = () => {
                 <div class="card mb-4">
                   <img src="static/images/vac-icon.png" class="card-img-top2" alt="...">
                   <div class="card-body">
-                    <h6>Rating: ${review.rating}</h6>
+                    <h6>${review.rating}</h6>
                     <h6>Reviewer: ${review.reviewer.first_name}</h6>
-                    <h6>Review: ${review.comment}</h6>
+                    <h6 class="rev-title">${review.comment}</h6>
                     <h6>Created at: ${review.created_at}</h6>
                   </div>
                 </div>
