@@ -28,7 +28,7 @@ function changePassword(event) {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Token ${token}`,
             // 'X-CSRFToken': getCookie('csrftoken'),
             'Content-Type': 'application/json',
         },

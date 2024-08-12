@@ -23,48 +23,79 @@
         <div id="navbar"></div>
 
     </header>
-
-    <!-- doctor profile info section -->
     
-    <div class="row profile-body">
-        <div class="col-md-6 container p-5">
-            <div class="card profile" style="width: 18rem;">
-                <img class="dash-img m-auto" src="static/images/dashboard.png" 
-                class="card-img-top" alt="...">
-                <h3 class="text-center text-danger">Patient Dashboard</h3>
-                <hr>
-                <div class="card-body">
-                    <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/profile_4466498.png" alt=""></div> 
-                        <div><a href="patient_profile.html" class="mt-1 text-decoration-none"> Profile</a></div>
-                       </div>
+    <!-- patient update form -->
 
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="card-title text-center">Patient update profile</h1>
+                    </div>
+                    <div class="card-body">
+                      <form id="update-profile" onsubmit="UpdateProfile(event)" class="pt-4">
+                        <div class="mb-3">
+                            <label for="full_name" class="form-label">Full name</label>
+                            <input
+                              type="text"
+                              class="form-control profile-body"
+                              id="full_name"
+                              required
+                              name="full_name"
+                          />
+                        </div>
+              
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control profile-body"
+                            id="email"
+                            required
+                            name="email"
+                          />
+                        </div>
 
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/resume.png" alt=""></div> 
-                        <div><a href="patient_manage_vaccine.html" class="mt-1 text-decoration-none">Vaccine details</a></div>
-
-                       </div>
-                      
-
-                      
-                    
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input
+                              type="address"
+                              class="form-control profile-body"
+                              id="address"
+                              required
+                              name="address"
+                            />
+                          </div>
+              
+                        <div class="mb-3">
+                          <label for="nid" class="form-label">NID Number</label>
+                          <input
+                            type="text"
+                            class="form-control profile-body"
+                            id="nid"
+                            required
+                            name="nid"
+                          />
+                        </div>
+              
+                       
+                        <div class="d-grid gap-2">
+                          <button type="submit" class="btn btn-deep-orange">Submit</button>
+                      </div>
+                      </form>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div id="patient_profile" class="col-md-6 mt-5">
-
-           
-        </div>
-    
     </div>
 
-   
 
+    
 
+     
     <!-- Footer -->
-    <footer class="foot">
+    <footer class="mt-5 foot">
         <div class="container m-auto p-5 row gap-0">
             <div class="col-md-4 mt-3">
                 <h3 class="text-white">IMMUNOHUB</h3>

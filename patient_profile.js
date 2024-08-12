@@ -23,7 +23,7 @@ function fetchUserProfile() {
       return response.json();
     })
     .then(data => {
-      console.log(data.email)
+      console.log(data.id)
       const profileInfo =  document.getElementById("patient_profile")
       profileInfo.innerHTML = `
             <h3>Personal information</h3>
@@ -31,10 +31,10 @@ function fetchUserProfile() {
             <h5>User ID</h5>
             <h6 class="prof">${data.id}</h6>
             <h5>Full name</h5>
-            <h6 class="prof">${data.first_name} ${data.last_name}</h6>
+           <h6 class="prof">${data.first_name} ${data.last_name}</h6>
             <h5>Email address</h5>
             <h6 class="prof">${data.email}</h6>
-            <a href="./update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
+            <a href="./patient_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
             <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-4" type="submit">Change password</a>
               
       `
@@ -54,11 +54,17 @@ const getQueryParams = (param) => {
 
 const getProfileDetail = () => {
   const profileId = getQueryParams("id");
-  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`)
+  const token = localStorage.getItem('token');
+  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`,{
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`
+    }
+  })
     .then((res) => res.json())
     .then((data) => {
-      
-      document.getElementById("name").value = data.first_name;
+      console.log(data)
+      document.getElementById("full_name").value = `${data.first_name} ${data.last_name}`;
       document.getElementById("email").value = data.email;
       document.getElementById("address").value = data.address;
       document.getElementById("nid").value = data.nid;
@@ -75,10 +81,15 @@ const UpdateProfile = (event) => {
   const form = document.getElementById("update-profile");
   const formData = new FormData(form);
   const token = localStorage.getItem("token");
+
+  const fullName = formData.get("full_name").trim().split(" ");
+  const first_name = fullName.slice(0, -1).join(" "); 
+  const last_name = fullName.slice(-1).join(" ");   
   
 
   const updateProfileData = {
-      name: formData.get("name"),
+      first_name: first_name,
+      last_name: last_name,
       email: formData.get("email"),
       address: formData.get("address"),
       nid: formData.get("nid"),

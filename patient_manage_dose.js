@@ -53,7 +53,6 @@ const loadAllDoses = () => {
     })
     .then((response) => {
         if (response.ok) {
-            // Remove the corresponding row from the table
             const row = document.getElementById(`dose-row-${doseId}`);
             if (row) {
                 row.remove();

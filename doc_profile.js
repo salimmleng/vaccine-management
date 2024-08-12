@@ -34,7 +34,7 @@ function fetchUserProfile() {
             <h6 class="prof">${data.first_name} ${data.last_name}</h6>
             <h5>Email address</h5>
             <h6 class="prof">${data.email}</h6>
-            <a href="./update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
+            <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
               
       `
     })
@@ -63,7 +63,7 @@ const getProfileDetail = () => {
     .then((res) => res.json())
     .then((data) => {
       
-      document.getElementById("name").value = data.first_name;
+      document.getElementById("full_name").value = `${data.first_name} ${data.last_name}`;
       document.getElementById("email").value = data.email;
       document.getElementById("address").value = data.address;
       document.getElementById("nid").value = data.nid;
@@ -81,9 +81,13 @@ const UpdateProfile = (event) => {
   const formData = new FormData(form);
   const token = localStorage.getItem("token");
   
+  const fullName = formData.get("full_name").trim().split(" ");
+  const first_name = fullName.slice(0, -1).join(" "); 
+  const last_name = fullName.slice(-1).join(" ");     
 
   const updateProfileData = {
-      name: formData.get("name"),
+      first_name: first_name,
+      last_name: last_name,
       email: formData.get("email"),
       address: formData.get("address"),
       nid: formData.get("nid"),

@@ -241,12 +241,15 @@ document.getElementById("bookingForm").addEventListener("submit", handleTakeVacc
 const displayReviewForm = () => {
   const vaccineId = getQueryParams("id");
   const formContainer = document.getElementById("review-form-container");
+  const token = localStorage.getItem("token");
 
   const hasBookedDose = localStorage.getItem(`bookedDose_${vaccineId}`) === "true";
 
   if (hasBookedDose) {
+    if (token){
     formContainer.innerHTML = `
       <div class="mx-auto w-75 mt-5">
+        <h1 class='text-center revg my-4'>Give Review</h1>
         
         <form id="review-form" class="pt-2 bord" onsubmit="submitReview(event)">
           <div class="mb-3">
@@ -267,8 +270,11 @@ const displayReviewForm = () => {
         </form>
       </div>
     `;
+    }
   } else {
+    if (token){
     formContainer.innerHTML = "<p class='text-center fw-bold'>You must book a dose before giving a review.</p>";
+    }
   }
 };
 
