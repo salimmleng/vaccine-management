@@ -16,14 +16,19 @@ li{
     color: rgb(36, 240, 104);
     cursor: pointer;
 }
-
+.fa-2xl{
+    cursor: pointer;
+    
+}
 
 .back{
     background-color: #387efa;;
 }
 .foot{
     background-color: #387efa;
-    height: 60vh;
+    min-height: 80px;
+    padding: 1rem;
+
 }
 .card-img{
    width: 130%;

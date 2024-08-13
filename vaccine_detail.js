@@ -43,22 +43,6 @@ const getAllvaccines = () => {
 getAllvaccines()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const getQueryParams = (param) => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -97,7 +81,7 @@ const getQueryParams = (param) => {
                   `
                }
                else{
-                  buttonHTML = '<p><a class="text-decoration-none text-danger" href="Registration.html">Register to book dose</a></p>'
+                  buttonHTML = '<p><a class="text-decoration-none text-white btn btn-deep-orange" href="Registration.html">Register to book dose</a></p>'
                }
               
               div.innerHTML = `
@@ -213,7 +197,7 @@ const handleTakeVaccine=(event)=>{
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        showAlert("First dose scheduled successfully!", "success");
+        showAlert("First dose scheduled successfull!", "success");
         $("#addModal").modal("hide");
         localStorage.setItem(`bookedDose_${vaccine}`, "true");  // store dose id
         displayReviewForm();
