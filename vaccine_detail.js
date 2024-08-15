@@ -2,7 +2,7 @@
 
 const getAllvaccines = () => {
   const token = localStorage.getItem("token");
-  fetch("http://127.0.0.1:8000/api/vaccines/",{
+  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
       // headers: {
       //     Authorization: `Token ${token}`,
       //   },
@@ -20,7 +20,7 @@ const getAllvaccines = () => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
+                    <img src="https://vaccination-management-wbw3.onrender.com/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                         <h6 class="card-title mb-2 v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
@@ -52,7 +52,7 @@ const getQueryParams = (param) => {
     const vaccineId = getQueryParams("id");
     const token = localStorage.getItem("token");
     console.log(vaccineId)
-    fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`,{
+    fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`,{
         method: "GET",
         // headers: {
         //     Authorization: `Token ${token}`,
@@ -86,7 +86,7 @@ const getQueryParams = (param) => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="http://127.0.0.1:8000/${vaccine.image}" class="card-img-top2" alt="...">
+                    <img src="https://vaccination-management-wbw3.onrender.com/${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                        <h6 class="card-title v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
@@ -113,7 +113,7 @@ getVaccineDetail()
 const loadDates = ()=>{
     // const token = localStorage.getItem("token");
     const vID = getQueryParams("id");
-    fetch(`http://127.0.0.1:8000/vaccine/api/available_dates/?id=${vID}`
+    fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/available_dates/?id=${vID}`
        
     )
     .then((res) => res.json())
@@ -138,7 +138,7 @@ loadDates()
 const loadHospitalname = ()=>{
   // const token = localStorage.getItem("token");
   const vID = getQueryParams("id");
-  fetch(`http://127.0.0.1:8000/vaccine/api/available_hospitals/?id=${vID}`
+  fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/available_hospitals/?id=${vID}`
      
   )
   .then((res) => res.json())
@@ -187,7 +187,7 @@ const handleTakeVaccine=(event)=>{
     console.log(JSON.stringify(info))
     
     const token = localStorage.getItem("token");
-    fetch("http://127.0.0.1:8000/vaccine/api/doses/", {
+    fetch("https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/", {
       method: "POST",
       headers: { "content-type": "application/json",
              Authorization: `Token ${token}`,
@@ -279,7 +279,7 @@ const submitReview = (event) => {
 
   
 
-  fetch("http://127.0.0.1:8000/vaccine/reviews/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/vaccine/reviews/", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -310,7 +310,7 @@ const displayReview = () => {
   const vaccineId = getQueryParams("id");
   const token = localStorage.getItem("token");
   console.log(vaccineId)
-  fetch(`http://127.0.0.1:8000/vaccine/reviews/${vaccineId}/`,{
+  fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/reviews/${vaccineId}/`,{
       method: "GET",
       headers: {
           Authorization: `Token ${token}`,

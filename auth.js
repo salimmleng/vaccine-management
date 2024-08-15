@@ -36,7 +36,7 @@ const handleRegistration = (event) => {
  
   console.log(info)
 
-  fetch("http://127.0.0.1:8000/accounts/register/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/accounts/register/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(info),
@@ -45,7 +45,7 @@ const handleRegistration = (event) => {
       alert("Registration successful. Check your mail for confirmation.")
 
       localStorage.setItem('userRole',user_role);
-      // window.location.href = "login.html";
+      window.location.href = "login.html";
   })
    .catch((error) => {
     console.error("Error:", error.message);
@@ -60,7 +60,7 @@ const handleLogin =(event) =>{
   const username = getValue("id_username")
   const password = getValue("id_password")
 
-  fetch("http://127.0.0.1:8000/accounts/login/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/accounts/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -78,10 +78,7 @@ const handleLogin =(event) =>{
           console.error("Login failed: user_role not found");
           alert("Login failed: user_role not found");
         }
-        // localStorage.setItem('token', data.token)
-        // localStorage.setItem('user_id', data.user_id)
-        // localStorage.setItem('userRole',data.user_role)
-        // window.location.href = 'index.html'   
+       
       })
 
 }
@@ -90,7 +87,7 @@ const handleLogout = () => {
   const token = localStorage.getItem("token");
   console.log(token)
 
-  fetch("http://127.0.0.1:8000/accounts/logout/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/accounts/logout/", {
     method: "POST",
     headers: {
       Authorization: `Token ${token}`,

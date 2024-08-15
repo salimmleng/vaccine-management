@@ -9,7 +9,7 @@ function fetchUserProfile() {
       return;
     }
   
-    fetch(`http://127.0.0.1:8000/accounts/profile/${userId}/`, {
+    fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${userId}/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -35,6 +35,7 @@ function fetchUserProfile() {
             <h5>Email address</h5>
             <h6 class="prof">${data.email}</h6>
             <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
+             <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-4" type="submit">Change password</a>
               
       `
     })
@@ -54,7 +55,7 @@ const getQueryParams = (param) => {
 const getProfileDetail = () => {
   const profileId = getQueryParams("id");
   const token = localStorage.getItem('token');
-  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`,{
+  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${profileId}/`,{
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Token ${token}`
@@ -93,7 +94,7 @@ const UpdateProfile = (event) => {
       nid: formData.get("nid"),
   };
 
-  fetch(`http://127.0.0.1:8000/accounts/profile/${profileId}/`, {
+  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${profileId}/`, {
       method: "PUT",
       headers: {
           "Content-Type": "application/json",

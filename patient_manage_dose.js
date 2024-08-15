@@ -1,6 +1,6 @@
 const loadAllDoses = () => {
   const token = localStorage.getItem("token");
-  fetch("http://127.0.0.1:8000/vaccine/api/doses/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/", {
       headers: {
           Authorization: `Token ${token}`,
       },
@@ -43,7 +43,7 @@ loadAllDoses();
 const generatePDF = (id) => {
   console.log(id);
   const token = localStorage.getItem("token");
-  fetch(`http://127.0.0.1:8000/vaccine/api/doses/${id}/`, {
+  fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/${id}/`, {
       headers: {
           Authorization: `Token ${token}`,
       },
@@ -111,7 +111,7 @@ const generatePDF = (id) => {
   const deleteVaccine = (doseId) => {
     const token = localStorage.getItem("token");
 
-    fetch(`http://127.0.0.1:8000/vaccine/api/doses/${doseId}/`, {
+    fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/${doseId}/`, {
         method: "DELETE",
         headers: {
             Authorization: `Token ${token}`,

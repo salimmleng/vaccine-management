@@ -7,7 +7,7 @@ const addVaccine = (event) => {
   const formData = new FormData(form);
   const token = localStorage.getItem("token");
   console.log(formData)
-  fetch("http://127.0.0.1:8000/api/vaccines/", {
+  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
     method: "POST",
     headers: {
       Authorization: `Token ${token}`,
@@ -31,7 +31,7 @@ const addVaccine = (event) => {
 const getAllVaccines = () => {
   const token = localStorage.getItem("token");
   console.log(token)
-  fetch("http://127.0.0.1:8000/api/vaccines/",{
+  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
     headers: {
       Authorization: `Token ${token}`,
     },
@@ -79,7 +79,7 @@ const getQueryParams = (param) => {
 const getVaccineDetail = () => {
   const vaccineId = getQueryParams("id");
   const token = localStorage.getItem("token");
-  fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`,{
+  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`,{
     headers: {
       Authorization: `Token ${token}`,
     },
@@ -114,7 +114,7 @@ const updateVaccine = (event) => {
       age_limit: formData.get("age_limit"),
   };
 
-  fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`, {
+  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`, {
       method: "PUT",
       headers: {
           "Content-Type": "application/json",
@@ -134,7 +134,7 @@ const updateVaccine = (event) => {
 
 const deleteVaccine = (vaccineId) => {
   const token = localStorage.getItem("token");
-  fetch(`http://127.0.0.1:8000/api/vaccines/${vaccineId}/`, {
+  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
