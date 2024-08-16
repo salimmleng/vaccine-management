@@ -3,28 +3,52 @@
 
 const addVaccine = (event) => {
   event.preventDefault();
-  const form = document.getElementById("add-vaccine");
+ 
+  
+  const form = document.getElementById("add-vaccine")
   const formData = new FormData(form);
+  const imageinput = document.getElementById("image").files[0];
+  formData.append('image',imageinput)
   const token = localStorage.getItem("token");
   console.log(formData)
-  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
-    method: "POST",
-    headers: {
-      Authorization: `Token ${token}`,
-    },
-    body: formData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      alert("Vaccine Added Successfully");
-      console.log(data);
-      window.location.href = "campaign.html";
+  
+  // First, upload the image to imgbb
+  fetch("https://api.imgbb.com/1/upload?key=8d5311e77df04acf766601c0030c098b",
+    { method:"POST",
+      body: formData
+
+})
+   .then(response => response.json())
+   .then(data =>{
+    console.log(data)
+
+    const imageUrl = data.data.url;
+
+      // Add the image URL to the formData
+    formData.append("image_url", imageUrl);
+
+    // Now send the image URL and other form data to your backend
+    fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
+      method: "POST",
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+      body: formData,
     })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("Error adding vaccine");
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        alert("Vaccine Added Successfully");
+        console.log(data);
+        window.location.href = "campaign.html";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error adding vaccine");
+      });
+   })
+
+  
 };
 
 

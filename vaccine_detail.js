@@ -20,7 +20,7 @@ const getAllvaccines = () => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="https://vaccination-management-wbw3.onrender.com/${vaccine.image}" class="card-img-top2" alt="...">
+                    <img src="${vaccine.image_url}" class="card-img-top2" alt="...">
                     <div class="card-body">
                         <h6 class="card-title mb-2 v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
