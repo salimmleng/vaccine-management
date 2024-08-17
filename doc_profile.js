@@ -105,8 +105,9 @@ const UpdateProfile = (event) => {
       
       .then((data) => {
        
-        alert("Profile updated successfully")
-        window.location.href = "doc_profile.html";
+        const alertModal = new bootstrap.Modal(document.getElementById("docProfileAlertModal"));
+        alertModal.show();
+
              
       });
       

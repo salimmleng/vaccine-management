@@ -90,7 +90,28 @@
     </div>
 
 
+     <!-- alert doctor profile -->
+
+     <div class="modal fade" id="docProfileAlertModal" tabindex="-1" aria-labelledby="customAlertLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: white;">
+          <div class="modal-body text-center">
+            <img src="static/images/check.png" alt="Alert Image" class="img-fluid mb-3" style="max-width: 100px;">
+            <p class="modal-text">Profile updated successfuly</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redirectToDocProfile()">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
+      <script>
+        function redirectToDocProfile() {
+        window.location.href = "./doc_profile.html";
+      }
+    
+      </script>
 
      
     <!-- Footer -->

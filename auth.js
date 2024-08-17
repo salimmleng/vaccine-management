@@ -42,10 +42,11 @@ const handleRegistration = (event) => {
     body: JSON.stringify(info),
   })
     .then((res) => {
-      alert("Registration successful. Check your mail for confirmation.")
-
+     
       localStorage.setItem('userRole',user_role);
-      window.location.href = "login.html";
+      const alertModal = new bootstrap.Modal(document.getElementById("customAlertModal"));
+      alertModal.show();
+
   })
    .catch((error) => {
     console.error("Error:", error.message);

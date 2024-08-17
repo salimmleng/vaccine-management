@@ -104,194 +104,30 @@
           </div>
   </div>
     
-    <!-- <div class="row">
-        <div class="col-md-6 container p-5">
-            <div class="card profile" style="width: 18rem;">
-                <img class="dash-img m-auto" src="static/images/dashboard.png" 
-                class="card-img-top" alt="...">
-                <h3 class="text-center text-danger">Doctor dashboard</h3>
-                <hr>
-                <div class="card-body">
-                    <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/profile_4466498.png" alt=""></div> 
-                        <div><a href="doc_profile.html" class="mt-1 text-decoration-none"> Profile</a></div>
-                       </div>
+  <!-- vaccine alert -->
 
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/resume.png" alt=""></div> 
-                        <div><a href="doc_patient_info.html" class="mt-1 text-decoration-none">Patient details</a></div>
-
-                       </div>
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-
-                       <div class="d-flex gap-3 mb-4">
-                        <div> <img class="pro-img" src="static/images/boy.png" alt=""></div> 
-                        <div><a href="add_vaccine.html" class="mt-1 text-decoration-none"> Add vaccine</a></div>
-                       </div>
-                    
-                </div>
-            </div>
-
+  <div class="modal fade" id="vaccineAlertModal" tabindex="-1" aria-labelledby="customAlertLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: white;">
+        <div class="modal-body text-center">
+          <img src="static/images/check.png" alt="Alert Image" class="img-fluid mb-3" style="max-width: 100px;">
+          <p class="modal-text">Vaccine added successfuly</p>
         </div>
-        <div class="col-md-6">
-          <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h1 class="card-title text-center">Add vaccine</h1>
-                        </div>
-                        <div class="card-body">
-                          <form id="add-vaccine" onsubmit="addVaccine(event)" class="pt-4">
-                            <div class="mb-3">
-                              <label for="name" class="form-label">Name</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="name"
-                                required
-                                name="name"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label  for="manufacturer" class="form-label">Manufacturer</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="manufacturer"
-                                required
-                                name="manufacturer"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label for="batch_number" class="form-label">Batch Number</label>
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="batch_number"
-                                required
-                                name="batch_number"
-                              />
-                            </div>
-                  
-                            <div class="mb-3">
-                              <label for="expiry_date" class="form-label">Expiry date</label>
-                              <input
-                                type="date"
-                                class="form-control"
-                                id="expiry_date"
-                                required
-                                name="expiry_date"
-                              />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="image" class="form-label">Vaccine Image</label>
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*" />
-                            </div>
-
-
-                            <div class="d-grid gap-2">
-                              <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                          </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redirectToCampaign()">OK</button>
         </div>
-      
-
-
-        </div>
-
-    </div> -->
-
-       <!-- Edit Modal  -->
-
-    <!-- <div
-       class="modal fade"
-       id="editModal"
-       tabindex="-1"
-       aria-labelledby="exampleModalLabel"
-       aria-hidden="true"
-     >
-       <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-             <button
-               type="button"
-               class="btn-close"
-               data-bs-dismiss="modal"
-               aria-label="Close"
-             ></button>
-           </div>
-           <div class="modal-body">
-             <form id="update-vaccine" onsubmit="updateVaccine(event)" class="pt-4">
-                  <div class="mb-3">
-                      <label for="name" class="form-label">Name</label>
-                      <input
-                      type="text"
-                      class="form-control profile-body"
-                      id="name"
-                      required
-                      name="name"
-                      />
-                  </div>
-          
-                  <div class="mb-3">
-                      <label  for="manufacturer" class="form-label">Manufacturer</label>
-                      <input
-                      type="text"
-                      class="form-control profile-body"
-                      id="manufacturer"
-                      required
-                      name="manufacturer"
-                      />
-                  </div>
-          
-                  <div class="mb-3">
-                      <label for="batch_number" class="form-label">Batch Number</label>
-                      <input
-                      type="text"
-                      class="form-control profile-body"
-                      id="batch_number"
-                      required
-                      name="batch_number"
-                      />
-                  </div>
-          
-                  <div class="mb-3">
-                      <label for="expiry_date" class="form-label">Expiry date</label>
-                      <input
-                      type="date"
-                      class="form-control profile-body"
-                      id="expiry_date"
-                      required
-                      name="expiry_date"
-                      />
-                  </div>
-                  <div class="d-grid gap-2">
-                      <button type="submit" class="btn btn-primary">Edit vaccine</button>
-                  </div>
-              </form>
-           </div>
-         </div>
-       </div>
+      </div>
     </div>
-     -->
-    
+  </div>
+  
+    <script>
+      function redirectToCampaign() {
+      window.location.href = "./campaign.html";
+    }
+  
+    </script>
+
+
     <!-- Footer -->
     <footer class="mt-5 foot">
       <div class="container m-auto p-5 row">

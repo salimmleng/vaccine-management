@@ -85,7 +85,7 @@
 
           </div>
           <div class="col-md-6 mb-3">
-            confirm_password
+            Confirm_password
             <input type="password" name="password2" autocomplete="new-password" class="passwordinput form-control"
               required="" id="password2">
 
@@ -100,6 +100,30 @@
     </div>
 
   </div>
+
+  <!-- alert modal -->
+
+<div class="modal fade" id="customAlertModal" tabindex="-1" aria-labelledby="customAlertLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color: white;">
+      <div class="modal-body text-center">
+        <img src="static/images/check.png" alt="Alert Image" class="img-fluid mb-3" style="max-width: 100px;">
+        <p class="modal-text">Registration successful. Please check your mail for confirmation.</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="redirectToRegistration()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    function redirectToRegistration() {
+    window.location.href = "registration.html";
+  }
+
+  </script>
+
 
 
   <!-- Footer -->

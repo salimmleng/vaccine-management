@@ -98,11 +98,22 @@
   </div>
 </div>
 
-    <!-- alert container -->
-    <div id="alert-container" class="custom-alert-container">
-      <!-- Alert messages will be inserted here -->
-  </div>
+    <!-- dose alert modal -->
 
+    <div class="modal fade" id="doseAlertModal" tabindex="-1" aria-labelledby="customAlertLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="background-color: white;">
+            <div class="modal-body text-center">
+              <img src="static/images/check.png" alt="Alert Image" class="img-fluid mb-3" style="max-width: 100px;">
+              <p class="modal-text">First dose scheduled successfull, Second dose will be scheduled 21 days later</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
 
     <!-- Footer -->

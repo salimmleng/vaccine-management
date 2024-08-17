@@ -40,9 +40,9 @@ const addVaccine = (event) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        alert("Vaccine Added Successfully");
-        console.log(data);
-        window.location.href = "./campaign.html";
+        const alertModal = new bootstrap.Modal(document.getElementById("vaccineAlertModal"));
+        alertModal.show();
+
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -153,8 +153,8 @@ const updateVaccine = (event) => {
 
         console.log(vaccine)
        
-        alert("Vaccine updated successfully")
-        window.location.href = "./campaign.html";
+        const alertModal = new bootstrap.Modal(document.getElementById("updateAlertModal"));
+        alertModal.show();
              
       });
       

@@ -190,8 +190,12 @@ const handleTakeVaccine=(event)=>{
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        showAlert("First dose scheduled successfull!", "success");
+
         $("#addModal").modal("hide");
+        
+        const alertModal = new bootstrap.Modal(document.getElementById("doseAlertModal"));
+        alertModal.show();
+      
         localStorage.setItem(`bookedDose_${vaccine}`, "true");  // store dose id
         displayReviewForm();
          
@@ -200,15 +204,6 @@ const handleTakeVaccine=(event)=>{
      
 }
 
-const showAlert = (message, type) => {
-  const alertContainer = document.getElementById("alert-container");
-  alertContainer.innerHTML = `
-      <div class="custom-alert ${type}">
-          ${message}
-          <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
-      </div>
-  `;
-};
 
 document.getElementById("bookingForm").addEventListener("submit", handleTakeVaccine);
 
