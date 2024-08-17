@@ -29,7 +29,7 @@
     <!-- vaccine campaign for doctor -->
 
 
-    <div class='container my-5'>
+    <!-- <div class='container my-5'>
        
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2 class="text-center flex-grow-1">Manage Vaccine</h2>
@@ -54,7 +54,37 @@
           </tbody>
          
         </table>
+      </div> -->
+
+      <div class="container my-5">
+        <div class="row mb-3">
+          <div class="col-12 col-md-6">
+            <h2 class="text-center text-md-start">Manage Vaccine</h2>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <a class="edit-btn text-decoration-none text-white btn btn-primary" href="add_vaccine.html">Add Vaccine</a>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="table-danger">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Vaccine Name</th>
+                <th scope="col">Manufacturer</th>
+                <th scope="col">Age Limit</th>
+                <th scope="col">B.No</th>
+                <th scope="col">Ex.Date</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody  id="campaign-container">
+              <!-- Vaccine data rows go here -->
+            </tbody>
+          </table>
+        </div>
       </div>
+      
 
 
 

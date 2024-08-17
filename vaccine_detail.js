@@ -1,26 +1,22 @@
 
 
 const getAllvaccines = () => {
-  const token = localStorage.getItem("token");
   fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
-      // headers: {
-      //     Authorization: `Token ${token}`,
-      //   },
-
+     
   })
       .then((res) => res.json())
       .then((vaccines) => {
           console.log(vaccines)
           
+          
           const allvaccines = document.getElementById("vaccine-container")
           vaccines.forEach((vaccine) => {
-              console.log(vaccine)
               const div = document.createElement("div")
               div.classList.add("col-md-4","mb-4")
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="${vaccine.image_url}" class="card-img-top2" alt="...">
+                    <img src="${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                         <h6 class="card-title mb-2 v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>
@@ -54,9 +50,6 @@ const getQueryParams = (param) => {
     console.log(vaccineId)
     fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`,{
         method: "GET",
-        // headers: {
-        //     Authorization: `Token ${token}`,
-        //   },
 
     })
         .then((res) => res.json())
@@ -86,7 +79,7 @@ const getQueryParams = (param) => {
               
               div.innerHTML = `
                   <div class="card ">
-                    <img src="https://vaccination-management-wbw3.onrender.com/${vaccine.image}" class="card-img-top2" alt="...">
+                    <img src="${vaccine.image}" class="card-img-top2" alt="...">
                     <div class="card-body">
                        <h6 class="card-title v-title">Vaccine: ${vaccine.name}</h6>
                         <p class="card-text">Manufacturer: ${vaccine.manufacturer}</p>

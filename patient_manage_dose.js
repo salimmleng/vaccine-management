@@ -24,7 +24,7 @@ const loadAllDoses = () => {
               ${
                   item.vaccine_status == "Pending"
                   ? `<td class="table-success"><a class="text-danger text-decoration-none" style="cursor: pointer;" onclick="deleteVaccine(${item.id})">Cancel</a></td>`
-                  : `<td class="table-success">✔</td>`
+                  : `<td class="table-success">Accepted</td>`
               }
              
               <td class="table-success"><i onclick="generatePDF(${item.id})" class="fa-solid fa-file-pdf fa-2xl" style="color: #dc3545;"></i></td>

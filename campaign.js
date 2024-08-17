@@ -8,14 +8,16 @@ const addVaccine = (event) => {
   const form = document.getElementById("add-vaccine")
   const formData = new FormData(form);
   const imageinput = document.getElementById("image").files[0];
-  formData.append('image',imageinput)
   const token = localStorage.getItem("token");
   console.log(formData)
+
+  const imageFormData = new FormData();
+  imageFormData.append('image', imageinput);
   
   // First, upload the image to imgbb
   fetch("https://api.imgbb.com/1/upload?key=8d5311e77df04acf766601c0030c098b",
     { method:"POST",
-      body: formData
+      body: imageFormData
 
 })
    .then(response => response.json())
@@ -24,8 +26,8 @@ const addVaccine = (event) => {
 
     const imageUrl = data.data.url;
 
-      // Add the image URL to the formData
-    formData.append("image_url", imageUrl);
+    formData.delete('image');
+    formData.append("image", imageUrl);
 
     // Now send the image URL and other form data to your backend
     fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
@@ -77,7 +79,7 @@ const getAllVaccines = () => {
               <td class="table-success">${vaccine.age_limit}</td>
               <td class="table-success">${vaccine.batch_number}</td>
               <td class="table-success">${vaccine.expiry_date}</td>
-              <td class="table-success"> <a href="./edit_vaccine.html?id=${vaccine.id}" class="btn btn-info ">Edit</a>
+              <td class="table-success"> <a href="./edit_vaccine.html?id=${vaccine.id}" class="btn btn-success">Edit</a>
              <a onclick="deleteVaccine(${vaccine.id})" class="btn btn-danger ">Delete</a></td>
 
         `;
@@ -139,7 +141,7 @@ const updateVaccine = (event) => {
   };
 
   fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
           "Content-Type": "application/json",
           Authorization: `Token ${token}`,
@@ -148,11 +150,14 @@ const updateVaccine = (event) => {
   })
       
       .then((vaccine) => {
+
+        console.log(vaccine)
        
         alert("Vaccine updated successfully")
         window.location.href = "./campaign.html";
              
       });
+      
       
 };
 

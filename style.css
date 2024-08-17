@@ -21,6 +21,15 @@ li{
     
 }
 
+.immu_title{
+    font-size: 25px;
+}
+.nav-font{
+    font-size: 20px;
+}
+
+
+
 .back{
     background-color: #387efa;;
 }
@@ -61,31 +70,63 @@ li{
 }
 
 /* banner part start */
-.banner{
-    /* background-color: rgb(255, 255, 255) */
+
+.banner {
     display: flex;
     background-image: url(/static/images/bgimg3.jpg);
     background-size: cover;
-    background-position: right center;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    align-items: center; 
-    justify-content: start; 
-    padding-left: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px; /* Adjust padding on sides */
+}
 
+.banner-title {
+    text-align: left;
 }
-.banner-title, .banner-subtitle, .banner-btn {
-    text-align: left; 
+
+.banner-subtitle {
+    text-align: left;
 }
-.font{
-    font-size: 60px;
+
+.banner-btn {
+    text-align: left;
+    margin-top: 20px; /* Space between subtitle and button */
 }
-.font2{
-    font-size: 20px;
+
+.font {
+    font-size: 3rem; /* Use rem for better scalability */
 }
+
+.font2 {
+    font-size: 1.25rem; /* Use rem for better scalability */
+}
+
 .banner-btn:hover {
     background-color: #0056b3; /* Darker shade of primary color */
 }
+
+/* Responsive  */
+@media (max-width: 768px) {
+    .banner {
+        height: auto; 
+        padding: 0 20px;
+    }
+    .font {
+        font-size: 2.5rem; 
+    }
+    .font2 {
+        font-size: 1rem; 
+    }
+    .banner-btn {
+        width: 100%; 
+        text-align: center; 
+    }
+}
+
+/* banner part end */
 
 .feature-card{
     border: 1px solid rgb(224, 220, 220);
@@ -97,8 +138,6 @@ li{
 }
 
 
-
-/* banner part end */
 .su-main-footer-area {
     background: #f26d3e;
     min-height: 80px;
@@ -287,7 +326,7 @@ li{
 
 /*  navigation links */
 /* Target only the navigation links within the nav-element */
-#nav-element .nav-link::after {
+.nav-item .nav-link::after {
     content: '';
     display: block;
     width: 0;
@@ -296,7 +335,7 @@ li{
     transition: width 0.3s;
 }
 
-#nav-element .nav-link:hover::after, #nav-element .nav-link.active::after {
+.nav-item .nav-link:hover::after, .nav-item .nav-link.active::after {
     width: 100%; /* Underline the entire width of the link */
 }
 .about-img{
