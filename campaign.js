@@ -42,7 +42,7 @@ const addVaccine = (event) => {
         console.log(data);
         alert("Vaccine Added Successfully");
         console.log(data);
-        window.location.href = "campaign.html";
+        window.location.href = "./campaign.html";
       })
       .catch((error) => {
         console.error("Error:", error);

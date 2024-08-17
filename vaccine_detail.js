@@ -74,7 +74,7 @@ const getQueryParams = (param) => {
                   `
                }
                else{
-                  buttonHTML = '<p><a class="text-decoration-none text-white btn btn-deep-orange" href="Registration.html">Register to book dose</a></p>'
+                  buttonHTML = '<p><a class="text-decoration-none text-white btn btn-deep-orange" href="./registration.html">Register to book dose</a></p>'
                }
               
               div.innerHTML = `
