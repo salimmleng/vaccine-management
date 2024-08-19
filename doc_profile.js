@@ -1,48 +1,69 @@
+
 function fetchUserProfile() {
-    const token = localStorage.getItem('token');
-    const userId = localStorage.getItem('user_id');
-    console.log(token);
-    console.log(userId);
-  
-    if (!token || !userId) {
+  const token = localStorage.getItem('token');
+  const userId = localStorage.getItem('user_id');
+  console.log(token);
+  console.log(userId);
+
+  if (!token || !userId) {
       console.error('Token or User ID is missing');
       return;
-    }
-  
-    fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${userId}/`, {
+  }
+
+  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${userId}/`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${token}`
+          'Content-Type': 'application/json',
+          'Authorization': `Token ${token}`
       }
-    })
-    .then(response => {
+  })
+  .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+          throw new Error('Network response was not ok');
       }
       return response.json();
-    })
-    .then(data => {
-      console.log(data.email)
-      const profileInfo =  document.getElementById("doc_profile")
-      profileInfo.innerHTML = `
-            <h3>Personal information</h3>
-            <img class="docc-img mx-4 my-3" src="static/images/doc-img.png" class="img-fluid rounded-start card-img" alt="...">
-            <h5>User ID</h5>
-            <h6 class="prof">${data.id}</h6>
-            <h5>Full name</h5>
-            <h6 class="prof">${data.first_name} ${data.last_name}</h6>
-            <h5>Email address</h5>
-            <h6 class="prof">${data.email}</h6>
-            <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
-             <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-4" type="submit">Change password</a>
-              
-      `
-    })
-    .catch(error => {
+  })
+  .then(data => {
+      const docprofileContainer = document.querySelector(".col-md-9 .card");
+      docprofileContainer.innerHTML = `
+          <div class="mb-3 row">
+              <label class="col-sm-4 col-form-label text-muted"><strong>Full Name</strong>:</label>
+              <div class="col-sm-8">
+                  <p class="mb-0">${data.first_name} ${data.last_name}</p>
+              </div>
+              <hr>
+          </div>
+          <div class="mb-3 row">
+              <label class="col-sm-4 col-form-label text-muted"><strong>Email</strong>:</label>
+              <div class="col-sm-8">
+                  <p class="mb-0">${data.email}</p>
+              </div>
+              <hr>
+          </div>
+          <div class="mb-3 row">
+              <label class="col-sm-4 col-form-label text-muted"><strong>Address</strong>:</label>
+              <div class="col-sm-8">
+                  <p class="mb-0">${data.address}</p>
+              </div>
+              <hr>
+          </div>
+          <div class="mb-3 row">
+              <label class="col-sm-4 col-form-label text-muted"><strong>NID number</strong>:</label>
+              <div class="col-sm-8">
+                  <p class="mb-0">${data.nid}</p>
+              </div>
+              <hr>
+          </div>
+          <div>
+              <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
+              <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-3" type="submit">Change password</a>
+          </div>
+      `;
+  })
+  .catch(error => {
       console.error('Error fetching user profile:', error);
-    });
-  }
+  });
+}
 
 // update profile start
 

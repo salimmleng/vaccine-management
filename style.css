@@ -59,6 +59,9 @@ li{
 .docc-img{
     width: 150px;
 }
+.doc-bg{
+    background-color: rgb(222, 219, 219);
+}
 .profile{
     box-shadow: 4px 4px 8px gray;
     border-radius: 10px;
@@ -68,6 +71,23 @@ li{
     padding: 20px;
     
 }
+
+/*doc profile start */
+.vaccine-card{
+    transition: all 0.3s ease;
+}
+
+.vaccine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-muted {
+    font-size: 0.9rem;
+}
+
+
+/* doc profile end */
 
 /* banner part start */
 
@@ -97,11 +117,20 @@ li{
 }
 
 .font {
-    font-size: 3rem; /* Use rem for better scalability */
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
-
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Normal weight */
+    line-height: 1.6; /* For comfortable reading */
+    font-size: 1rem; /* Adjust as needed */
+}
 .font2 {
-    font-size: 1.25rem; /* Use rem for better scalability */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .banner-btn:hover {
@@ -129,19 +158,12 @@ li{
 /* banner part end */
 
 .feature-card{
-    border: 1px solid rgb(224, 220, 220);
+    border: 1.5px solid rgb(224, 220, 220);
 }
 .feat-img{
     height: 90px;
     object-fit: cover; 
 
-}
-
-
-.su-main-footer-area {
-    background: #f26d3e;
-    min-height: 80px;
-    padding: 1rem;
 }
 .bn-img{
     width: 400px;
@@ -189,12 +211,19 @@ li{
 .bord{
     border: 1px solid rgb(209, 207, 207);
     background-color: rgb(214, 212, 212);
+    border-radius: 8px;
     
    
 }
 .td-design{
     background-color: darkgoldenrod
 
+}
+
+.table th {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 .edit{
     padding: 16px 32px;
@@ -210,8 +239,8 @@ li{
 
 }
 .prof{
-    background-color: rgb(230, 223, 223);
-    width: 80%;
+    background-color: rgb(237, 237, 237);
+    width: 76%;
     height: 43px;
     border-radius: 5px;
     padding: 8px;
@@ -256,6 +285,20 @@ li{
     background-color: #FF5722; 
     color: #fff; 
 }
+
+.btn-outline-list{
+    color: #FF5722; 
+    border-color: #FF5722; 
+    padding: 10px 15px;
+    border-radius: 4px;
+
+}
+.btn-outline-list:hover {
+    background-color: #FF5722; 
+    /* color: #fff;  */
+    color: rgb(243, 224, 224);
+}
+
 .btn-deep-orange {
     background-color: #FF5722; 
     color: #fff; 
@@ -272,6 +315,10 @@ li{
 }
 .btn-primary{
     padding: 10px 25px;
+}
+
+.vaccine-body{
+    background-color: rgb(243, 224, 224);
 }
 
 
@@ -311,4 +358,105 @@ li{
   .modal-footer .btn {
     width: 100px;
   }
-  
+
+
+
+
+
+
+
+
+
+/* detail page design */
+
+.detail-img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.detailRight {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.whole-part {
+    background-color: rgb(244, 233, 233);
+    border-radius: 10px;
+    /* border: 5px solid rgb(233, 169, 169); */
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 480px;
+    padding: 20px;
+}
+
+/* spacing and layout on smaller screens */
+@media (max-width: 767px) {
+    .whole-part {
+        padding: 10px;
+        min-height: 480px;
+    }
+    .detailRight {
+        text-align: center;
+    }
+    .detail-img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+.detailRight {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detailRight h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.detailRight h6 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.detailRight ul {
+    padding-left: 0;
+}
+
+.detailRight li {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.detailRight a.btn {
+    background-color: #ff5722; /* Deep orange */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.detailRight a.btn:hover {
+    background-color: #e64a19;
+}
+
+
+/* detail page design end */
+
+/* patient profile */
+
+.rev-card {
+    width: 17rem; 
+    height: 15rem; 
+}
+.rev-img{
+    height: 110px; 
+    width: 110px;
+    object-fit: cover; 
+}
