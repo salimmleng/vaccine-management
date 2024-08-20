@@ -460,3 +460,13 @@ p {
     width: 110px;
     object-fit: cover; 
 }
+
+.profile-card{
+    background-color: rgb(235, 232, 232);
+}
+.rob{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Medium weight for a more pronounced look */
+    text-transform: uppercase; /* Optional: Makes the headers all uppercase */
+    letter-spacing: 0.05em; /* Optional: Adds a bit of spacing between letters */
+}

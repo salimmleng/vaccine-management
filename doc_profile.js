@@ -27,28 +27,28 @@ function fetchUserProfile() {
       const docprofileContainer = document.querySelector(".col-md-9 .card");
       docprofileContainer.innerHTML = `
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Full Name</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>Full Name</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.first_name} ${data.last_name}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Email</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>Email</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.email}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Address</strong>:</label>
+              <label class="col-sm-4  rob col-form-label text-muted"><strong>Address</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.address}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>NID number</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>NID number</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.nid}</p>
               </div>

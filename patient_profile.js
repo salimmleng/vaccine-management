@@ -26,36 +26,36 @@ function fetchUserProfile() {
       const profileContainer = document.querySelector(".col-md-9 .card");
       profileContainer.innerHTML = `
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Full Name</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>Full Name</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.first_name} ${data.last_name}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Email</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>Email</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.email}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>Address</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>Address</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.address}</p>
               </div>
               <hr>
           </div>
           <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label text-muted"><strong>NID number</strong>:</label>
+              <label class="col-sm-4 rob col-form-label text-muted"><strong>NID number</strong></label>
               <div class="col-sm-8">
                   <p class="mb-0">${data.nid}</p>
               </div>
               <hr>
           </div>
           <div>
-              <a href="./patient_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
-              <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-3" type="submit">Change password</a>
+              <a href="./patient_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3 mx-1" type="submit">Edit profile</a>
+              <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3" type="submit">Change password</a>
           </div>
       `;
   })
