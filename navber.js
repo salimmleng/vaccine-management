@@ -11,7 +11,7 @@ function loadDoctorNavbar() {
           if (token) {
               dynamicContent.innerHTML = `
                   <a href="./campaign.html" class="btn btn-deep-orange mx-2">Campaign</a>
-                  <a href="./doc_profile.html" class="btn btn-deep-orange mx-2">Profile</a>
+                  <a href="./doc_dashboard.html" class="btn btn-deep-orange mx-2">Profile</a>
                   <a onclick="handleLogout()" class="btn btn-info">Logout</a>
               `;
           } else {

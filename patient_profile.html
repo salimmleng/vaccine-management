@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,9 +27,9 @@
 
     </header>
 
-    <!-- doctor profile info section -->
+    <!-- patient profile info section -->
 
-    <div class="row profile-body">
+    <!-- <div class="row profile-body">
         <div class="col-md-3 container p-5">
             <div class="card profile" style="width: 18rem;">
                 <img class="dash-img m-auto" src="static/images/pat-img.png" class="card-img-top" alt="...">
@@ -62,8 +63,129 @@
     
             </div>
         </div>
-    </div>
+    </div> -->
 
+
+
+
+    <!-- new dashboard -->
+
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">ImmunoHub</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="patient_profile.html" class="sidebar-link">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="patient_profile.html" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>Manage profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="vaccine.html" class="sidebar-link">
+                        <i class="fa-solid fa-syringe"></i>
+                        <span>Take vaccine</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </aside>
+        <div class="main">
+            <main class="content px-3 py-4">
+                <div class="container-fluid">
+                    <div class="mb-3">
+                        <h3 class="fw-bold fs-4 my-3">Patient Dashboard</h3>
+                        <div class="row">
+                            <div class="col-12 col-md-4 ">
+                                <div class="card border-0">
+                                    <div class="card-body py-4">
+                                        <h5 class="mb-2 fw-bold">
+                                            Easy Dose Scheduling
+                                        </h5>
+
+                                        <p class="mb-2">Effortlessly book your vaccination appointments at a time that suits you best.</p>
+                                       
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 ">
+                                <div class="card  border-0">
+                                    <div class="card-body py-4">
+                                        <h5 class="mb-2 fw-bold">
+                                            Secure Online Booking
+                                        </h5>
+                                        <p class="mb-2">Safeguard your health with our secure and easy-to-use online booking system.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 ">
+                                <div class="card border-0">
+                                    <div class="card-body py-4">
+                                        <h5 class="mb-2 fw-bold">
+                                            24/7 Access to Support
+                                        </h5>
+                                        <p class="mb-2">
+                                            Get assistance any time you need it with our round-the-clock support services.
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mt-2 ">
+                                <div class="card border-0">
+                                    <div class="card-body py-4">
+                                        <h5 class="mb-2 fw-bold">
+                                            Comprehensive Dose Tracking
+                                        </h5>
+                                        <p class="mb-2">
+                                            Keep track of all your doses, from first to booster, in one convenient place.
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mt-2 ">
+                                <div class="card border-0">
+                                    <div class="card-body py-4">
+                                        <h5 class="mb-2 fw-bold">
+                                            Instant Dose Confirmation
+                                        </h5>
+                                        <p class="mb-2">
+                                            Receive immediate confirmation of your vaccine dose booking and reminders.
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9 mt-3">
+                                <div class="card profile-card p-4">
+                        
+                                </div>
+                            </div>
+                            
+                        </div>
+                       
+                        </h3>
+                        
+                    </div>
+                </div>
+            </main>
+           
+        </div>
+    </div>
 
 
 
@@ -129,6 +251,7 @@
     <script src="auth.js"></script>
     <script src="navber.js"></script>
     <script src="patient_profile.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
