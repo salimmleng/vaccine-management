@@ -55,8 +55,8 @@ function fetchUserProfile() {
               <hr>
           </div>
           <div>
-              <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3" type="submit">Edit profile</a>
-              <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3 mx-3" type="submit">Change password</a>
+              <a href="./doctor_update_profile.html?id=${data.id}" class="btn btn-deep-orange mt-4 mb-3 mx-1" type="submit">Edit profile</a>
+              <a href="./change_password.html?id=${data.id}" class="btn btn-primary mt-4 mb-3" type="submit">Change password</a>
           </div>
       `;
   })
