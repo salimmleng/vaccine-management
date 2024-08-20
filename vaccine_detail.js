@@ -315,7 +315,7 @@ const displayReviewForm = () => {
     }
   } else {
     if (token){
-    formContainer.innerHTML = "<p class='text-center fw-bold'>You must book a dose before giving a review.</p>";
+    formContainer.innerHTML = "<p class='text-center fw-bold rob'>You must book a dose before giving a review.</p>";
     }
   }
 };
@@ -383,14 +383,14 @@ const displayReview = () => {
           allReviews.innerHTML = ""; 
           
           if (reviews.length === 0) {
-            allReviews.innerHTML = "<p class='text-center fw-bold'>No reviews found for this vaccine.</p>";
+            allReviews.innerHTML = "<p class='text-center fw-bold'></p>";
           } else {
             reviews.forEach((review) => {
               const div = document.createElement("div");
               div.classList.add("col-md-3", "mb-4");
     
               div.innerHTML = `
-                <div class="card rev-card mb-4">
+                <div class="card rev-card mb-4 mt-3">
                  <img src="static/images/vac-icon.png" class="rev-img" alt="...">
                   <div class="card-body">
                     <h6>${review.rating}</h6>
