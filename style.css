@@ -638,3 +638,17 @@ a.sidebar-link:hover {
 }
 
 @media (min-width: 768px) {}
+
+
+
+/* image hover */
+
+.image-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}

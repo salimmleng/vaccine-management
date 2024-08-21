@@ -41,50 +41,6 @@ const getAllvaccines = () => {
 getAllvaccines()
 
 
-// const getAllvaccines = () => {
-//   fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/")
-//     .then((res) => res.json())
-//     .then((vaccines) => {
-//       console.log(vaccines);
-
-//       const allVaccinesContainer = document.getElementById("vaccine-container");
-//       allVaccinesContainer.innerHTML = ""; // Clear the container before adding new content
-
-//       vaccines.forEach((vaccine) => {
-//         const cardDiv = document.createElement("div");
-//         cardDiv.classList.add("col-md-4", "mb-4");
-
-//         cardDiv.innerHTML = `
-//           <div class="card h-100 shadow-sm border-0">
-//             <img src="${vaccine.image}" class="card-img-top2 img-fluid" alt="${vaccine.name} Image">
-//             <div class="card-body">
-//               <h5 class="card-title mb-3 font-weight-bold text-dark">${vaccine.name}</h5>
-//               <ul class="list-unstyled mb-4">
-//                 <li class="mb-2"><strong>Manufacturer:</strong> ${vaccine.manufacturer}</li>
-//                 <li class="mb-2"><strong>Batch Number:</strong> ${vaccine.batch_number}</li>
-//                 <li class="mb-2"><strong>Age Limit:</strong> ${vaccine.age_limit}</li>
-//                 <li class="mb-2"><strong>Expiry Date:</strong> ${vaccine.expiry_date}</li>
-//               </ul>
-//               <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-deep-orange text-white px-4 py-2">Show Details</a>
-//             </div>
-//           </div>
-//         `;
-
-//         allVaccinesContainer.appendChild(cardDiv);
-//       });
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching vaccines:", error);
-//     });
-// };
-
-// getAllvaccines();
-
-
-
-
-
-
 
 const getQueryParams = (param) => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -129,7 +85,7 @@ const getQueryParams = (param) => {
     
             div.innerHTML = `
                 <div class="col-md-6 d-flex justify-content-center">
-                    <img class="detail-img img-fluid" src="${vaccine.image}" alt="${vaccine.name} Image">
+                    <img class="detail-img img-fluid image-hover" src="${vaccine.image}" alt="${vaccine.name} Image">
                 </div>
                 <div class="col-md-6">
                     <div class="detailRight p-4">
