@@ -12,7 +12,7 @@ function loadDoctorNavbar() {
               dynamicContent.innerHTML = `
                   <a href="./campaign.html" class="btn btn-deep-orange mx-2">Campaign</a>
                   <a href="./doc_dashboard.html" class="btn btn-deep-orange mx-2">Profile</a>
-                  <a onclick="handleLogout()" class="btn btn-info">Logout</a>
+                  <a onclick="handleLogout()" class="btn btn-info text-white">Logout</a>
               `;
           } else {
               dynamicContent.innerHTML = `
@@ -35,7 +35,7 @@ function loadPatientNavbar() {
           if (token) {
               dynamicContent.innerHTML = `
                   <a href="./patient_profile.html" class="btn btn-deep-orange mx-2">Profile</a>
-                  <a onclick="handleLogout()" class="btn btn-info">Logout</a>
+                  <a onclick="handleLogout()" class="btn btn-info text-white">Logout</a>
               `;
           } else {
               dynamicContent.innerHTML = `
