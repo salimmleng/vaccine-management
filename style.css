@@ -22,9 +22,14 @@ li{
     
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+
+
 .immu_title{
     font-size: 25px;
 }
+
+
 .nav-font{
     font-size: 20px;
 }
@@ -115,6 +120,9 @@ li{
 .banner-btn {
     text-align: left;
     margin-top: 20px; /* Space between subtitle and button */
+    background-color: #3009f4;
+    padding: 7px 9px; 
+
 }
 
 .font {
@@ -657,3 +665,39 @@ a.sidebar-link:hover {
     transform: scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+/* login register btn */
+
+.btn-bold {
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 10px 12px;
+    
+    
+}
+
+.btn-deep {
+    color: #ffffff; 
+}
+
+.btn-login {
+    background-color: #e80f78 !important; 
+    border-color: #e80f78 !important;
+    color: white;
+    
+}
+.btn-login:hover{
+    background-color: #cd387e ! important;
+}
+
+.btn-outline-danger {
+    color: #e80f78 !important; 
+    border-color: #e80f78 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e80f78 !important;
+    color: #ffffff !important;
+}
+

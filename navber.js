@@ -60,8 +60,8 @@ if (userRole === 'doctor') {
       const dynamicContent = document.querySelector(".navbar-collapse .d-flex");
 
       dynamicContent.innerHTML = `
-          <a href="./login.html" class="btn btn-success mx-2">Login</a>
-          <a href="./registration.html" class="btn btn-danger">Register</a>
+          <a href="./login.html" class="btn btn-login text-white mx-2 btn-bold btn-deep ">Login</a>
+          <a href="./registration.html" class="btn btn-outline-danger btn-bold btn-deep">Register</a>
       `;
   });
 }
