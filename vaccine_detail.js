@@ -68,11 +68,11 @@ const getQueryParams = (param) => {
                 buttonHTML = `
                     <button
                         type="button"
-                        class="btn btn-deep-orange btn-lg text-white px-4 py-2"
+                        class="dose-btn text-white text-weight-bold px-4 py-2"
                         data-bs-toggle="modal"
                         data-bs-target="#addModal"
                     >
-                        Book Dose
+                        Book dose
                     </button>
                 `;
             } else {
@@ -264,7 +264,7 @@ const displayReviewForm = () => {
             <label for="comment" class="form-label mx-2">Comment</label>
             <textarea class="form-control" id="comment" rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn btn-deep-orange mx-3 my-2">Submit</button>
+          <button type="submit" class="submit-btn mx-3 my-2">Submit</button>
         </form>
       </div>
     `;

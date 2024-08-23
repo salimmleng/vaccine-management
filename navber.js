@@ -10,9 +10,9 @@ function loadDoctorNavbar() {
 
           if (token) {
               dynamicContent.innerHTML = `
-                  <a href="./campaign.html" class="btn btn-deep-orange mx-2">Campaign</a>
-                  <a href="./doc_dashboard.html" class="btn btn-deep-orange mx-2">Profile</a>
-                  <a onclick="handleLogout()" class="btn btn-info text-white">Logout</a>
+                  <button class="profile-btn"><a href="./campaign.html" class="btn-bold">CAMPAIGN</a></button>
+                  <button class="profile-btn mx-2"><a href="./doc_dashboard.html" class="btn-bold">PROFILE</a></button>
+                  <button class="logout-btn"><a onclick="handleLogout()" class="btn-bold">LOGOUT</a></button>
               `;
           } else {
               dynamicContent.innerHTML = `
@@ -34,8 +34,8 @@ function loadPatientNavbar() {
 
           if (token) {
               dynamicContent.innerHTML = `
-                  <a href="./patient_profile.html" class="btn btn-deep-orange mx-2">Profile</a>
-                  <a onclick="handleLogout()" class="btn btn-info text-white">Logout</a>
+                  <button class="profile-btn mx-2"><a href="./doc_dashboard.html" class="btn-bold">PROFILE</a></button>
+                  <button class="logout-btn"><a onclick="handleLogout()" class="btn-bold">LOGOUT</a></button>
               `;
           } else {
               dynamicContent.innerHTML = `
@@ -60,8 +60,8 @@ if (userRole === 'doctor') {
       const dynamicContent = document.querySelector(".navbar-collapse .d-flex");
 
       dynamicContent.innerHTML = `
-          <a href="./login.html" class="btn btn-login text-white mx-2 btn-bold btn-deep ">Login</a>
-          <a href="./registration.html" class="btn btn-outline-danger btn-bold btn-deep">Register</a>
+          <a href="./login.html" class="btn btn-login text-white mx-2 btn-bold btn-deep ">LOG IN</a>
+          <a href="./registration.html" class="btn btn-outline-danger btn-bold btn-deep">REGISTER</a>
       `;
   });
 }

@@ -26,9 +26,14 @@ li{
 
 
 .immu_title{
-    font-size: 25px;
+    font-size: 28px;
+    color: #e80f78;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
-
+.immu_title:hover {
+    color: #e80f78; 
+}
 
 .nav-font{
     font-size: 20px;
@@ -40,7 +45,7 @@ li{
     background-color: #387efa;;
 }
 .foot{
-    background-color: #387efa;
+    background-color: #8f50ec;
     min-height: 80px;
     padding: 1rem;
 
@@ -117,19 +122,72 @@ li{
     text-align: left;
 }
 
+/* banner btn */
 .banner-btn {
-    text-align: left;
-    margin-top: 20px; /* Space between subtitle and button */
-    background-color: #3009f4;
-    padding: 7px 9px; 
+    width: 155px;
+    height: 60px;
+    border: none;
+    color: white;
+    background-color: rgb(255, 0, 68);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
 
 }
+.banner-btn:hover{
+    cursor: pointer;
+    box-shadow: inset 300px 0 0 0 #f9e506;
+    color: #000;
+}
+.banner-btn2{
+    width: 155px;
+    height: 60px;
+    border: none;
+    color: white;
+    background-color: rgb(19, 180, 75);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+    /* border: 3px solid #42FBF2; */
+    position: relative;
+    z-index: 1;
+   
+
+}
+.banner-btn2:hover{
+    color: #000;
+    cursor: pointer;
+}
+.banner-btn2:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #42FBF2;
+}
+.banner-btn2:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+
+}
+
 
 .font {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 47px;
+    font-size: 57px;
     color: black;
 }
 p{
@@ -311,16 +369,60 @@ p{
 }
 
 .btn-deep-orange {
-    background-color: #FF5722; 
+    background-color: #04eb13; 
     color: #fff; 
     border: none;
-    padding: 10px 25px;
-} 
-.btn-deep-orange:hover {
-    background-color: #e64a19; 
-    color: #fff; 
-   
+    
 }
+.profile-btn{
+    background-color: #e80f78;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+.profile-btn:hover{
+    background-color: #ca4987;
+    
+}
+.logout-btn{
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.dose-btn{
+    background-color: #e80f78;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    height: 51px;
+
+    
+
+}
+.submit-btn{
+    background-color: #e80f78; /* YouTube red */
+    color: white;
+    padding: 10px 20px; /* Adequate padding for a button */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover{
+    background-color: #c5206f; 
+}
+
+
 .btn-info{
     padding: 10px 25px;
 }
@@ -493,7 +595,10 @@ p{
 }
 
 a {
-    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;  
+    text-decoration: none; 
+    color: inherit; 
 }
 
 body {
@@ -700,4 +805,91 @@ a.sidebar-link:hover {
     background-color: #e80f78 !important;
     color: #ffffff !important;
 }
+
+
+
+/* contact section */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.contact-body{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    
+} */
+
+
+/* Apply to all input fields */
+.con-input::placeholder {
+    
+    opacity: 1;
+    font-weight: 650;
+}
+
+/* Apply to the textarea separately */
+#message::placeholder {
+    /* color: white; */
+    opacity: 1;
+    font-weight: 650;
+}
+#message{
+    background-color: #fff;
+}
+
+.social-media i {
+    background: #8f50ec;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+    color: #fff;
+}
+
+.social-media i:hover {
+    background: #fff;
+    color: #8f50ec;
+}
+
+.first-text {
+    color: #8f50ec;
+    font-weight: 600;
+}
+
+.second-text {
+    font-weight: 590;
+    color: #8f50ec;
+}
+
+.third-text {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.con-input {
+    width: 100%;
+    height: 55px;
+    border: 2px solid #fff;
+    border-radius: 20px; /* Add border radius here */
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+textarea.conn-input {
+    border-radius: 20px; 
+    color: #8f50ec;
+    border: 2px solid #fff;
+    
+   
+   
+}
+.con-img{
+    height: 360px;
+    width: 360px;
+}
+
+.submit-form{
+    background-color: #8f50ec;
+}
+
+
 
