@@ -61,18 +61,19 @@
         <!-- Right Side: Contact Form -->
         <div class="col-lg-6 submit-form text-white p-4">
             <h4 class="third-text">Contact us</h4>
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form" onsubmit="addContact(event)">
                 <div class="mb-4">
-                    <input class="form-control con-input" type="text" placeholder="Name">
+                    <input class="form-control con-input" type="text" placeholder="Name" required>
                 </div>
                 <div class="mb-4">
-                    <input class="form-control con-input" type="email" placeholder="Email">
+                    <input class="form-control con-input" type="email" placeholder="Email" required>
                 </div>
                 <div class="mb-4">
-                    <textarea class="form-control conn-input" id="message" rows="5" placeholder="Message"></textarea>
+                    <textarea class="form-control conn-input" id="message" rows="5" placeholder="Message" required></textarea>
                 </div>
                 <button type="submit" class="btn con-btn">Send message</button>
             </form>
+            <p id="con-message" class="mt-3"></p>
         </div>
     </div>
 </div>
@@ -134,7 +135,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="auth.js"></script>
     <script src="navber.js"></script>
-    <script src="password.js"></script>
+    <script src="contact.js"></script>
+
+    
     
 </body>
 
