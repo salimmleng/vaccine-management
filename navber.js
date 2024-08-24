@@ -10,9 +10,9 @@ function loadDoctorNavbar() {
 
           if (token) {
               dynamicContent.innerHTML = `
-                  <button class="profile-btn"><a href="./campaign.html" class="btn-bold">CAMPAIGN</a></button>
-                  <button class="profile-btn mx-2"><a href="./doc_dashboard.html" class="btn-bold">PROFILE</a></button>
-                  <button class="logout-btn"><a onclick="handleLogout()" class="btn-bold">LOGOUT</a></button>
+                  
+                  <button class="profile-btn mx-2"><a href="./doc_dashboard.html" class="btn-bold">Profile</a></button>
+                  <button class="logout-btn"><a onclick="handleLogout()" class="btn-bold">Logout</a></button>
               `;
           } else {
               dynamicContent.innerHTML = `
