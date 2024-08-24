@@ -248,7 +248,7 @@ const displayReviewForm = () => {
     if (token){
     formContainer.innerHTML = `
       <div class="mx-auto w-75 mt-5">
-        <h1 class='text-center revg my-4'>Give Review</h1>
+        <h1 class='text-center revg my-3'>Give Review</h1>
         
         <form id="review-form" class="pt-2 bord" onsubmit="submitReview(event)">
           <div class="mb-3 p-3">
@@ -262,7 +262,7 @@ const displayReviewForm = () => {
             </select>
           </div>
           <div class="mb-3 p-3">
-            <label for="comment" class="form-label mx-2">Comment</label>
+            <label for="comment" class="form-label mx-2">Review</label>
             <textarea class="form-control" id="comment" rows="3" required></textarea>
           </div>
           <button type="submit" class="submit-btn mx-3 my-2">Submit</button>
@@ -355,7 +355,7 @@ const displayReview = () => {
                     <h6>${review.rating}</h6>
                     <h6>Reviewer: ${review.reviewer.first_name}</h6>
                     <h6 class="rev-title">Review: ${review.comment}</h6>
-                    <h6>Created at: ${review.created_at}</h6>
+                   
                   </div>
                 </div>
               `;
