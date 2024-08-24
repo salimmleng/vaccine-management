@@ -8,7 +8,6 @@ const getAllvaccines = () => {
       .then((vaccines) => {
           console.log(vaccines)
           
-          
           const allvaccines = document.getElementById("vaccine-container")
           vaccines.forEach((vaccine) => {
               const div = document.createElement("div")
@@ -236,6 +235,8 @@ document.getElementById("bookingForm").addEventListener("submit", handleTakeVacc
 
 // display review form
 
+
+
 const displayReviewForm = () => {
   const vaccineId = getQueryParams("id");
   const formContainer = document.getElementById("review-form-container");
@@ -309,7 +310,9 @@ const submitReview = (event) => {
   .then((res) => res.json())
   .then((data) => {
       console.log(data);
-      // alert("Review submitted successfully!");
+      document.getElementById("review-form").reset();
+      // Refresh the page
+      window.location.reload();
      
   })
   .catch((error) => {

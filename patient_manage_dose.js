@@ -103,7 +103,7 @@ const generatePDF = (id) => {
         ['Vaccine Center:', data.vaccine_center.name],
         ['First Dose Date:', data.firstDose_date ? data.firstDose_date.date : 'N/A'],
         ['Second Dose Date:', data.secondDose_date ? data.secondDose_date.date : 'N/A'],
-        ['Vaccine Status:', ` ${data.vaccine_status}`]
+        ['Vaccine Status:', `${data.vaccine_status}`]
       ];
   
       vaccineDetails.forEach((row, index) => {
