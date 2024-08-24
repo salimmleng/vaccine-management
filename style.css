@@ -2,6 +2,9 @@
 body{
     margin: auto;
     background-color: white;
+    height: 100vh;
+    
+
 }
 li{
     list-style: none;
@@ -39,17 +42,21 @@ li{
     font-size: 20px;
 }
 
-
-
 .back{
     background-color: #387efa;;
 }
 .foot{
-    background-color: #8f50ec;
+    background-color: lightgray;
     min-height: 80px;
     padding: 1rem;
 
 }
+.about-foot{
+    background-color: rgb(244, 238, 238);
+    min-height: 80px;
+    padding: 1rem;
+}
+
 .card-img{
    width: 130%;
    height: 235px;
@@ -494,13 +501,6 @@ p{
   .modal-footer .btn {
     width: 100px;
   }
-
-
-
-
-
-
-
 
 
 /* detail page design */
@@ -958,6 +958,10 @@ textarea.conn-input {
 .rating .star.bxs-star {
     color: #FFA500; /* Darker gold color for filled stars */
 }
+
+
+
+
 
 
 

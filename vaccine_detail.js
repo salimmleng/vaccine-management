@@ -1,5 +1,4 @@
 
-
 const getAllvaccines = () => {
   fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
      
@@ -38,7 +37,6 @@ const getAllvaccines = () => {
 
 }
 getAllvaccines()
-
 
 
 const getQueryParams = (param) => {
