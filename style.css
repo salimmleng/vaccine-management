@@ -1,8 +1,9 @@
 
 body{
-    margin: auto;
+    margin: 0;
     background-color: white;
     height: 100vh;
+    padding: 0;
     
 
 }
@@ -269,6 +270,8 @@ p{
 .cor-img{
     width: 83%;
 }
+
+/* service */
 #tpc:hover{
    transform: translateY(-10px);
    background-color: red;
@@ -278,6 +281,8 @@ p{
     transition: 0.5s ease;
     cursor: pointer;
 }
+
+/* service end */
 .bor{
     border: 1px solid rgb(209, 207, 207);
     border-radius: 10px;
