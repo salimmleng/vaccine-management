@@ -10,7 +10,7 @@ const getAllvaccines = () => {
           const allvaccines = document.getElementById("vaccine-container")
           vaccines.forEach((vaccine) => {
               const div = document.createElement("div")
-              div.classList.add("col-md-4","mb-4")
+              div.classList.add("col-md-4","mb-4","col-lg-4","col-sm-6")
               
               div.innerHTML = `
                   <div class="card vaccine-card">
