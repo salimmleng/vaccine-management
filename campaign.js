@@ -29,7 +29,7 @@ const addVaccine = (event) => {
     formData.delete('image');
     formData.append("image", imageUrl);
 
-    // Now send the image URL and other form data to your backend
+    // Now send the image URL to backend
     fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
       method: "POST",
       headers: {
