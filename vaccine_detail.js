@@ -327,10 +327,6 @@ const displayReview = () => {
   console.log(vaccineId)
   fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/reviews/${vaccineId}/`,{
       method: "GET",
-      headers: {
-          Authorization: `Token ${token}`,
-        },
-
   })
       .then((res) => res.json())
       .then((reviews) => {
