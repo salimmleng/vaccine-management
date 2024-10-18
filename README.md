@@ -1,5 +1,5 @@
-### Food Delivery App
-QuickDrop is a fast and smarter food delivery system that simplifies the entire delivery process.
+### Vaccine Management System
+ImmunoHub is a comprehensive vaccine management system that streamlines the entire vaccination process.
 
 ### Features
 - Responsive design with mobile-first approach<br>
@@ -11,12 +11,12 @@ QuickDrop is a fast and smarter food delivery system that simplifies the entire 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### Project live link
-https://salimmleng.github.io/Food-delivery
+https://salimmleng.github.io/vaccine-management/
 
 ### If you want to run the project locally please folllow these process 👇 
 
 1. ### Clone the repository:
-       git clone https://github.com/salimmleng/Food-delivery.git
+       git clone https://github.com/salimmleng/vaccine-management.git
 2. ### Navigate to the project directory:
        cd project-name
 3. ### Open index.html in your browser:
