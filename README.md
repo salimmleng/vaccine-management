@@ -1,4 +1,6 @@
-### Vaccine Management System
+### Project Name: Immunohub
+
+### Description:
 ImmunoHub is a comprehensive vaccine management system that streamlines the entire vaccination process.
 
 ### Features
