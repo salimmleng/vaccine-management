@@ -9,7 +9,7 @@ function fetchUserProfile() {
       return;
   }
 
-  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${userId}/`, {
+  fetch(`https://vaccine-pi.vercel.app/accounts/profile/${userId}/`, {
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const getQueryParams = (param) => {
 const getProfileDetail = () => {
   const profileId = getQueryParams("id");
   const token = localStorage.getItem('token');
-  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${profileId}/`,{
+  fetch(`https://vaccine-pi.vercel.app/accounts/profile/${profileId}/`,{
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Token ${token}`
@@ -116,7 +116,7 @@ const UpdateProfile = (event) => {
       nid: formData.get("nid"),
   };
 
-  fetch(`https://vaccination-management-wbw3.onrender.com/accounts/profile/${profileId}/`, {
+  fetch(`https://vaccine-pi.vercel.app/accounts/profile/${profileId}/`, {
       method: "PUT",
       headers: {
           "Content-Type": "application/json",

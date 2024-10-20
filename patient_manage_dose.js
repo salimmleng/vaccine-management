@@ -1,6 +1,6 @@
 const loadAllDoses = () => {
   const token = localStorage.getItem("token");
-  fetch("https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/", {
+  fetch("https://vaccine-pi.vercel.app/vaccine/api/doses/", {
       headers: {
           Authorization: `Token ${token}`,
       },
@@ -43,7 +43,7 @@ loadAllDoses();
 const generatePDF = (id) => {
     console.log(id);
     const token = localStorage.getItem("token");
-    fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/${id}/`, {
+    fetch(`https://vaccine-pi.vercel.app/vaccine/api/doses/${id}/`, {
       headers: {
         Authorization: `Token ${token}`,
       },
@@ -135,7 +135,7 @@ const generatePDF = (id) => {
   const deleteVaccine = (doseId) => {
     const token = localStorage.getItem("token");
 
-    fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/${doseId}/`, {
+    fetch(`https://vaccine-pi.vercel.app/vaccine/api/doses/${doseId}/`, {
         method: "DELETE",
         headers: {
             Authorization: `Token ${token}`,

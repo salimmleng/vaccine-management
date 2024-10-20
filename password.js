@@ -24,7 +24,7 @@ function changePassword(event) {
 
 
     // Send the POST request to the API
-    fetch('https://vaccination-management-wbw3.onrender.com/accounts/change-password/', {
+    fetch('https://vaccine-pi.vercel.app/accounts/change-password/', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {

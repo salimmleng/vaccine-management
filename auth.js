@@ -36,7 +36,7 @@ const handleRegistration = (event) => {
  
   console.log(info)
 
-  fetch("https://vaccination-management-wbw3.onrender.com/accounts/register/", {
+  fetch("https://vaccine-pi.vercel.app/accounts/register/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(info),
@@ -61,7 +61,7 @@ const handleLogin =(event) =>{
   const username = getValue("id_username")
   const password = getValue("id_password")
 
-  fetch("https://vaccination-management-wbw3.onrender.com/accounts/login/", {
+  fetch("https://vaccine-pi.vercel.app/accounts/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -88,7 +88,7 @@ const handleLogout = () => {
   const token = localStorage.getItem("token");
   console.log(token)
 
-  fetch("https://vaccination-management-wbw3.onrender.com/accounts/logout/", {
+  fetch("https://vaccine-pi.vercel.app/accounts/logout/", {
     method: "POST",
     headers: {
       Authorization: `Token ${token}`,

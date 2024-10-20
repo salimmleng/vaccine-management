@@ -12,7 +12,7 @@ function addContact(event) {
         message: message
     };
 
-    fetch('https://vaccination-management-wbw3.onrender.com/contact/', {
+    fetch('https://vaccine-pi.vercel.app/contact/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

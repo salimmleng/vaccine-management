@@ -30,7 +30,7 @@ const addVaccine = (event) => {
     formData.append("image", imageUrl);
 
     // Now send the image URL to backend
-    fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/", {
+    fetch("https://vaccine-pi.vercel.app/api/vaccines/", {
       method: "POST",
       headers: {
         Authorization: `Token ${token}`,
@@ -57,7 +57,7 @@ const addVaccine = (event) => {
 const getAllVaccines = () => {
   const token = localStorage.getItem("token");
   console.log(token)
-  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
+  fetch("https://vaccine-pi.vercel.app/api/vaccines/",{
     headers: {
       Authorization: `Token ${token}`,
     },
@@ -105,7 +105,7 @@ const getQueryParams = (param) => {
 const getVaccineDetail = () => {
   const vaccineId = getQueryParams("id");
   const token = localStorage.getItem("token");
-  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`,{
+  fetch(`https://vaccine-pi.vercel.app/api/vaccines/${vaccineId}/`,{
     headers: {
       Authorization: `Token ${token}`,
     },
@@ -140,7 +140,7 @@ const updateVaccine = (event) => {
       age_limit: formData.get("age_limit"),
   };
 
-  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`, {
+  fetch(`https://vaccine-pi.vercel.app/api/vaccines/${vaccineId}/`, {
       method: "PATCH",
       headers: {
           "Content-Type": "application/json",
@@ -163,7 +163,7 @@ const updateVaccine = (event) => {
 
 const deleteVaccine = (vaccineId) => {
   const token = localStorage.getItem("token");
-  fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`, {
+  fetch(`https://vaccine-pi.vercel.app/api/vaccines/${vaccineId}/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

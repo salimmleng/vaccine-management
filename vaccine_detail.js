@@ -1,6 +1,6 @@
 
 const getAllvaccines = () => {
-  fetch("https://vaccination-management-wbw3.onrender.com/api/vaccines/",{
+  fetch("https://vaccine-pi.vercel.app/api/vaccines/",{
      
   })
       .then((res) => res.json())
@@ -48,7 +48,7 @@ const getQueryParams = (param) => {
     const vaccineId = getQueryParams("id");
     const token = localStorage.getItem("token");
     console.log(vaccineId)
-    fetch(`https://vaccination-management-wbw3.onrender.com/api/vaccines/${vaccineId}/`,{
+    fetch(`https://vaccine-pi.vercel.app/api/vaccines/${vaccineId}/`,{
         method: "GET",
 
     })
@@ -129,7 +129,7 @@ getVaccineDetail()
 const loadDates = ()=>{
     // const token = localStorage.getItem("token");
     const vID = getQueryParams("id");
-    fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/available_dates/?id=${vID}`
+    fetch(`https://vaccine-pi.vercel.app/vaccine/api/available_dates/?id=${vID}`
        
     )
     .then((res) => res.json())
@@ -154,7 +154,7 @@ loadDates()
 const loadHospitalname = ()=>{
   // const token = localStorage.getItem("token");
   const vID = getQueryParams("id");
-  fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/api/available_hospitals/?id=${vID}`
+  fetch(`https://vaccine-pi.vercel.app/vaccine/api/available_hospitals/?id=${vID}`
      
   )
   .then((res) => res.json())
@@ -203,7 +203,7 @@ const handleTakeVaccine=(event)=>{
     console.log(JSON.stringify(info))
     
     const token = localStorage.getItem("token");
-    fetch("https://vaccination-management-wbw3.onrender.com/vaccine/api/doses/", {
+    fetch("https://vaccine-pi.vercel.app/vaccine/api/doses/", {
       method: "POST",
       headers: { "content-type": "application/json",
              Authorization: `Token ${token}`,
@@ -292,7 +292,7 @@ const submitReview = (event) => {
 
   
 
-  fetch("https://vaccination-management-wbw3.onrender.com/vaccine/reviews/", {
+  fetch("https://vaccine-pi.vercel.app/vaccine/reviews/", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -325,7 +325,7 @@ const displayReview = () => {
   const vaccineId = getQueryParams("id");
   const token = localStorage.getItem("token");
   console.log(vaccineId)
-  fetch(`https://vaccination-management-wbw3.onrender.com/vaccine/reviews/${vaccineId}/`,{
+  fetch(`https://vaccine-pi.vercel.app/vaccine/reviews/${vaccineId}/`,{
       method: "GET",
   })
       .then((res) => res.json())
