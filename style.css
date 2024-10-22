@@ -31,12 +31,9 @@ li{
 
 .immu_title{
     font-size: 28px;
-    color: #e80f78;
+    color: #ff009a;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-}
-.immu_title:hover {
-    color: #e80f78; 
 }
 
 .nav-font{
@@ -47,9 +44,11 @@ li{
     background-color: #387efa;;
 }
 .foot{
-    background-color: lightgray;
+    background-color: #f2209e;
     min-height: 80px;
     padding: 1rem;
+    font-family: "Roboto";
+    font-weight: bold;
 
 }
 .about-foot{
@@ -135,12 +134,13 @@ li{
     width: 155px;
     height: 60px;
     border: none;
-    color: white;
-    background-color: rgb(231, 61, 106);
+    color: #fff;
+    background-color: #ff009a;
     border-radius: 4px;
     box-shadow: inset 0 0 0 0 #e4d638;
     transition: ease-out 0.3s;
     font-size: 1rem;
+    font-family:;
     outline: none;
 
 }
@@ -309,13 +309,13 @@ p{
 }
 .edit{
     padding: 16px 32px;
-    background-color: #F3745B;
+    background-color: #ff009a;
     border-radius: 5px;
 }
 .edit-btn{
     padding: 10px 20px;
-    background-color: #F3745B;
-    border: 1px solid #F3745B;
+    background-color: #ff009a;
+    border: 1px solid  #ff009a;
     
      
 
@@ -345,50 +345,52 @@ p{
 /* review card start*/
 
 .revg{
-    color: #f26d3e;
+    color: #ff009a;
 }
 .v-title{
     /* color: #007bff; */
-    color: #FF5722;
+    color: #ff009a;
     font-size: 30px;
 }
 .rev-title{
     font-size: 20px;
-    color: #FF5722;
+    color: #ff009a;
 
 }
 
 .btn-outline-custom {
-    color: #FF5722; 
-    border-color: #FF5722; 
+    color: #ff009a; 
+    border-color: #ff009a; 
     padding: 10px 25px;
 }
 .btn-outline-custom:hover {
-    background-color: #FF5722; 
+    background-color: #ff009a; 
     color: #fff; 
 }
 
 .btn-outline-list{
-    color: #FF5722; 
-    border-color: #FF5722; 
+    
+    border-color: #ff009a; 
     padding: 10px 15px;
     border-radius: 4px;
+    font-weight: bold;
 
 }
 .btn-outline-list:hover {
-    background-color: #FF5722; 
-    /* color: #fff;  */
+    background-color: #ff009a; 
     color: rgb(243, 224, 224);
+    font-weight: bold;
 }
 
 .btn-deep-orange {
-    background-color: #04eb13; 
+    background-color: #ff009a; 
     color: #fff; 
     border: none;
     
 }
+
 .profile-btn{
-    background-color: #e7197c;
+    background-color: #ff009a;
     
     padding: 14px;
     border: none;
@@ -398,11 +400,11 @@ p{
    
 }
 .profile-btn:hover{
-    background-color: #c31268;
+    background-color: #ff009a;
     
 }
 .profileEdit-btn{
-    background-color: #ec4f9b;
+    background-color: #ff009a;
     padding: 16px;
     border: none;
     border-radius: 4px;
@@ -411,14 +413,14 @@ p{
 
 }
 .profileEdit-btn:hover{
-    background-color: #ca4987;
+    background-color: #ff009a;
     
 }
 .profile-pass{
     font-weight: 600;
 }
 .logout-btn{
-    background-color: rgb(222, 116, 116);
+    background-color: #ff009a;
     padding: 14px;
     border: none;
     border-radius: 6px;
@@ -426,11 +428,11 @@ p{
     color: white;
 }
 .logout-btn:hover{
-    background-color: rgb(228, 11, 11);
+    background-color : #ff009a(228, 11, 11);
 }
 
 .dose-btn{
-    background-color: #e80f78;
+    background-color: #ff009a;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -440,10 +442,10 @@ p{
 
 }
 .dose-btn:hover{
-    background-color: #c10962;
+    background-color: #ff009a;
 }
 .submit-btn{
-    background-color: #e80f78; /* YouTube red */
+    background-color: #ff009a; /* YouTube red */
     color: white;
     padding: 10px 20px; /* Adequate padding for a button */
     border: none;
@@ -454,7 +456,7 @@ p{
     transition: background-color 0.3s ease;
 }
 .submit-btn:hover{
-    background-color: #c5206f; 
+    background-color: #ff009a; 
 }
 
 
@@ -577,14 +579,14 @@ p{
 }
 
 .detailRight a.btn {
-    background-color: #ff5722; /* Deep orange */
+    background-color: #ff009a; /* Deep orange */
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .detailRight a.btn:hover {
-    background-color: #e64a19;
+    background-color: #ff009a;
 }
 
 
@@ -815,22 +817,22 @@ a.sidebar-link:hover {
 }
 
 .btn-login {
-    background-color: #e80f78 !important; 
-    border-color: #e80f78 !important;
+    background-color: #ff009a !important; 
+    border-color: #ff009a !important;
     color: white;
     
 }
 .btn-login:hover{
-    background-color: #cd387e ! important;
+    background-color: #ff009a ! important;
 }
 
 .btn-outline-danger {
-    color: #e80f78 !important; 
-    border-color: #e80f78 !important;
+    color: #ff009a !important; 
+    border-color: #ff009a !important;
 }
 
 .btn-outline-danger:hover {
-    background-color: #e80f78 !important;
+    background-color: #ff009a !important;
     color: #ffffff !important;
 }
 

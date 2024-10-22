@@ -30,14 +30,14 @@
         <div class="col-md-6">
         
             <form action="" method="POST">
-                <!-- <input type="hidden" name="csrfmiddlewaretoken" value="votezvGKzGeZkekw496SOyrYVIPtidgzy1HoWGu1WNHMd902sivhZiHkfrPVV0n4"> -->
+               
                 <h1 class="text-center">Login page</h1>
                 <label for="id_username">Username:</label>
-                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" class="textinput form-control" required="" id="id_username">
+                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" class="textinput form-control" required id="id_username" required="">
                 
                 <br>
                 <label for="id_password">Password:</label>
-                <input type="password" name="password" autocomplete="current-password" class="passwordinput form-control" required="" id="id_password">
+                <input type="password" name="password" autocomplete="current-password" class="passwordinput form-control" required id="id_password" required="">
                 
                 <br>
                 <button onclick="handleLogin(event)" class="submit-btn" type="submit">Login</button>
