@@ -16,6 +16,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-section {
+            background: url(static/images/Placeholder\(3\).png) no-repeat center center/cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .mission-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mission-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* State Section */
+        .stats-section {
+            padding: 60px 0;
+        }
+
+        .stats-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .stat-box p {
+            font-size: 1.2rem;
+        }
+
+        /* Doctor/Team Section */
+        .team-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .doctor-card {
+            border: none;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor-card img {
+            border-radius: 50%;
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .doctor-card h5 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .doctor-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .doctor-card a {
+            color: #ff009a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .immu{
+            color: #ff009a;
+        }
+        .num{
+            color: #ff009a;
+
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .stat-box h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,78 +144,138 @@
 
     </header>
     
-    <!-- about us section -->
-
-    <div class="row d-flex justify-content-around p-4 about m-auto">
-        <div class="col-md-6 m-auto">
-            <h1>About Us</h1>
-            <p>
-                At IMMUNOHUB, we are committed to making healthcare more accessible and efficient through innovative technology. Our vaccination management system is designed to streamline the process of booking, tracking, and managing vaccinations for individuals and healthcare providers alike.
-                
-                With a focus on user-friendly design and robust functionality, our platform ensures that you can easily schedule appointments, receive reminders, and keep track of your vaccination history. We believe that staying up-to-date with vaccinations is crucial for public health, and our goal is to make this process as seamless as possible.
-                
-                Whether you’re a patient looking to book your next dose or a healthcare provider managing appointments, IMMUNOHUB is here to support you every step of the way. Join us in our mission to promote a healthier future for everyone.
-                
-                </p>
-            
-
-
+    
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="immu">About ImmunoHub</h1>
+            <p class="text-dark">Ensuring Safe and Timely Vaccination for All</p>
         </div>
-        <div class="col-md-6 about">
-            <img class="about-img" src="static/images/aboutimg.png" alt="">
+    </section>
 
+    <!-- Mission Section -->
+    <section class="mission-section text-center">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>We aim to streamline the vaccination process through a robust, user-friendly platform, empowering
+                healthcare providers and patients with efficient vaccine management, scheduling, and secure data handling.</p>
         </div>
+    </section>
 
-    </div>
-      
+    <!-- Statistics Section -->
+    <section class="stats-section text-center">
+        <div class="container">
+            <h2>Our Impact in Numbers</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 class="num">1000+</h3>
+                        <p>Vaccines Administered</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 class="num">500+</h3>
+                        <p>Registered Users</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 class="num">100+</h3>
+                        <p>Healthcare Providers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor/Team Section -->
+    <section class="team-section text-center">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="doctor-card p-4">
+                        <img src="static/images/doc1.jfif" alt="Dr. Sarah Wilson">
+                        <h5>Dr. Sarah Wilson</h5>
+                        <p>Chief Medical Officer, ImmunoHub</p>
+                        <a href="#">View Profile</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="doctor-card p-4">
+                        <img src="static/images/doc2.jfif" alt="Dr. James Thompson">
+                        <h5>Dr. James Thompson</h5>
+                        <p>Lead Vaccine Specialist</p>
+                        <a href="#">View Profile</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="doctor-card p-4">
+                        <img src="static/images/doc3.jfif" alt="Dr. Emily Richards">
+                        <h5>Dr. Emily Richards</h5>
+                        <p>Public Health Advisor</p>
+                        <a href="#">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Footer -->
-    <footer class="about-foot">
+    <footer class="mt-5 foot">
         <div class="container m-auto p-5 row">
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">IMMUNOHUB</h3>
-                <p class="text-dark">ImmunoHub simplifies vaccination management with online booking, dose scheduling, inventory control, and user feedback to improve the vaccination process</p>
+                <h3 class="text-white mb-3">IMMUNOHUB</h3>
+                <p class="text-white">ImmunoHub simplifies vaccination management with online booking, dose scheduling,
+                    inventory control, and user feedback to improve the vaccination process</p>
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Services</h3>
-                <a class="text-dark" href="registration.html">Online Booking</a>
+                <h3 class="text-white mb-3">Services</h3>
+                <a class="text-white" href="registration.html">Online Booking</a>
                 <br>
-                <a class="text-dark" href="registration.html">Conduct campaign</a>
+                <a class="text-white" href="registration.html">Conduct campaign</a>
                 <br>
-                <a class="text-dark" href="registration.html">Vaccine management</a>
+                <a class="text-white" href="registration.html">Vaccine management</a>
                 <br>
-                <a class="text-dark" href="registration.html">Inventory tracking</a>
-                
+                <a class="text-white" href="registration.html">Inventory tracking</a>
+
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Contact</h3>
-                <div class="d-md-flex gap-2">
-                    <i class="fa-solid fa-location-dot" style="color: black;"></i>
-                    <small class="text-dark mb-3">Dhaka 1207,Bangladesh</small>
+                <h3 class="text-white mb-3">Contact</h3>
+                <div class="d-md-flex gap-2 con-weight">
+                    <i class="fa-solid fa-location-dot" style="color: #fff;"></i>
+                    <small class="text-white mb-3">Dhaka 1207,Bangladesh</small>
                 </div>
                 <div class="d-md-flex gap-2">
-                    <i class="fa-solid fa-envelope" style="color: black;"></i>
-                    <small class="text-dark">immunohub@hotmail.com</small>
+                    <i class="fa-solid fa-envelope" style="color: #fff;"></i>
+                    <small class="text-white">immunohub@hotmail.com</small>
                 </div>
                 <br>
                 <div class="d-flex gap-2">
-                    <i class="fa-solid fa-phone" style="color: black;"></i>
-                    <small class="text-dark">+91 9751791203</small>
+                    <i class="fa-solid fa-phone" style="color: #fff;"></i>
+                    <small class="text-white">+91 9751791203</small>
                 </div>
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Quick Links</h3>
-                <a class="text-dark text-decoration-none" aria-current="page" href="index.html">Home</a>
+                <h3 class="text-white mb-3">Quick Links</h3>
+                <a class="text-white text-decoration-none" aria-current="page" href="index.html">Home</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#faq">FAQ</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#faq">FAQ</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#gallery">Gallery</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#gallery">Gallery</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#feature">Features</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#feature">Features</a>
             </div>
-           
 
-            <hr class="text-dark mt-2">
-            <p class="text-center text-dark">© 2024 Copyright: immunohub.com</p>
+
+            <hr class="text-white mt-2">
+            <p class="text-center text-white">© 2024 Copyright: immunohub.com</p>
         </div>
     </footer>
 

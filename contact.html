@@ -16,51 +16,29 @@
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
+    <style>
+
+    </style>
+
 </head>
 
-<body class="contact-body">
+<body>
     <header>
 
         <!-- Navbar  -->
         <div id="navbar"></div>
 
     </header>
-    
-   <div class="container contact-container py-5">
+<div class="bglight">
+   <div class="container py-5">
     <div class="row item shadow-lg rounded">
-        <!-- Left Side: Image and Social Media -->
-        <div class="col-lg-6 text-center text-lg-start p-4">
-            <h2 class="first-text mb-5">Contact with us as<br>more details</h2>
-            <div class="mb-5">
-                <div class="d-flex gap-3 mb-3">
-                    <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
-                    <small class="text-white icon-text">immunohub@gmail.com</small>
-
-                </div>
-                <div class="d-flex mb-3">
-                    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
-                    <small class="text-white icon-text ms-3">712/27 Adabor 10, Mohammadpur, Dhaka, 1207, Bangladesh</small>
-                </div>
-                <div class="d-flex mb-3">
-                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
-                    <small class="text-white icon-text ms-3">+91 9751791203, +91 9159669599</small>
-                </div>
-            </div>
-           
-            <div class="social-links">
-                <span class="second-text d-block mb-4">Connect with us:</span>
-                <ul class="social-media list-inline">
-                    <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/salim.hossain.54922"><i class='bx bxl-facebook'></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                    <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/salim-hossaian/"><i class='bx bxl-linkedin'></i></a></li>
-                </ul>
-            </div>
+       
+        <div class="col-lg-6">
+            <img class="img-fluid" src="static/images/con-img.jpg" alt="">
         </div>
         
-        <!-- Right Side: Contact Form -->
         <div class="col-lg-6 submit-form text-white p-4">
-            <h4 class="third-text">Contact us</h4>
+            <h4 class="third-text text-center">Contact us</h4>
             <form class="contact-form" id="contact-form" onsubmit="addContact(event)">
                 <div class="mb-4">
                     <input class="form-control con-input" type="text" placeholder="Name" required>
@@ -71,62 +49,67 @@
                 <div class="mb-4">
                     <textarea class="form-control conn-input" id="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <button type="submit" class="btn con-btn">Send message</button>
+                <button type="submit" class="btn con-btn">Submit</button>
             </form>
             <p id="con-message" class="mt-3"></p>
         </div>
     </div>
 </div>
+</div>
 
-     
+
     <!-- Footer -->
-    <footer class="mt-5 foot">
+    <footer class="foot">
         <div class="container m-auto p-5 row">
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">IMMUNOHUB</h3>
-                <p class="text-dark">ImmunoHub simplifies vaccination management with online booking, dose scheduling, inventory control, and user feedback to improve the vaccination process</p>
+                <h3 class="text-white mb-3">IMMUNOHUB</h3>
+                <p class="text-white">ImmunoHub simplifies vaccination management with online booking, dose scheduling,
+                    inventory control, and user feedback to improve the vaccination process</p>
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Services</h3>
-                <a class="text-dark" href="registration.html">Online Booking</a>
+                <h3 class="text-white mb-3">Services</h3>
+                <a class="text-white" href="registration.html">Online Booking</a>
                 <br>
-                <a class="text-dark" href="registration.html">Conduct campaign</a>
+                <a class="text-white" href="registration.html">Conduct campaign</a>
                 <br>
-                <a class="text-dark" href="registration.html">Vaccine management</a>
+                <a class="text-white" href="registration.html">Vaccine management</a>
                 <br>
-                <a class="text-dark" href="registration.html">Inventory tracking</a>
-                
+                <a class="text-white" href="registration.html">Inventory tracking</a>
+
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Contact</h3>
-                <div class="d-md-flex gap-2">
-                    <i class="fa-solid fa-location-dot" style="color: black;"></i>
-                    <small class="text-dark mb-3">Dhaka 1207,Bangladesh</small>
+                <h3 class="text-white mb-3">Contact</h3>
+                <div class="d-md-flex gap-2 con-weight">
+                    <i class="fa-solid fa-location-dot" style="color: #fff;"></i>
+                    <small class="text-white mb-3">Dhaka 1207,Bangladesh</small>
                 </div>
                 <div class="d-md-flex gap-2">
-                    <i class="fa-solid fa-envelope" style="color: black;"></i>
-                    <small class="text-dark">immunohub@hotmail.com</small>
+                    <i class="fa-solid fa-envelope" style="color: #fff;"></i>
+                    <small class="text-white">immunohub@hotmail.com</small>
                 </div>
                 <br>
                 <div class="d-flex gap-2">
-                    <i class="fa-solid fa-phone" style="color: black;"></i>
-                    <small class="text-dark">+91 9751791203</small>
+                    <i class="fa-solid fa-phone" style="color: #fff;"></i>
+                    <small class="text-white">+91 9751791203</small>
                 </div>
             </div>
             <div class="col-md-3 mt-3">
-                <h3 class="text-dark mb-3">Quick Links</h3>
-                <a class="text-dark text-decoration-none" aria-current="page" href="index.html">Home</a>
+                <h3 class="text-white mb-3">Quick Links</h3>
+                <a class="text-white text-decoration-none" aria-current="page" href="index.html">Home</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#faq">FAQ</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#faq">FAQ</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#gallery">Gallery</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#gallery">Gallery</a>
                 <br>
-                <a class="text-dark text-decoration-none" aria-current="page" href="https://salimmleng.github.io/vaccine-management/index.html#feature">Features</a>
+                <a class="text-white text-decoration-none" aria-current="page"
+                    href="https://salimmleng.github.io/vaccine-management/index.html#feature">Features</a>
             </div>
-           
 
-            <hr class="text-dark mt-2">
-            <p class="text-center text-dark">© 2024 Copyright: immunohub.com</p>
+
+            <hr class="text-white mt-2">
+            <p class="text-center text-white">© 2024 Copyright: immunohub.com</p>
         </div>
     </footer>
 

@@ -75,6 +75,8 @@ const handleLogin =(event) =>{
           localStorage.setItem('user_id', data.user_id);
           localStorage.setItem('userRole', data.user_role);
           window.location.href = 'index.html';
+          
+         
         } else {
           console.error("Login failed: user_role not found");
           alert("Login failed: user_role not found");
@@ -83,6 +85,7 @@ const handleLogin =(event) =>{
       })
 
 }
+
 
 const handleLogout = () => {
   const token = localStorage.getItem("token");

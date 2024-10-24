@@ -14,7 +14,7 @@ const getAllvaccines = () => {
               
               div.innerHTML = `
                   <div class="card vaccine-card">
-                    <img src="${vaccine.image}" class="card-img-top2" alt="...">
+                    <img src="${vaccine.image}" class="card-img-top2" class="img-fluid" alt="...">
               <div class="card-body vaccine-body">
               <h5 class="card-title mb-3 v-title font-weight-bold">${vaccine.name}</h5>
               <ul class="list-unstyled mb-4">

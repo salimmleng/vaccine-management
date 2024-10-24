@@ -109,45 +109,111 @@ li{
 
 /* banner part start */
 
+
 .banner {
     display: flex;
     background-image: url(./static/images/bgimg4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100vh; 
     align-items: center;
     justify-content: center;
-    padding: 0 50px; 
+    padding: 0 50px;
+    position: relative; 
 }
 
 .banner-title {
-    text-align: left;
+    font-size: 2.5rem; 
 }
 
 .banner-subtitle {
-    text-align: left;
+    font-size: 1.2rem; 
 }
 
-/* banner btn */
 .banner-btn {
-    width: 155px;
-    height: 60px;
+    background-color: #f2209e; 
     border: none;
-    color: #fff;
-    background-color: #ff009a;
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 0 #e4d638;
-    transition: ease-out 0.3s;
-    font-size: 1rem;
-    font-family:;
-    outline: none;
-
+    color: white; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    font-weight: bold;
 }
+
+.bann-img {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.banner img {
+    max-width: 250%;
+    height: auto; 
+}
+
+
+.vaccine-span {
+   
+    color: #f2209e; 
+   
+}
+
+@media (max-width: 768px) {
+    .vaccine-span {
+        font-size: 1.2em; 
+    }
+}
+
+@media (max-width: 576px) {
+    .vaccine-span {
+        font-size: 1em; 
+        text-align: center; 
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .banner {
+        height: auto; 
+        padding: 20px; 
+        flex-direction: column; 
+    }
+
+    .banner-title {
+        font-size: 2rem; 
+        text-align: center;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem; 
+        text-align: center; 
+    }
+
+    .banner-btn {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .col-md-4 {
+        margin-top: 20px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-title {
+        font-size: 1.5rem; 
+    }
+
+    .banner-subtitle {
+        font-size: 0.9rem; 
+    }
+}
+
 .banner-btn:hover{
     cursor: pointer;
-    box-shadow: inset 300px 0 0 0 #f9e506;
-    color: #000;
+    box-shadow: inset 300px 0 0 0 #d01a87;
+    color: #fff;
 }
 .banner-btn2{
     width: 155px;
@@ -191,12 +257,14 @@ li{
 }
 
 
+
 .font {
     font-family: "Roboto", sans-serif;
     font-weight: 1000;
     font-style: normal;
     font-size: 57px;
     color: #2C3E50;
+    
 }
 p{
     font-family: 'Lato', sans-serif;
@@ -206,14 +274,15 @@ p{
 }
 .font2 {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 550;
     font-style: italic;
     font-size: 19px;
-    color: rgb(120, 120, 120);
+    /* color: rgb(120, 120, 120); */
+    color: #2C3E50;
 }
 
 .banner-btn:hover {
-    background-color: #0056b3; /* Darker shade of primary color */
+    background-color: #0056b3; 
 }
 
 /* Responsive  */
@@ -332,13 +401,18 @@ p{
 /* vaccine card start */
 
 .card-img-top2 {
-    height: 200px; 
+    height: 200px;
     object-fit: cover; 
+    
 }
+
 .card{
     border-radius: 8px;
     box-shadow: 4px 4px 8px rgb(196, 196, 196);
+   
 }
+
+
 
 /* vaccine card end */
 
@@ -606,9 +680,9 @@ p{
 
 .rob{
     font-family: 'Roboto', sans-serif;
-    font-weight: 500; /* Medium weight for a more pronounced look */
-    text-transform: uppercase; /* Optional: Makes the headers all uppercase */
-    letter-spacing: 0.05em; /* Optional: Adds a bit of spacing between letters */
+    font-weight: 500; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
 }
 
 
@@ -843,13 +917,20 @@ a.sidebar-link:hover {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .contact-body{
-    margin: 0;
-    padding: 0;
+   
     font-family: "poppins";
-    background-color: #0ecfc6;
+    background-image: url(./static/images/contactbg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
     
 }
 
+.con-weight{
+    font-weight: 100;
+}
 
 /* Apply to all input fields */
 .con-input::placeholder {
@@ -864,7 +945,8 @@ a.sidebar-link:hover {
     font-weight: 650;
 }
 #message{
-    background-color: rgb(237, 235, 235);
+    /* background-color: rgb(237, 235, 235); */
+    background-color: rgb(245, 230, 213);
 }
 
 .social-media i {
@@ -906,14 +988,15 @@ a.sidebar-link:hover {
     outline: none;
     padding-left: 15px;
     font-size: 16px;
-    background-color: rgb(237, 235, 235);
+    /* background-color: rgb(237, 235, 235); */
+    background-color: rgb(245, 230, 213);
 }
 
 textarea.conn-input {
     border-radius: 20px; 
     border: 2px solid #fff;
-    background-color: rgb(237, 235, 235);
-    
+    /* background-color: rgb(237, 235, 235); */
+    background-color: rgb(245, 230, 213);
    
 }
 .con-img{
@@ -922,24 +1005,27 @@ textarea.conn-input {
 }
 
 .submit-form{
-    /* background-color: #8f50ec; */
-    background-color: #fff;
-    
+   
+    background-color: #fff;  
 }
 .item{
     border-radius: 10px;
     box-shadow: 0 16px 20px;
-    background-color: #05dbd0;
+    background-color: #fff; 
+    /* background-color: #05dbd0; */
+}
+.bglight{
+    background-color: rgb(245, 230, 213);
 }
 .con-btn{
-    background-color: #05c5bb;
+    background-color: #ff009a;
     color: #fff;
-    width: 125px;
+    width: 100px;
     height: 45px;
     font-weight: bold;
 }
 .con-btn:hover{
-    background-color: #12e1d7;
+    background-color: #e82d9d;
 }
 
 
@@ -965,6 +1051,64 @@ textarea.conn-input {
 .rating .star.bxs-star {
     color: #FFA500; /* Darker gold color for filled stars */
 }
+
+/* feature design */
+
+
+/* Main feature section */
+#feature {
+    padding: 50px 0;
+}
+
+#feature h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff009a;
+}
+
+/* Feature card styling */
+.feature-card {
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature card image */
+.feat-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Feature card title */
+.feature-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Feature card text */
+.feature-card .card-text {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 30px;
+    }
+}
+
 
 
 
