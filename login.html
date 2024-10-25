@@ -14,6 +14,43 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+   <style>
+    .demo-credentials {
+        max-width: 350px; 
+        margin: 0 auto;
+        padding: 20px; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-demo {
+        font-size: 14px; 
+        font-weight: 600;
+        border: none;
+        border-radius: 20px; 
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-doctor {
+        background-color: #3498db;
+        color: white;
+    }
+
+    .btn-doctor:hover {
+        background-color: #2980b9;
+    }
+
+    .btn-patient {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .btn-patient:hover {
+        background-color: #27ae60;
+    }
+
+
+   </style>
 
 <body>
     
@@ -42,13 +79,28 @@
                 <button onclick="handleLogin(event)" class="submit-btn" type="submit">Login</button>
             </form>
 
-            <div class="demo-credentials mt-4">
-                <h3 class="text-center">Demo Credentials</h3>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-info" onclick="fillDemoCredentials('doctor')">Login as Doctor</button>
-                    <button class="btn btn-info" onclick="fillDemoCredentials('patient')">Login as Patient</button>
+           
+
+
+            <div class="demo-credentials mt-4 p-3 bg-white rounded shadow-sm border">
+                <h4 class="text-center mb-2" style="font-weight: 600; color: #2c3e50;">Demo Access</h4>
+                <p class="text-center text-muted mb-3" style="font-size: 14px;">Select a role to login with demo credentials.</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-demo btn-doctor px-4 py-2" onclick="fillDemoCredentials('doctor')">
+                        Doctor Login
+                    </button>
+                    <button class="btn btn-demo btn-patient px-4 py-2" onclick="fillDemoCredentials('patient')">
+                        Patient Login
+                    </button>
                 </div>
             </div>
+            
+            
+
+
+
+
+
         </div>
         
     </div>
