@@ -34,7 +34,6 @@
                 <h1 class="text-center">Login page</h1>
                 <label for="id_username">Username:</label>
                 <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" class="textinput form-control" required id="id_username" required="">
-                
                 <br>
                 <label for="id_password">Password:</label>
                 <input type="password" name="password" autocomplete="current-password" class="passwordinput form-control" required id="id_password" required="">
@@ -42,11 +41,41 @@
                 <br>
                 <button onclick="handleLogin(event)" class="submit-btn" type="submit">Login</button>
             </form>
+
+            <div class="demo-credentials mt-4">
+                <h3 class="text-center">Demo Credentials</h3>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-info" onclick="fillDemoCredentials('doctor')">Login as Doctor</button>
+                    <button class="btn btn-info" onclick="fillDemoCredentials('patient')">Login as Patient</button>
+                </div>
+            </div>
         </div>
         
     </div>
 
-   
+
+    <script>
+        // Demo credentials for auto-filling the form
+        const demoCredentials = {
+            doctor: {
+                username: "Doctor",
+                password: "salim106"
+            },
+            patient: {
+                username: "Patient",
+                password: "salim106"
+            }
+        };
+    
+        // Function to fill in the demo credentials
+        function fillDemoCredentials(role) {
+            const { username, password } = demoCredentials[role];
+            document.getElementById('id_username').value = username;
+            document.getElementById('id_password').value = password;
+        }
+    </script>
+    
+    
 
     
     <!-- Footer -->
