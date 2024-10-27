@@ -462,6 +462,10 @@ p{
     border: none;
     
 }
+.btn-deep-orange:hover{
+    background-color: #ff009a; 
+    color: #fff;
+}
 
 .profile-btn{
     background-color: #ff009a;
@@ -591,12 +595,6 @@ p{
     max-width: 500px;
     height: 400px;
     object-fit: cover;
-}
-
-.detailRight {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
 }
 
 .whole-part {
