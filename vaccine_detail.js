@@ -22,6 +22,7 @@ const getAllvaccines = () => {
                 <li class="mb-2"><strong>Batch Number:</strong> ${vaccine.batch_number}</li>
                 <li class="mb-2"><strong>Age Limit:</strong> ${vaccine.age_limit}</li>
                 <li class="mb-2"><strong>Expiry Date:</strong> ${vaccine.expiry_date}</li>
+                
               </ul>
             </div>
              <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-outline-list" type="submit">Show details</a>
@@ -81,29 +82,25 @@ const getQueryParams = (param) => {
             }
     
             div.innerHTML = `
-                <div class="col-md-6 d-flex justify-content-center">
-                    <img class="detail-img img-fluid image-hover" src="${vaccine.image}" alt="${vaccine.name} Image">
+               <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <img 
+                        class="detail-img img-fluid rounded shadow image-hover" 
+                        src="${vaccine.image}" 
+                        alt="Image of ${vaccine.name}" 
+                        style="max-height: 350px; border: 3px solid #f0f0f0; padding: 10px;"
+                    >
                 </div>
                 <div class="col-md-6">
-                    <div class="detailRight p-4">
-                        <h2 class="text-left font-weight-bold mb-4">Vaccine Details</h2>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <h6 class="text-dark m-0"><strong>Vaccine Name:</strong> ${vaccine.name}</h6>
-                            </li>
-                            <li class="mb-3">
-                                <h6 class="text-dark m-0"><strong>Batch Number:</strong> ${vaccine.batch_number}</h6>
-                            </li>
-                            <li class="mb-3">
-                                <h6 class="text-dark m-0"><strong>Manufacturer:</strong> ${vaccine.manufacturer}</h6>
-                            </li>
-                            <li class="mb-4">
-                                <h6 class="text-dark m-0"><strong>Age Limit:</strong> ${vaccine.age_limit}</h6>
-                            </li>
-                        </ul>
+                    <h2 class="display-5 fw-bold " style="color: #ff009a">${vaccine.name}</h2>
+                    <hr class="my-3" style="border-top: 2px solid #ff8a00;">
+                    <p class="text-secondary fs-5 mb-4">${vaccine.description}</p>
+                    <div class="d-flex align-items-center">
                         ${buttonHTML}
                     </div>
                 </div>
+            </div>
+
             `;
           allvaccines.appendChild(div)
         })

@@ -168,8 +168,8 @@
                             <div class="col-12 col-md-3">
                                 <div class="card border-0 shadow-sm">
                                     <div class="card-body admin-card py-4 text-center">
-                                        <h5 class="mb-2 fw-bold">Registered Patients</h5>
-                                        <h2 id="registered-users" class="fw-bold">0</h2>
+                                        <h5 class="mb-2 fw-bold">Total Registered Users</h5>
+                                        <h2 id="registered-users-count" class="fw-bold">0</h2>
                                     </div>
                                 </div>
                             </div>
@@ -257,6 +257,18 @@
             </main>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://vaccine-pi.vercel.app/accounts/registered-users-count/')  // URL for the API endpoint
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("registered-users-count").innerText = data.registered_users;
+                })
+                .catch(error => console.error("Error fetching registered users count:", error));
+        });
+    </script>
+    
 
    
 

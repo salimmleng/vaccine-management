@@ -119,6 +119,7 @@ const getVaccineDetail = () => {
       document.getElementById("batch_number").value = vaccine.batch_number;
       document.getElementById("expiry_date").value = vaccine.expiry_date;
       document.getElementById("age_limit").value = vaccine.age_limit;
+      document.getElementById("description").value = vaccine.description;
      
     });
 };
@@ -138,6 +139,7 @@ const updateVaccine = (event) => {
       batch_number: formData.get("batch_number"),
       expiry_date: formData.get("expiry_date"),
       age_limit: formData.get("age_limit"),
+      description: formData.get("description"),
   };
 
   fetch(`https://vaccine-pi.vercel.app/api/vaccines/${vaccineId}/`, {
