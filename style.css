@@ -48,7 +48,7 @@ li{
     min-height: 80px;
     padding: 1rem;
     font-family: "Roboto";
-    font-weight: bold;
+    /* font-weight: bold; */
 
 }
 .about-foot{

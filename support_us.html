@@ -9,6 +9,10 @@
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
    
     <style>
@@ -24,9 +28,12 @@
             color: #343a40; 
         }
 
-        footer p {
+        .dpart{
             font-size: 1.2rem; 
             color: #6c757d; 
+        }
+        .change {
+          font-weight: normal !important; /* Use !important to ensure it takes precedence */
         }
         .donate{
             color: #fff; 
@@ -107,9 +114,9 @@
         
 
         
-        <footer class="text-center mt-5">
-            <p>Thank you for considering supporting us. Every contribution matters!</p>
-        </footer>
+        <div class="text-center mt-5">
+            <p class="dpart">Thank you for considering supporting us. Every contribution matters!</p>
+        </div>
     </div>
     
     <!-- Footer -->
@@ -117,7 +124,7 @@
         <div class="container m-auto p-5 row">
             <div class="col-md-3 mt-3">
                 <h3 class="text-white mb-3">IMMUNOHUB</h3>
-                <p class="text-white">ImmunoHub simplifies vaccination management with online booking, dose scheduling,inventory control, and user feedback to improve the vaccination process</p>
+                <p class="text-white change">ImmunoHub simplifies vaccination management with online booking, dose scheduling,inventory control, and user feedback to improve the vaccination process</p>
             </div>
             <div class="col-md-3 mt-3">
                 <h3 class="text-white mb-3">Services</h3>
