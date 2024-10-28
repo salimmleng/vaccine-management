@@ -30,7 +30,7 @@ document.getElementById('donation-form').addEventListener('submit', function(eve
     };
 
     // Send data to the backend
-    fetch('http://127.0.0.1:8000/vaccine/payment/', {
+    fetch('https://vaccine-pi.vercel.app/vaccine/payment/', {
 
         method: 'POST',
         headers: {
