@@ -31,7 +31,8 @@ li{
 
 .immu_title{
     font-size: 28px;
-    color: #ff009a;
+    /* color: #ff009a; */
+    color: #13C5DD;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -44,7 +45,7 @@ li{
     background-color: #387efa;;
 }
 .foot{
-    background-color: #f2209e;
+    background-color: #1D2A4D;
     min-height: 80px;
     padding: 1rem;
     font-family: "Roboto";
@@ -112,7 +113,7 @@ li{
 
 .banner {
     display: flex;
-    background-image: url(./static/images/bgimg4.png);
+    background-image: url(./static/images/h1_hero.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,12 +133,22 @@ li{
 }
 
 .banner-btn {
-    background-color: #f2209e; 
+    background-color: #1D2A4D; 
+    border-radius: 10px;
     border: none;
     color: white; 
-    padding: 10px 20px; 
+    padding: 13px 20px; 
     cursor: pointer;
     font-weight: bold;
+}
+.vaccine-span {
+    color: #13C5DD;  
+}
+
+.banner-btn:hover{
+    cursor: pointer;
+    box-shadow: inset 300px 0 0 0 #1D2A4D;
+    color: #fff;
 }
 
 .bann-img {
@@ -149,13 +160,6 @@ li{
 .banner img {
     max-width: 250%;
     height: auto; 
-}
-
-
-.vaccine-span {
-   
-    color: #f2209e; 
-   
 }
 
 @media (max-width: 768px) {
@@ -210,28 +214,6 @@ li{
     }
 }
 
-.banner-btn:hover{
-    cursor: pointer;
-    box-shadow: inset 300px 0 0 0 #d01a87;
-    color: #fff;
-}
-.banner-btn2{
-    width: 155px;
-    height: 60px;
-    border: none;
-    color: white;
-    background-color: rgb(19, 180, 75);
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 0 #f9e506;
-    transition: ease-out 0.3s;
-    font-size: 1rem;
-    outline: none;
-    /* border: 3px solid #42FBF2; */
-    position: relative;
-    z-index: 1;
-   
-
-}
 .banner-btn2:hover{
     color: #000;
     cursor: pointer;
@@ -340,16 +322,38 @@ p{
     width: 83%;
 }
 
-/* service */
-#tpc:hover{
-   transform: translateY(-10px);
-   background-color: red;
+/* gallery */
+
+
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
 }
-#tpc{
-  
-    transition: 0.5s ease;
-    cursor: pointer;
+
+.gallery-card img {
+    transition: transform 0.3s ease;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239, 18, 29, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
 
 /* service end */
 .bor{
@@ -409,6 +413,7 @@ p{
 .card{
     border-radius: 8px;
     box-shadow: 4px 4px 8px rgb(196, 196, 196);
+
    
 }
 
@@ -419,56 +424,57 @@ p{
 /* review card start*/
 
 .revg{
-    color: #ff009a;
+    color: #1D2A4D;
 }
 .v-title{
     /* color: #007bff; */
-    color: #ff009a;
+    color: #13C5DD;
     font-size: 30px;
 }
+
 .rev-title{
     font-size: 20px;
-    color: #ff009a;
+    color: #13C5DD;
 
 }
 
 .btn-outline-custom {
-    color: #ff009a; 
-    border-color: #ff009a; 
+    color: #13C5DD; 
+    border-color: #13C5DD; 
     padding: 10px 25px;
 }
 .btn-outline-custom:hover {
-    background-color: #ff009a; 
+    background-color: #13C5DD; 
     color: #fff; 
 }
 
 .btn-outline-list{
     
-    border-color: #ff009a; 
+    border-color: #13C5DD; 
     padding: 10px 15px;
     border-radius: 4px;
     font-weight: bold;
 
 }
 .btn-outline-list:hover {
-    background-color: #ff009a; 
+    background-color: #13C5DD; 
     color: rgb(243, 224, 224);
     font-weight: bold;
 }
 
 .btn-deep-orange {
-    background-color: #ff009a; 
+    background-color: #1D2A4D; 
     color: #fff; 
     border: none;
     
 }
 .btn-deep-orange:hover{
-    background-color: #ff009a; 
+    background-color: #1D2A4D; 
     color: #fff;
 }
 
 .profile-btn{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     
     padding: 14px;
     border: none;
@@ -478,11 +484,11 @@ p{
    
 }
 .profile-btn:hover{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     
 }
 .profileEdit-btn{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     padding: 16px;
     border: none;
     border-radius: 4px;
@@ -491,14 +497,14 @@ p{
 
 }
 .profileEdit-btn:hover{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     
 }
 .profile-pass{
     font-weight: 600;
 }
 .logout-btn{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     padding: 14px;
     border: none;
     border-radius: 6px;
@@ -506,11 +512,11 @@ p{
     color: white;
 }
 .logout-btn:hover{
-    background-color : #ff009a(228, 11, 11);
+    background-color : #1D2A4D(228, 11, 11);
 }
 
 .dose-btn{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -520,10 +526,10 @@ p{
 
 }
 .dose-btn:hover{
-    background-color: #ff009a;
+    background-color: #1D2A4D;
 }
 .submit-btn{
-    background-color: #ff009a; /* YouTube red */
+    background-color: #1D2A4D; /* YouTube red */
     color: white;
     padding: 10px 20px; /* Adequate padding for a button */
     border: none;
@@ -534,7 +540,7 @@ p{
     transition: background-color 0.3s ease;
 }
 .submit-btn:hover{
-    background-color: #ff009a; 
+    background-color: #1D2A4D; 
 }
 
 
@@ -651,14 +657,14 @@ p{
 }
 
 .detailRight a.btn {
-    background-color: #ff009a; /* Deep orange */
+    background-color: #1D2A4D; /* Deep orange */
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .detailRight a.btn:hover {
-    background-color: #ff009a;
+    background-color: #1D2A4D;
 }
 
 
@@ -889,144 +895,24 @@ a.sidebar-link:hover {
 }
 
 .btn-login {
-    background-color: #ff009a !important; 
-    border-color: #ff009a !important;
+    background-color: #1D2A4D !important; 
+    border-color: #1D2A4D !important;
     color: white;
     
 }
 .btn-login:hover{
-    background-color: #ff009a ! important;
+    background-color: #1D2A4D ! important;
 }
 
 .btn-outline-danger {
-    color: #ff009a !important; 
-    border-color: #ff009a !important;
+    color: #1D2A4D !important; 
+    border-color: #1D2A4D !important;
 }
 
 .btn-outline-danger:hover {
-    background-color: #ff009a !important;
+    background-color: #1D2A4D !important;
     color: #ffffff !important;
 }
-
-
-
-/* contact section */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-.contact-body{
-   
-    font-family: "poppins";
-    background-image: url(./static/images/contactbg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    
-    
-}
-
-.con-weight{
-    font-weight: 100;
-}
-
-/* Apply to all input fields */
-.con-input::placeholder {
-    
-    opacity: 1;
-    font-weight: 650;
-}
-
-/* Apply to the textarea separately */
-#message::placeholder {
-    opacity: 1;
-    font-weight: 650;
-}
-#message{
-    /* background-color: rgb(237, 235, 235); */
-    background-color: rgb(245, 230, 213);
-}
-
-.social-media i {
-    background: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    transition: .3s;
-    color: #16f3e8;
-}
-
-.social-media i:hover {
-    background: #fff;
-    color: #16f3e8;
-}
-
-.first-text {
-    color: #fff;
-    font-weight: 650;
-}
-
-.second-text {
-    font-weight: 590;
-    color: #fff;
-}
-.icon-text{
-    font-weight: 550;
-}
-
-.third-text {
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #000;
-}
-.con-input {
-    width: 100%;
-    height: 55px;
-    border: 2px solid #fff;
-    border-radius: 20px; /* Add border radius here */
-    outline: none;
-    padding-left: 15px;
-    font-size: 16px;
-    /* background-color: rgb(237, 235, 235); */
-    background-color: rgb(245, 230, 213);
-}
-
-textarea.conn-input {
-    border-radius: 20px; 
-    border: 2px solid #fff;
-    /* background-color: rgb(237, 235, 235); */
-    background-color: rgb(245, 230, 213);
-   
-}
-.con-img{
-    height: 360px;
-    width: 360px;
-}
-
-.submit-form{
-   
-    background-color: #fff;  
-}
-.item{
-    border-radius: 10px;
-    box-shadow: 0 16px 20px;
-    background-color: #fff; 
-    /* background-color: #05dbd0; */
-}
-.bglight{
-    background-color: rgb(245, 230, 213);
-}
-.con-btn{
-    background-color: #ff009a;
-    color: #fff;
-    width: 100px;
-    height: 45px;
-    font-weight: bold;
-}
-.con-btn:hover{
-    background-color: #e82d9d;
-}
-
-
 
 
 

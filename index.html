@@ -17,6 +17,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
+    <style>
+       .view-more-link {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #1D2A4D;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        border: 1px solid transparent; /* Initial transparent border */
+    }
+
+    .view-more-link:hover {
+        background-color: #fff;
+        color: black;
+        border-color: rgb(198, 196, 196); /* Change border color on hover */
+    }
+    .vaccine-intro {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #6c757d; 
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-left: 4px solid #007bff; 
+        border-radius: 5px;
+        background-color: #f8f9fa; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+
+
+    </style>
    
 </head>
   
@@ -33,13 +68,13 @@
        
         <div class="banner d-flex flex-column align-items-start justify-content-center text-left p-4 p-md-5">
             <div class="container row">
-                <div class="col-md-9" style="margin-top: 25px;">
+                <div class="col-md-10" style="margin-top: 25px;">
                     <h1 class="banner-title font">Ensuring Safe and<br>Timely <span class="vaccine-span">Vaccination</span><br>for All</h1>
                     <p class="banner-subtitle font2">Efficient Vaccine Management and Booking System</p>
                     <button class="banner-btn mt-2" onclick="location.href='about.html';">Learn More</button>
                 </div>
-                <div class="col-md-3 bann-img">
-                    <img src="static/images/vac23-removebg-preview.png" class="img-fluid" alt="">
+                <div class="col-md-2 bann-img">
+                    
                 </div>
             </div>
         </div>
@@ -114,7 +149,7 @@
 
 
 
-        <!-- our service center -->
+    <!-- our service center -->
 
 
 
@@ -152,13 +187,35 @@
             </div>
         </div>
 
+  
+
+    <!-- vaccine card -->
+
+
+    <div class="container my-5">
+        <h1 class="text-center text-danger my-3">Choose Your Vaccine</h1>
+        <p class="vaccine-intro text-center text-muted mb-4">
+            Find the vaccine you need with detailed information to make the right choice.
+        </p>
+        
+        
+        <div id="vaccine-container" class="row justify-content-center">
+            <!-- Dynamic vaccine cards  -->
+        </div>
+    
+        <div class="text-center mt-4">
+            <a href="vaccine.html" id="loadMoreLink" class="view-more-link">View More Vaccines</a>
+        </div>
+    </div>
+    
+
         <!-- vaccine img section  -->
 
         <div id="gallery" class="mt-4 mb-3">
             <h1 class="text-center text-danger my-4">Our photo gallary</h1>
             <div class="d-flex flex-wrap justify-content-center m-auto gap-3">
                 <div id="tpc" class="card gallery-card" style="width: 18rem;">
-                    <img src="static/images/vac6.jfif" class="card-img-top rounded-1" alt="...">
+                    <img  src="static/images/vac6.jfif" class="card-img-top rounded-1" alt="...">
                     <div class="overlay"></div>
                 </div>
                 <div id="tpc" class="card gallery-card" style="width: 18rem;">
@@ -338,6 +395,7 @@
     <script src="app.js"></script>
     <script src="auth.js"></script>
     <script src="navber.js"></script>
+    <script src="homepageVaccine.js"></script>
 </body>
 
 </html>

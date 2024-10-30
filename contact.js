@@ -2,8 +2,8 @@
 function addContact(event) {
     event.preventDefault(); 
 
-    const name = document.querySelector('input[placeholder="Name"]').value;
-    const email = document.querySelector('input[placeholder="Email"]').value;
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+    const email = document.querySelector('input[placeholder="Your Email"]').value;
     const message = document.querySelector('textarea[placeholder="Message"]').value;
 
     const data = {

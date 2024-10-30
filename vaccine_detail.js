@@ -92,7 +92,7 @@ const getQueryParams = (param) => {
                     >
                 </div>
                 <div class="col-md-6">
-                    <h2 class="display-5 fw-bold " style="color: #ff009a">${vaccine.name}</h2>
+                    <h2 class="display-5 fw-bold " style="color: #13C5DD">${vaccine.name}</h2>
                     <hr class="my-3" style="border-top: 2px solid #ff8a00;">
                     <p class="text-secondary fs-5 mb-4">${vaccine.description}</p>
                     <div class="d-flex align-items-center">

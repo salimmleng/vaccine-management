@@ -19,6 +19,27 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <style>
+    .hero-header {
+    background: linear-gradient(rgba(26, 59, 108, 0.85), rgba(22, 61, 120, 0.85)), url(static/images/back4.jpg) center center no-repeat;
+    background-size: cover;
+}
+.btn-message {
+    padding: 0.75rem 2rem;
+    color: #fff;
+    background-color: #1D2A4D;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+.btn-message:hover {
+    background-color: #1D2A4D;
+    box-shadow: 0 4px 8px #1D2A4D(0, 123, 255, 0.2);
+    color: #fff;
+}
+
 
     </style>
 
@@ -31,7 +52,10 @@
         <div id="navbar"></div>
 
     </header>
-<div class="bglight">
+
+
+
+   <!-- <div class="bglight">
    <div class="container py-5">
     <div class="row item shadow-lg rounded">
        
@@ -57,7 +81,89 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
+
+
+
+     <!-- Hero Start -->
+     <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Contact Us</h1>
+                <a href="index.html" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="contact.html" class="h4 text-white">Contact</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded h-100 p-5">
+                        <div class="section-title">
+                            <h5 class="position-relative d-inline-block text-primary text-uppercase">Contact Us</h5>
+                            <h1 class="display-6 mb-4" style="font-weight: bold;">Feel Free To Contact Us</h1>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-0">Our Office</h5>
+                                <span>House-712/30,Mohammadpur, Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-0">Email Us</h5>
+                                <span>immunohub@hotmail.com</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h5 class="mb-0">Call Us</h5>
+                                <span>+880157-123-4790</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <form id="contact-form" onsubmit="addContact(event)">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control border-0 bg-light px-4 py-3" rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-message w-100 py-3" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p id="con-message" class="mt-3"></p>
+                </div>
+                <div class="col-xl-4 col-lg-12 wow slideInUp" data-wow-delay="0.6s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14606.067940179168!2d90.3494702883601!3d23.764597896969146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c09f9ba3d447%3A0x1babce9f1c6c95a3!2sMohammadpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1730222567003!5m2!1sen!2sbd"
+                        frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+
 
 
     <!-- Footer -->

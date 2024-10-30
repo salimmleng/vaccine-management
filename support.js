@@ -45,6 +45,7 @@ document.getElementById('donation-form').addEventListener('submit', function(eve
         if (data) {
             // Redirect to the payment gateway
             window.location.href = data.GatewayPageURL;
+            document.getElementById('donation-form').reset();
         } else {
             alert('Payment session creation failed: ' + (data.error || 'Unknown error'));
         }

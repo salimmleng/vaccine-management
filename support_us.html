@@ -19,30 +19,75 @@
         body {
             background-color: #fff;
         }
-        header h1 {
-            font-size: 2.5rem;
-            color: #343a40; 
-        }
 
-        h2 {
-            color: #343a40; 
-        }
+        /* Container Styling */
+.donation-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        .dpart{
-            font-size: 1.2rem; 
-            color: #6c757d; 
-        }
-        .change {
-          font-weight: normal !important; /* Use !important to ensure it takes precedence */
-        }
-        .donate{
-            color: #fff; 
-            padding: 10px 20px;
-            background-color: #ff009a;
-            border-color: #ff009a;
-            font-weight: bold;
-            border-radius: 5px;
-        }
+/* Header Styling */
+.donation-header {
+    font-size: 2rem;
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.donation-subtext {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Form Label Styling */
+.form-group label {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Input Field Styling */
+.form-control {
+    border: 2px solid #ced4da;
+    padding: 0.75rem;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+.form-control:focus {
+    border-color: #1D2A4D;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+
+.btn-donate {
+    padding: 0.75rem 2rem;
+    color: #fff;
+    background-color: #1D2A4D;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+.btn-donate:hover {
+    background-color: #1D2A4D;
+    box-shadow: 0 4px 8px #1D2A4D(0, 123, 255, 0.2);
+    color: #fff;
+}
+
+/* Footer Note */
+.dpart {
+    color: #495057;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+       
     </style>
 </head>
 
@@ -55,7 +100,7 @@
     </header>
     
 
-      <div class="container mt-5">
+      <!-- <div class="container mt-5">
         <header class="text-center mb-4">
             <h1>Support Our Mission</h1>
             <p>Your support helps us bring crucial vaccine management services to those in need.</p>
@@ -118,7 +163,70 @@
             <p class="dpart">Thank you for considering supporting us. Every contribution matters!</p>
         </div>
     </div>
+     -->
+      
+     <div class="container mt-5 donation-container">
+        <header class="text-center mb-4">
+            <h1 class="donation-header">Support Our Mission</h1>
+            <p class="donation-subtext">Your support helps us bring crucial vaccine management services to those in need.</p>
+        </header>
     
+        <h2 class="text-center mb-4">Make a Donation</h2>
+        <form id="donation-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="mb-2" for="full_name">Full Name</label>
+                        <input type="text" class="form-control" id="full_name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="mb-2" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="my-2" for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="my-2" for="city">City</label>
+                        <input type="text" class="form-control" id="city" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="my-2" for="total_price">Donation Amount</label>
+                        <input type="number" class="form-control" id="total_price" required>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-donate" type="submit">Donate Now</button>
+                </div>
+            </div>
+        </form>
+    
+        <div class="text-center mt-5">
+            <p class="dpart">Thank you for considering supporting us. Every contribution matters!</p>
+        </div>
+    </div>
+    
+
+
+
     <!-- Footer -->
     <footer class="mt-5 foot">
         <div class="container m-auto p-5 row">
