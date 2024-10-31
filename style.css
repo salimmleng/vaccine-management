@@ -26,12 +26,9 @@ li{
     
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
-
 
 .immu_title{
     font-size: 28px;
-    /* color: #ff009a; */
     color: #13C5DD;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -49,7 +46,7 @@ li{
     min-height: 80px;
     padding: 1rem;
     font-family: "Roboto";
-    /* font-weight: bold; */
+    
 
 }
 .about-foot{
@@ -92,14 +89,6 @@ li{
 }
 
 /*doc profile start */
-.vaccine-card{
-    transition: all 0.3s ease;
-}
-
-.vaccine-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
 
 .text-muted {
     font-size: 0.9rem;
@@ -108,8 +97,8 @@ li{
 
 /* doc profile end */
 
-/* banner part start */
 
+/* banner part start */
 
 .banner {
     display: flex;
@@ -239,7 +228,6 @@ li{
 }
 
 
-
 .font {
     font-family: "Roboto", sans-serif;
     font-weight: 1000;
@@ -250,16 +238,15 @@ li{
 }
 p{
     font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Normal weight */
-    line-height: 1.6; /* For comfortable reading */
-    font-size: 1rem; /* Adjust as needed */
+    font-weight: 400; 
+    line-height: 1.6; 
+    font-size: 1rem; 
 }
 .font2 {
     font-family: "Roboto", sans-serif;
     font-weight: 550;
     font-style: italic;
     font-size: 19px;
-    /* color: rgb(120, 120, 120); */
     color: #2C3E50;
 }
 
@@ -314,7 +301,6 @@ p{
 
 }
 .about{
-    /* background-color: #b7d7dd; */
     background-color: #c6d8db;
 }
 
@@ -322,9 +308,8 @@ p{
     width: 83%;
 }
 
+
 /* gallery */
-
-
 
 .gallery-card {
     position: relative;
@@ -349,9 +334,6 @@ p{
 .gallery-card:hover .overlay {
     opacity: 1;
 }
-
-
-
 
 
 
@@ -404,22 +386,46 @@ p{
 
 /* vaccine card start */
 
-.card-img-top2 {
-    height: 200px;
-    object-fit: cover; 
-    
-}
-
-.card{
+.vaccine-card {
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 4px 4px 8px rgb(196, 196, 196);
-
-   
 }
 
+.vaccine-card:hover {
+   
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
+.card-img-container img {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.vaccine-card .card-body {
+    padding: 1.25rem;
+}
+
+.vaccine-card .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.vaccine-card .btn-primary {
+    background-color: #1D2A4D;
+    border: none;
+    font-weight: bold;
+}
+
+.vaccine-card .btn-primary:hover {
+    background-color: #1D2A4D;
+}
 
 /* vaccine card end */
+
 
 /* review card start*/
 
@@ -427,17 +433,14 @@ p{
     color: #1D2A4D;
 }
 .v-title{
-    /* color: #007bff; */
     color: #13C5DD;
-    font-size: 30px;
+    font-size: 35px;
+    
 }
-
 .rev-title{
     font-size: 20px;
     color: #13C5DD;
-
 }
-
 .btn-outline-custom {
     color: #13C5DD; 
     border-color: #13C5DD; 
@@ -447,14 +450,11 @@ p{
     background-color: #13C5DD; 
     color: #fff; 
 }
-
 .btn-outline-list{
-    
     border-color: #13C5DD; 
     padding: 10px 15px;
     border-radius: 4px;
     font-weight: bold;
-
 }
 .btn-outline-list:hover {
     background-color: #13C5DD; 
@@ -472,7 +472,6 @@ p{
     background-color: #1D2A4D; 
     color: #fff;
 }
-
 .profile-btn{
     background-color: #1D2A4D;
     
@@ -481,11 +480,9 @@ p{
     border-radius: 6px;
     font-weight: 600;
     color: white;
-   
 }
 .profile-btn:hover{
-    background-color: #1D2A4D;
-    
+    background-color: #1D2A4D; 
 }
 .profileEdit-btn{
     background-color: #1D2A4D;
@@ -494,7 +491,6 @@ p{
     border-radius: 4px;
     font-weight: 600;
     color: white;
-
 }
 .profileEdit-btn:hover{
     background-color: #1D2A4D;
@@ -529,9 +525,9 @@ p{
     background-color: #1D2A4D;
 }
 .submit-btn{
-    background-color: #1D2A4D; /* YouTube red */
+    background-color: #1D2A4D; 
     color: white;
-    padding: 10px 20px; /* Adequate padding for a button */
+    padding: 10px 20px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -606,7 +602,6 @@ p{
 .whole-part {
     background-color: rgb(244, 233, 233);
     border-radius: 10px;
-    /* border: 5px solid rgb(233, 169, 169); */
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -690,7 +685,7 @@ p{
 }
 
 
-/* new dashboard */
+/* dashboard */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
@@ -920,20 +915,20 @@ a.sidebar-link:hover {
 
 .rating-container {
     display: flex;
-    justify-content: center; /* Centers the stars horizontally */
-    align-items: center; /* Centers the stars vertically if necessary */
-    margin-bottom: 1rem; /* Adds some space below the stars */
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 1rem; 
 }
 .rating .star {
-    font-size: 2rem; /* Increase the size of the stars */
-    color: #FFD700; /* Gold color for the stars */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: color 0.2s ease-in-out; /* Smooth transition for color changes */
+    font-size: 2rem; 
+    color: #FFD700; 
+    cursor: pointer; 
+    transition: color 0.2s ease-in-out; 
 }
 
 .rating .star:hover,
 .rating .star.bxs-star {
-    color: #FFA500; /* Darker gold color for filled stars */
+    color: #FFA500; 
 }
 
 /* feature design */
