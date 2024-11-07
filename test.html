@@ -1,31 +1,130 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaccination Management System</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
- 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Slider with Text</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        .slide-img{
+            width: 100%;
+            max-height: 525px;
+            object-fit: cover;
+        }
+        .mySwiper {
+            max-width: 1350px;
+        }
+        .swiper-slide {
+            position: relative;
+        }
+        .slide-text {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        max-width: 80%;
+        /* font-size: 2.2em; */
+        /* font-weight: 600; */
+    }
+    .ba-title{
+        font-size: 65px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    .ba-title4{
+        font-size: 65px;
+        font-weight: bold;
+        color: black;
+    }
+   
+    </style>
+</head>
 <body>
-    <!-- Main Content -->
-    <div class="container text-center my-5">
-        <h1 class="display-4 text-success">Thank You for Your Generosity!</h1>
-        <p class="lead mt-3">Your donation plays a crucial role in supporting our vaccination efforts and making a positive impact on the community.</p>
-        <p>Every contribution helps us in our mission to ensure safe and timely vaccinations for everyone.</p>
-        <a href="https://salimmleng.github.io/vaccine-management/index.html" class="btn btn-primary mt-4 px-4 py-2">Back to Homepage</a>
+     <!-- Navbar  -->
+     <div id="navbar"></div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="static/images/slide2.png" class="img-fluid slide-img" alt="">
+            <div class="slide-text">
+                <h1 class="ba-title">Stay safe with<br> easy vaccineation</h1>
+                <h5>Book your vaccine in minutes. Our platform makes it simple and stress-free<br> to schedule your dose and stay protected.</h5>
+                <button  style="position: relative;" class="banner-btn mt-2" onclick="location.href='about.html';">Learn More</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/slide5.png" class="img-fluid slide-img" alt="">
+            <div class="slide-text">
+                <h1 class="ba-title">Stay Protected, Stay Healthy</h1>
+                <h5>Vaccines safeguard your health and the health of those around you Schedule your dose<br> today and join the fight against preventable diseases</h5>
+                <button style="position: relative;" class="banner-btn mt-2" onclick="location.href='about.html';">Learn More</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/slide7.png" class="img-fluid slide-img" alt="">
+            <div class="slide-text">
+              <h1 class="ba-title">Get Consultation, Stay Healthy</h1>
+              <h5>Not sure about the vaccine? Consult with our experts and receive reliable, personalized advice for a healthier future.</h5>
+              <button style="position: relative;" class="banner-btn mt-2" onclick="location.href='about.html';">Learn More</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/slide6.png" class="img-fluid slide-img" alt="">
+            <div class="slide-text">
+              <h1 class="ba-title4">Timely Vaccination<br> Better Protection</h1>
+              <h5>We’re here to support your vaccination journey with flexible scheduling and trusted guidance. Take the step towards lasting protection.</h5>
+              <button style="position: relative;" class="banner-btn mt-2" onclick="location.href='about.html';">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
 
-  
-   
-    <!-- Bootstrap JS -->
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-   
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
 
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+     <script src="app.js"></script>
+     <script src="app.js"></script>
+     <script src="auth.js"></script>
+     <script src="navber.js"></script>
+</body>
 </html>
