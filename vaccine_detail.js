@@ -16,10 +16,10 @@ const getAllvaccines = () => {
                       <div class="card-body">
                           <h5 class="card-title v-title">${vaccine.name}</h5>
                           <ul class="list-unstyled text-muted mb-4">
-                              <li><strong>Manufacturer:</strong> ${vaccine.manufacturer}</li>
-                              <li><strong>Batch Number:</strong> ${vaccine.batch_number}</li>
-                              <li><strong>Age Limit:</strong> ${vaccine.age_limit}</li>
-                              <li><strong>Expiry Date:</strong> ${vaccine.expiry_date}</li>
+                              <li style="font-size: 17px;"><strong>Manufacturer:</strong> ${vaccine.manufacturer}</li>
+                              <li style="font-size: 17px;"><strong>Batch Number:</strong> ${vaccine.batch_number}</li>
+                              <li style="font-size: 17px;"><strong>Age Limit:</strong> ${vaccine.age_limit}</li>
+                              <li style="font-size: 17px;"><strong>Expiry Date:</strong> ${vaccine.expiry_date}</li>
                           </ul>
                           <a href="vaccine_detail.html?id=${vaccine.id}" class="btn btn-primary btn-block">Show Details</a>
                       </div>
@@ -86,7 +86,7 @@ const getQueryParams = (param) => {
                         class="detail-img img-fluid rounded shadow image-hover" 
                         src="${vaccine.image}" 
                         alt="Image of ${vaccine.name}" 
-                        style="max-height: 350px; border: 3px solid #f0f0f0; padding: 10px;"
+                        style="max-height: 350px; border: 1px solid #f0f0f0;"
                     >
                 </div>
                 <div class="col-md-6">

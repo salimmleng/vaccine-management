@@ -29,13 +29,17 @@ li{
 
 .immu_title{
     font-size: 28px;
-    color: #13C5DD;
+    color: #E3A008;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+}
+.immu_title:hover{
+    color: #E3A008;
 }
 
 .nav-font{
     font-size: 20px;
+    
 }
 
 .back{
@@ -122,7 +126,7 @@ li{
 }
 
 .banner-btn {
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
     border-radius: 10px;
     border: none;
     color: white; 
@@ -136,7 +140,7 @@ li{
 
 .banner-btn:hover{
     cursor: pointer;
-    box-shadow: inset 300px 0 0 0 #1D2A4D;
+    box-shadow: inset 300px 0 0 0 #E3A008;
     color: #fff;
 }
 
@@ -398,6 +402,15 @@ p{
 
 .vaccine-card .card-body {
     padding: 1.25rem;
+    border: 2px solid #fff;
+    
+}
+.card-body{
+    /* background-color: #fff; */
+    font-size: 25px;
+}
+.addVaccine-cardbody{
+    font-size: 20px;
 }
 
 .vaccine-card .btn {
@@ -409,13 +422,13 @@ p{
 }
 
 .vaccine-card .btn-primary {
-    background-color: #1D2A4D;
+    background-color: #E3A008;
     border: none;
     font-weight: bold;
 }
 
 .vaccine-card .btn-primary:hover {
-    background-color: #1D2A4D;
+    background-color: #E3A008;
 }
 
 /* vaccine card end */
@@ -424,51 +437,59 @@ p{
 /* review card start*/
 
 .revg{
-    color: #1D2A4D;
+    color: #E3A008;
 }
 .v-title{
-    color: #13C5DD;
+    color: #E3A008;
     font-size: 35px;
+    font-weight: bold;
     
 }
 .rev-title{
     font-size: 20px;
-    color: #13C5DD;
+    color: #E3A008;
 }
 .btn-outline-custom {
-    color: #13C5DD; 
-    border-color: #13C5DD; 
+    color: #E3A008; 
+    border-color: #E3A008; 
     padding: 10px 25px;
 }
 .btn-outline-custom:hover {
-    background-color: #13C5DD; 
+    background-color: #E3A008; 
     color: #fff; 
 }
 .btn-outline-list{
-    border-color: #13C5DD; 
+    border-color: #E3A008; 
     padding: 10px 15px;
     border-radius: 4px;
     font-weight: bold;
 }
 .btn-outline-list:hover {
-    background-color: #13C5DD; 
+    background-color: #E3A008; 
     color: rgb(243, 224, 224);
     font-weight: bold;
 }
 
 .btn-deep-orange {
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
     color: #fff; 
     border: none;
     
 }
 .btn-deep-orange:hover{
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
     color: #fff;
 }
 .profile-btn{
-    background-color: #1D2A4D;
-    
+    background-color: #E3A008;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+}
+.addVaccine-btn{
+    background-color: #E3A008;
     padding: 14px;
     border: none;
     border-radius: 6px;
@@ -476,10 +497,10 @@ p{
     color: white;
 }
 .profile-btn:hover{
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
 }
 .profileEdit-btn{
-    background-color: #1D2A4D;
+    background-color: #E3A008;
     padding: 16px;
     border: none;
     border-radius: 4px;
@@ -487,14 +508,14 @@ p{
     color: white;
 }
 .profileEdit-btn:hover{
-    background-color: #1D2A4D;
+    background-color: #E3A008;
     
 }
 .profile-pass{
     font-weight: 600;
 }
 .logout-btn{
-    background-color: #1D2A4D;
+    background-color: #E3A008;
     padding: 14px;
     border: none;
     border-radius: 6px;
@@ -502,11 +523,11 @@ p{
     color: white;
 }
 .logout-btn:hover{
-    background-color : #1D2A4D(228, 11, 11);
+    background-color : #E3A008(228, 11, 11);
 }
 
 .dose-btn{
-    background-color: #1D2A4D;
+    background-color: #E3A008;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -516,10 +537,10 @@ p{
 
 }
 .dose-btn:hover{
-    background-color: #1D2A4D;
+    background-color: #E3A008;
 }
 .submit-btn{
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -530,7 +551,7 @@ p{
     transition: background-color 0.3s ease;
 }
 .submit-btn:hover{
-    background-color: #1D2A4D; 
+    background-color: #E3A008; 
 }
 
 
@@ -588,14 +609,14 @@ p{
 
 .detail-img {
     width: 100%;
-    max-width: 500px;
-    height: 400px;
+    max-width: 480px;
+    height: 380px;
     object-fit: cover;
 }
 
 .whole-part {
-    background-color: rgb(244, 233, 233);
-    border-radius: 10px;
+    border: 1px solid rgb(228, 226, 226);
+    border-radius: 8px;
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -646,14 +667,14 @@ p{
 }
 
 .detailRight a.btn {
-    background-color: #1D2A4D; /* Deep orange */
+    background-color: #E3A008;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .detailRight a.btn:hover {
-    background-color: #1D2A4D;
+    background-color: #E3A008;
 }
 
 
@@ -839,8 +860,9 @@ a.sidebar-link:hover {
 }
 
 .navbar {
-    background-color: #f5f5f5;
-    box-shadow: 0 0 2rem 0 rgba(33, 37, 41, .1);
+    /* background-color: #064b54; */
+    background-color: #111827;
+    /* box-shadow: 0 0 2rem 0 rgba(33, 37, 41, .1); */
 }
 
 .navbar-expand .navbar-collapse {
@@ -884,22 +906,22 @@ a.sidebar-link:hover {
 }
 
 .btn-login {
-    background-color: #1D2A4D !important; 
-    border-color: #1D2A4D !important;
+    background-color: #E3A008 !important; 
+    border-color: #E3A008 !important;
     color: white;
     
 }
 .btn-login:hover{
-    background-color: #1D2A4D ! important;
+    background-color: #E3A008 ! important;
 }
 
 .btn-outline-danger {
-    color: #1D2A4D !important; 
-    border-color: #1D2A4D !important;
+    color: #E3A008 !important; 
+    border-color: #E3A008 !important;
 }
 
 .btn-outline-danger:hover {
-    background-color: #1D2A4D !important;
+    background-color: #E3A008 !important;
     color: #ffffff !important;
 }
 
