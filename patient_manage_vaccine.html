@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
    
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
@@ -20,6 +20,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .bg-warning{
+            background-color: red ! important;
+            color: #fff;
+        }
+        .vac-name{
+            background-color: #E3A008;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,10 +68,16 @@
                         <span>Take vaccine</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="#" onclick="handleLogout()" class="sidebar-link">
+                      <i class="bi bi-box-arrow-right"></i>
+                      <span>Logout</span>
+                    </a>
+                </li>
 
             </ul>
         </aside>
-        <div class="main">
+        <!-- <div class="main">
             <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <div class="mb-3">
@@ -99,8 +114,21 @@
                 </div>
             </main>
 
+        </div> -->
+        <div class="container-fluid mt-3">
+            <div class="row" id="vaccine-info-container"></div>
         </div>
+
     </div>
+
+
+  
+   
+    
+
+
+   
+    
 
 
     <!-- Footer -->

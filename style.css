@@ -918,11 +918,13 @@ a.sidebar-link:hover {
 .btn-outline-danger {
     color: #E3A008 !important; 
     border-color: #E3A008 !important;
+    font-weight: bold;
 }
 
 .btn-outline-danger:hover {
     background-color: #E3A008 !important;
     color: #ffffff !important;
+    font-weight: bold;
 }
 
 
