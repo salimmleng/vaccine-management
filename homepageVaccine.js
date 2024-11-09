@@ -32,3 +32,6 @@ const getAllvaccines = () => {
 }
 
 getAllvaccines();
+
+
+

@@ -213,16 +213,15 @@
     }
 
     .review-card {
-        background: #fff;
+        background: #fefefe;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border-radius: 10px;
         padding: 20px;
         display: flex;
         align-items: center;
         flex-direction: column;
         text-align: center;
     }
-
     .reviewer-img {
         width: 80px;
         height: 80px;
@@ -624,7 +623,7 @@
     <!-- review section -->
 
     <div class="container mt-3">
-        <h1 class="text-center text-danger">What our happy customers say</h1>
+        <h1 class="text-center text-danger">Customer Experiences with ImmunoHub</h1>
         <div class="swiper mySwiper review-swiper">
             <div id="review-swiper-wrapper" class="swiper-wrapper">
                 <!-- dynamic value will be appended -->
@@ -668,7 +667,7 @@
                 <br>
                 <div class="d-flex gap-2">
                     <i class="fa-solid fa-phone" style="color: #fff;"></i>
-                    <small class="text-white">+91 9751791203</small>
+                    <small class="text-white">+880157-123-4790</small>
                 </div>
             </div>
             <div class="col-md-3 mt-3">
@@ -676,13 +675,13 @@
                 <a class="text-white text-decoration-none" aria-current="page" href="index.html">Home</a>
                 <br>
                 <a class="text-white text-decoration-none" aria-current="page"
-                    href="https://salimmleng.github.io/vaccine-management/index.html#faq">FAQ</a>
+                    href="vaccine.html">Vaccine</a>
                 <br>
                 <a class="text-white text-decoration-none" aria-current="page"
                     href="https://salimmleng.github.io/vaccine-management/index.html#gallery">Gallery</a>
                 <br>
                 <a class="text-white text-decoration-none" aria-current="page"
-                    href="https://salimmleng.github.io/vaccine-management/index.html#feature">Features</a>
+                    href="support_us.html">Support us</a>
             </div>
 
 
@@ -714,11 +713,11 @@
     </script>
 
 
-<script>
+   <script>
     const swiper = new Swiper('.review-swiper', {
         slidesPerView: 1,      // Shows 1 slide by default
         spaceBetween: 20,      // Spacing between slides
-        loop: true,            // Allows infinite looping of slides
+        loop: true,            
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -728,8 +727,8 @@
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            768: { slidesPerView: 2 },  // 2 slides for tablet and above
-            1024: { slidesPerView: 3 }  // 3 slides for larger screens
+            768: { slidesPerView: 2 },  
+            1024: { slidesPerView: 3 }  
         }
     });
 </script>
