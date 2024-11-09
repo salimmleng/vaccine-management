@@ -105,34 +105,34 @@
         }
 
          /*** Feature ***/
-     .intro-text{
-            font-family: 'Lora', serif; 
-            font-size: 1.1rem; 
-            line-height: 1.6; 
-            font-weight: 400; 
-            color: #f0f0f0; 
-        }
-    @media (min-width: 992px) {
-        .container.feature {
-            max-width: 100% !important;
+        .intro-text{
+                font-family: 'Lora', serif; 
+                font-size: 1.1rem; 
+                line-height: 1.6; 
+                font-weight: 400; 
+                color: #f0f0f0; 
+            }
+        @media (min-width: 992px) {
+            .container.feature {
+                max-width: 100% !important;
+            }
+
+            .feature-text  {
+                padding-left: calc(((100% - 960px) / 2) + .75rem);
+            }
         }
 
-        .feature-text  {
-            padding-left: calc(((100% - 960px) / 2) + .75rem);
+        @media (min-width: 1200px) {
+            .feature-text  {
+                padding-left: calc(((100% - 1140px) / 2) + .75rem);
+            }
         }
-    }
 
-    @media (min-width: 1200px) {
-        .feature-text  {
-            padding-left: calc(((100% - 1140px) / 2) + .75rem);
+        @media (min-width: 1400px) {
+            .feature-text  {
+                padding-left: calc(((100% - 1320px) / 2) + .75rem);
+            }
         }
-    }
-
-    @media (min-width: 1400px) {
-        .feature-text  {
-            padding-left: calc(((100% - 1320px) / 2) + .75rem);
-        }
-    }
 
     /* swipper */
 
@@ -205,12 +205,63 @@
             padding: 6px 12px;
         }
     }
+    
+    /* review swiper */
+    .review-swiper {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .review-card {
+        background: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reviewer-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        object-fit: cover;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .review-text {
+        max-width: 600px;
+    }
+
+    .review-content {
+        font-style: italic;
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .reviewer-name {
+        font-weight: 700;
+        color: #333;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    .reviewer-title {
+        color: #777;
+        font-size: 14px;
+    }
+   
     </style>
    
 </head>
   
 
-<body>
+<body class="bg-light">
     <header>
 
     <!-- Navbar  -->
@@ -570,7 +621,21 @@
 
 
 
+    <!-- review section -->
 
+    <div class="container mt-3">
+        <h1 class="text-center text-danger">What our happy customers say</h1>
+        <div class="swiper mySwiper review-swiper">
+            <div id="review-swiper-wrapper" class="swiper-wrapper">
+                <!-- dynamic value will be appended -->
+                
+            </div>
+            <!-- Swiper Pagination and Navigation -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    
     <!-- Footer -->
     <footer class="mt-2 foot">
         <div class="container m-auto p-5 row">
@@ -648,6 +713,31 @@
         });
     </script>
 
+
+<script>
+    const swiper = new Swiper('.review-swiper', {
+        slidesPerView: 1,      // Shows 1 slide by default
+        spaceBetween: 20,      // Spacing between slides
+        loop: true,            // Allows infinite looping of slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 },  // 2 slides for tablet and above
+            1024: { slidesPerView: 3 }  // 3 slides for larger screens
+        }
+    });
+</script>
+
+
+   
+   
+
     <!-- Bootstrap JS -->
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -657,6 +747,7 @@
     <script src="auth.js"></script>
     <script src="navber.js"></script>
     <script src="homepageVaccine.js"></script>
+    <script src="homepageReview.js"></script>
 </body>
 
 </html>
